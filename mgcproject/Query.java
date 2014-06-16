@@ -22,7 +22,9 @@ public class Query {
             ResultSet rs = stmt.executeQuery(sqlString);
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnsNum = rsmd.getColumnCount();
+            
             System.out.println("Reading from database");
+            
             while(rs.next()) {
                 for(int i = 1; i <= columnsNum; i++) {
                     String columnValue = rs.getString(i);
@@ -31,6 +33,7 @@ public class Query {
             }
             rs.close();
             stmt.close();
+            conn.close();
         } catch(SQLException e) {
             System.err.println("Read SQLException: " + e.getMessage());
         }
@@ -46,8 +49,10 @@ public class Query {
             crs.populate(rs);
             rs.close();
             stmt.close();
+            conn.close();
         } catch(SQLException e) {
             System.err.println("Read SQLException: " + e.getMessage());
+            return null;
         }
         return crs;
     }
@@ -58,6 +63,8 @@ public class Query {
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(sqlString);
             System.out.println("Statement written to database");
+            stmt.close();
+            conn.close();
         } catch(SQLException e) {
             System.err.println("Write SQLException: " + e.getMessage());
         } 
@@ -75,6 +82,7 @@ public class Query {
             System.out.println("Connected to database");
         } catch(SQLException e) {
             System.err.println("Write SQLException: " + e.getMessage());
+            return null;
         }
         return conn;
     }
