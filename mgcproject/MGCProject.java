@@ -12,11 +12,13 @@ public class MGCProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {          
-        try {
-            Query.writeToTable("INSERT INTO person VALUES ('Jane', 'Doe', 23);");
-            Query.printFromTable("SELECT * FROM person;");            
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
-        }  
+//        try {
+//            Query.printFromTable("SELECT * FROM customer;");            
+//        } catch (SQLException e) {
+//            System.err.println(e.getMessage());
+//        }  
+        
+        JobTable jt = new JobTable();
+        jt.setVisible(true);
     }
 }
