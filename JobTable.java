@@ -11,6 +11,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.sql.rowset.CachedRowSet;
 import javax.swing.table.DefaultTableModel;
+import mgcproject.Job;
+import mgcproject.ProductTable;
+import mgcproject.Query;
+import mgcproject.SQLStatements;
 
 /**
  *
@@ -113,12 +117,20 @@ public class JobTable extends javax.swing.JFrame {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         try {
         CachedRowSet crs = new CachedRowSetImpl();
-        crs = Query.readFromTable(SQLStatements.getJobList());
+        crs = Query.readFromTable(SQLStatements.selectJobListStmt());
             while (crs.next())
             {
                 int jobID = crs.getInt("job_id");
                 String jobStatus = crs.getString("job_status");
-                Job newJob = new Job(jobID, jobStatus);
+                double taxPercent = crs.getDouble("tax_percent");
+                double discountPercent = crs.getDouble("discount_percent");
+                int quantityUsed = crs.getInt("job_qty_used");
+                String customerABN = crs.getString("customer_cust_abn");
+                String custFirstName = crs.getString("cust_first_name");
+                String custLastName = crs.getString("cust_last_name");
+                Job newJob = new Job(jobID, jobStatus, taxPercent,
+                discountPercent, quantityUsed, customerABN, custFirstName,
+                custLastName);
                 jobsList.add(newJob);
             }
         } catch(SQLException e) {
@@ -126,17 +138,30 @@ public class JobTable extends javax.swing.JFrame {
         }
         
         DefaultTableModel amodel = new DefaultTableModel();
-        Object[] tableColumnNames = new Object[2]; // two columns in kart table
-        tableColumnNames[0] = "job_id";
-        tableColumnNames[1] = "job_status";
+        Object[] tableColumnNames = new Object[8]; // two columns in kart table
+        tableColumnNames[0] = "Job Id";
+        tableColumnNames[1] = "Status";
+        tableColumnNames[2] = "Tax (%)";
+        tableColumnNames[3] = "Discount (%)";
+        tableColumnNames[4] = "Number of Jobs";
+        tableColumnNames[5] = "Customer ABN";
+        tableColumnNames[6] = "First Name";
+        tableColumnNames[7] = "Last Name";
         amodel.setColumnIdentifiers(tableColumnNames); // important step model won't be visible 
         
-        Object[] objects = new Object[2];
+        Object[] objects = new Object[8];
         if(jobsList.size() > 0) {
             for(int i = 0; i < jobsList.size(); i++ ) { // build the model
                 Job someJob = jobsList.get(i);
                 objects[0] = someJob.getJobID();
                 objects[1] = someJob.getJobStatus();
+                objects[2] = someJob.getTaxPercent();
+                objects[3] = someJob.getDiscountPercent();
+                objects[4] = someJob.getQuantityUsed();
+                objects[5] = someJob.getCustomerABN();
+                objects[6] = someJob.getCustFirstName();
+                objects[7] = someJob.getCustLastName();
+                
                 amodel.addRow(objects);
             }
             
