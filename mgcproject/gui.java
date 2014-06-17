@@ -5,12 +5,12 @@
 
 /*
  * gui_customer_details.java
- *
+ *  
  * Created on 16/06/2014, 9:50:37 AM
  */
 /**
  *
- * @author apeman
+ * @author Donovan Crichton 
  */
 public class gui extends javax.swing.JFrame {
 
@@ -28,325 +28,815 @@ public class gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        panel_cust_details = new javax.swing.JPanel();
+        lbl_cust_details_firstName = new javax.swing.JLabel();
+        lbl_cust_details_lastName = new javax.swing.JLabel();
+        lbl_cust_details_addr_street = new javax.swing.JLabel();
+        lbl_cust_details_addr_state = new javax.swing.JLabel();
+        lbl_cust_details_addr_postCode = new javax.swing.JLabel();
+        lbl_cust_details_addr_suburb = new javax.swing.JLabel();
+        lbl_cust_details_welcome = new javax.swing.JLabel();
+        txt_cust_details_firstName = new javax.swing.JTextField();
+        txt_cust_details_lastName = new javax.swing.JTextField();
+        txt_cust_details_addr_street = new javax.swing.JTextField();
+        txt_cust_details_addr_postCode = new javax.swing.JTextField();
+        txt_cust_details_addr_suburb = new javax.swing.JTextField();
+        cbx_cust_details_state = new javax.swing.JComboBox();
+        btn_cust_details_proceed = new javax.swing.JButton();
+        panel_cust_order = new javax.swing.JPanel();
+        lbl_cust_order_welcome = new javax.swing.JLabel();
+        lbl_cust_order_firstName = new javax.swing.JLabel();
+        lbl_cust_order_welcome2 = new javax.swing.JLabel();
+        lbl_cust_order_pleaseDo = new javax.swing.JLabel();
+        scrPnl_cust_order_table = new javax.swing.JScrollPane();
+        tbl_cust_order = new javax.swing.JTable();
+        btn_cust_order_cancel = new javax.swing.JButton();
+        btn_cust_order_proceed = new javax.swing.JButton();
+        btn_cust_order_confirmLine = new javax.swing.JButton();
+        btn_cust_order_removeLine = new javax.swing.JButton();
+        lbl_cust_order_listedCost = new javax.swing.JLabel();
+        lbl_cust_order_plusGST = new javax.swing.JLabel();
+        lbl_cust_order_totalCost = new javax.swing.JLabel();
+        lbl_cust_order_listedCost_val = new javax.swing.JLabel();
+        lbl_cust_order_plusGST_val = new javax.swing.JLabel();
+        lbl_cust_order_totalCost_val = new javax.swing.JLabel();
+        panel_doc_detail = new javax.swing.JPanel();
+        lbl_doc_detail_cust_name = new javax.swing.JLabel();
+        lbl_doc_detail_cust_name_val = new javax.swing.JLabel();
+        lbl_doc_detail_cust_billAddr = new javax.swing.JLabel();
+        lbl_doc_detail_cust_billAddr_line1_val = new javax.swing.JLabel();
+        lbl_doc_detail_cust_billAddr_line2_val = new javax.swing.JLabel();
+        lbl_doc_detail_cust_ABN = new javax.swing.JLabel();
+        lbl_doc_detail_cust_ABN_val = new javax.swing.JLabel();
+        lbl_doc_detail_cust_shpAddr = new javax.swing.JLabel();
+        lbl_doc_detail_cust_shpAddr_line2_val = new javax.swing.JLabel();
+        lbl_doc_detail_cust_shpAddr_line1_val = new javax.swing.JLabel();
+        lbl_doc_detail_supp_name = new javax.swing.JLabel();
+        lbl_doc_detail_supp_ABN = new javax.swing.JLabel();
+        lbl_doc_detail_supp_addr = new javax.swing.JLabel();
+        lbl_doc_detail_jobStatus = new javax.swing.JLabel();
+        lbl_doc_detail_taxInvoice = new javax.swing.JLabel();
+        scrPnl_cust_order_table1 = new javax.swing.JScrollPane();
+        tbl_cust_order1 = new javax.swing.JTable();
+        lbl_doc_detail_listedCost = new javax.swing.JLabel();
+        lbl_doc_detail_lessDiscount = new javax.swing.JLabel();
+        lbl_doc_detail_plusGST = new javax.swing.JLabel();
+        lbl_doc_detail_totalCost = new javax.swing.JLabel();
+        lbl_doc_detail_listedCost_val = new javax.swing.JLabel();
+        lbl_doc_detail_lessDiscount_val = new javax.swing.JLabel();
+        lbl_doc_detail_plusGST_val = new javax.swing.JLabel();
+        lbl_doc_detail_totalCost_val = new javax.swing.JLabel();
+        lbl_doc_detail_supp_name_val = new javax.swing.JLabel();
+        lbl_doc_detail_supp_ABN_val = new javax.swing.JLabel();
+        lbl_doc_detail_supp_addr_line1_val = new javax.swing.JLabel();
+        lbl_doc_detail_supp_addr_line2_val = new javax.swing.JLabel();
+        lbl_doc_deetail_jobStatus_val = new javax.swing.JLabel();
+        lbl_doc_detail_invoicedOn = new javax.swing.JLabel();
+        lbl_doc_detail_invoicedOn_val = new javax.swing.JLabel();
+        lbl_doc_detail_payableOn = new javax.swing.JLabel();
+        lbl_doc_detail_payableOn_val = new javax.swing.JLabel();
+        panel_job_list = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        tbl_job_list_jobList = new javax.swing.JTable();
+        lbl_job_list_jobList = new javax.swing.JLabel();
+        lbl_job_list_stockLevels = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tbl_job_list_stockLevel = new javax.swing.JTable();
+        navMenuBar = new javax.swing.JMenuBar();
+        menu_head_customer = new javax.swing.JMenu();
+        menu_item_cust_details = new javax.swing.JMenuItem();
+        menu_item_cust_order = new javax.swing.JMenuItem();
+        menu_item_cust_docDetail = new javax.swing.JMenuItem();
+        menu_head_changeUser = new javax.swing.JMenu();
+        menu_item_changeUser_manager = new javax.swing.JMenuItem();
+        menu_item_changeUser_salesPerson = new javax.swing.JMenuItem();
+        menu_item_changeUser_glazier = new javax.swing.JMenuItem();
+        menu_item_changeUser_customer = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        jLabel1.setText("First Name:");
+        lbl_cust_details_firstName.setText("First Name:");
 
-        jLabel2.setText("Last Name: ");
+        lbl_cust_details_lastName.setText("Last Name: ");
 
-        jLabel3.setText("Steet Address:");
+        lbl_cust_details_addr_street.setText("Steet Address:");
 
-        jLabel4.setText("State:");
+        lbl_cust_details_addr_state.setText("State:");
 
-        jLabel5.setText("PostCode:");
+        lbl_cust_details_addr_postCode.setText("PostCode:");
 
-        jTextField1.setText("jTextField1");
+        lbl_cust_details_addr_suburb.setText("Suburb: ");
 
-        jTextField2.setText("jTextField1");
+        lbl_cust_details_welcome.setText("Welcome valued Customer! Please Enter
+your details and click proceed to begin!");
 
-        jTextField3.setText("jTextField1");
+        txt_cust_details_firstName.setText("jTextField1");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] {
-				"Item 1", "Item 2", "Item 3", "Item 4" }));
+        txt_cust_details_lastName.setText("jTextField1");
 
-        jTextField4.setText("jTextField4");
+        txt_cust_details_addr_street.setText("jTextField1");
 
-        jLabel6.setText("Suburb: ");
+        txt_cust_details_addr_postCode.setText("jTextField4");
 
-        jTextField5.setText("jTextField5");
+        txt_cust_details_addr_suburb.setText("jTextField5");
 
-        jLabel7.setText("Welcome valued Customer! Please Enter your details "
-				+"and click proceed to begin!");
+        cbx_cust_details_state.setModel(new javax.swing.DefaultComboBoxModel(new
+String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton1.setText("Proceed");
+        btn_cust_details_proceed.setText("Proceed");
 
-        javax.swing.GroupLayout jPanel1Layout = new
-				javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_cust_detailsLayout = new
+javax.swing.GroupLayout(panel_cust_details);
+        panel_cust_details.setLayout(panel_cust_detailsLayout);
+        panel_cust_detailsLayout.setHorizontalGroup(
+            panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                 .addGap(107, 107, 107)
-                .addGroup(jPanel1Layout.createParallelGroup(
-							javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 593,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(
-									javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
+                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_cust_details_welcome,
+javax.swing.GroupLayout.PREFERRED_SIZE, 593,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_cust_detailsLayout.createSequentialGroup()
+                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_cust_details_addr_street)
+                            .addComponent(lbl_cust_details_firstName)
+                            .addComponent(lbl_cust_details_addr_suburb)
+                            .addComponent(lbl_cust_details_addr_state)
+                            .addComponent(lbl_cust_details_addr_postCode))
                         .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(
-									javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4,
-											javax.swing.GroupLayout.PREFERRED_SIZE, 
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1,
-											javax.swing.GroupLayout.PREFERRED_SIZE, 97,
-											javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(
-											javax.swing.GroupLayout.Alignment.TRAILING,
-											false)
-                           .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
-										jPanel1Layout.createSequentialGroup()
-   	                         .addComponent(jTextField1,
-										javax.swing.GroupLayout.PREFERRED_SIZE, 128,
-									javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_cust_details_addr_postCode,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbx_cust_details_state,
+javax.swing.GroupLayout.PREFERRED_SIZE, 97,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+panel_cust_detailsLayout.createSequentialGroup()
+                                    .addComponent(txt_cust_details_firstName,
+javax.swing.GroupLayout.PREFERRED_SIZE, 128,
+javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(32, 32, 32)
-                                    .addComponent(jLabel2)
+                                    .addComponent(lbl_cust_details_lastName)
                                     .addGap(4, 4, 4)
-                                    .addComponent(jTextField2,
-										javax.swing.GroupLayout.PREFERRED_SIZE, 128,
-											javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jTextField3,
-											javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField5,
-											javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jButton1))))
+                                    .addComponent(txt_cust_details_lastName,
+javax.swing.GroupLayout.PREFERRED_SIZE, 128,
+javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_cust_details_addr_street,
+javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_cust_details_addr_suburb,
+javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(btn_cust_details_proceed))))
                 .addContainerGap(191, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(
-					javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        panel_cust_detailsLayout.setVerticalGroup(
+            panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                 .addGap(106, 106, 106)
-                .addComponent(jLabel7)
+                .addComponent(lbl_cust_details_welcome)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(
-						javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2,
-						javax.swing.GroupLayout.PREFERRED_SIZE, 
-						javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1,
-						javax.swing.GroupLayout.PREFERRED_SIZE, 
-						javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_details_firstName)
+                    .addComponent(lbl_cust_details_lastName)
+                    .addComponent(txt_cust_details_lastName,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_cust_details_firstName,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(
-						javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3,
-						javax.swing.GroupLayout.PREFERRED_SIZE, 
-						javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_details_addr_street)
+                    .addComponent(txt_cust_details_addr_street,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(
-						javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField5,
-						javax.swing.GroupLayout.PREFERRED_SIZE, 
-						javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_details_addr_suburb)
+                    .addComponent(txt_cust_details_addr_suburb,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(
-						javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1,
-						javax.swing.GroupLayout.PREFERRED_SIZE, 
-						javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_details_addr_state)
+                    .addComponent(cbx_cust_details_state,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(
-						javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4,
-						javax.swing.GroupLayout.PREFERRED_SIZE, 
-						javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_details_addr_postCode)
+                    .addComponent(txt_cust_details_addr_postCode,
+javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addComponent(btn_cust_details_proceed)
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, "card2");
+        getContentPane().add(panel_cust_details, "card2");
 
-        jLabel9.setText("Welcome");
+        lbl_cust_order_welcome.setText("Welcome");
 
-        jLabel10.setText("firstName");
+        lbl_cust_order_firstName.setText("firstName");
 
-        jLabel11.setText(", to your order!");
+        lbl_cust_order_welcome2.setText(", to your order!");
 
-        jLabel19.setText("Please enter the information for your glass pane" 
-				+ "order below:");
+        lbl_cust_order_pleaseDo.setText("Please enter the information for your
+glass pane order below:");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_cust_order.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
                 "Glass Type", "Glass Location", "Lockable", "Description",
-					"Length (cm)", "Width (cm)", "Thickness (cm)", "Quantity"
-            }) 
-			{
+"Length (cm)", "Width (cm)", "Thickness (cm)", "Quantity", "Cost"
+            }
+        ) {
             Class[] types = new Class [] {
-               java.lang.String.class, java.lang.String.class,
-					java.lang.Boolean.class, java.lang.String.class, 
-					java.lang.Double.class, java.lang.Double.class, 
-					java.lang.Double.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class,
+java.lang.Boolean.class, java.lang.String.class, java.lang.Double.class,
+java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class,
+java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jTable1.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(jTable1);
-        jTable1.getColumnModel().getColumn(0).setResizable(false);
-        jTable1.getColumnModel().getColumn(2).setResizable(false);
+        tbl_cust_order.getTableHeader().setReorderingAllowed(false);
+        scrPnl_cust_order_table.setViewportView(tbl_cust_order);
+        tbl_cust_order.getColumnModel().getColumn(0).setResizable(false);
+        tbl_cust_order.getColumnModel().getColumn(2).setResizable(false);
 
-        jButton2.setText("Cancel");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_cust_order_cancel.setText("C(a)ncel");
+        btn_cust_order_cancel.addActionListener(new
+java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_cust_order_cancelActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Proceed");
+        btn_cust_order_proceed.setText("(P)roceed");
 
-        javax.swing.GroupLayout jPanel2Layout = new
-	     javax.swing.GroupLayout(jPanel2);
-	        jPanel2.setLayout(jPanel2Layout);
-   	     jPanel2Layout.setHorizontalGroup(
-           jPanel2Layout.createParallelGroup(
-							javax.swing.GroupLayout.Alignment.LEADING)
-            				.addGroup(jPanel2Layout.createSequentialGroup()
-   			            .addGroup(jPanel2Layout.createParallelGroup(
-							javax.swing.GroupLayout.Alignment.LEADING)
-         		         .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(
-							javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(
-							javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(
-							javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11))
-                        .addComponent(jScrollPane1,
-							javax.swing.GroupLayout.PREFERRED_SIZE, 809,
-							javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel19))
-	                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jButton2)
-                        .addGap(56, 56, 56)
-                        .addComponent(jButton3)))
-			               .addContainerGap(70, Short.MAX_VALUE)));
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(
-					javax.swing.GroupLayout.Alignment.LEADING)
-            	 .addGroup(jPanel2Layout.createSequentialGroup()
+        btn_cust_order_confirmLine.setText("(C)onfirm Line");
+
+        btn_cust_order_removeLine.setText("(R)emove Line");
+        btn_cust_order_removeLine.addActionListener(new
+java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cust_order_removeLineActionPerformed(evt);
+            }
+        });
+
+        lbl_cust_order_listedCost.setText("Listed Cost:");
+
+        lbl_cust_order_plusGST.setText("Plus GST of:");
+
+        lbl_cust_order_totalCost.setText("Total Cost of Order:");
+
+        lbl_cust_order_listedCost_val.setText("$sum");
+
+        lbl_cust_order_plusGST_val.setText("$tax");
+
+        lbl_cust_order_totalCost_val.setText("$quote");
+
+        javax.swing.GroupLayout panel_cust_orderLayout = new
+javax.swing.GroupLayout(panel_cust_order);
+        panel_cust_order.setLayout(panel_cust_orderLayout);
+        panel_cust_orderLayout.setHorizontalGroup(
+            panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+panel_cust_orderLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(btn_cust_order_confirmLine)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_cust_order_removeLine)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_cust_order_proceed,
+javax.swing.GroupLayout.PREFERRED_SIZE, 147,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_cust_order_cancel,
+javax.swing.GroupLayout.PREFERRED_SIZE, 114,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(307, 307, 307))
+            .addGroup(panel_cust_orderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(
-					javax.swing.GroupLayout.Alignment.BASELINE)
-                 .addComponent(jLabel9)
-                 .addComponent(jLabel10)
-                 .addComponent(jLabel11))
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrPnl_cust_order_table,
+javax.swing.GroupLayout.PREFERRED_SIZE, 856,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_cust_orderLayout.createSequentialGroup()
+                        .addComponent(lbl_cust_order_welcome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_cust_order_firstName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_cust_order_welcome2))
+                    .addComponent(lbl_cust_order_pleaseDo))
+                .addContainerGap(23, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+panel_cust_orderLayout.createSequentialGroup()
+                .addContainerGap(628, Short.MAX_VALUE)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_cust_order_plusGST)
+                    .addComponent(lbl_cust_order_listedCost)
+                    .addComponent(lbl_cust_order_totalCost))
+                .addGap(28, 28, 28)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_cust_order_plusGST_val)
+                    .addComponent(lbl_cust_order_totalCost_val)
+                    .addComponent(lbl_cust_order_listedCost_val))
+                .addGap(45, 45, 45))
+        );
+        panel_cust_orderLayout.setVerticalGroup(
+            panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_cust_orderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_order_welcome)
+                    .addComponent(lbl_cust_order_firstName)
+                    .addComponent(lbl_cust_order_welcome2))
                 .addGap(26, 26, 26)
-                .addComponent(jLabel19)
+                .addComponent(lbl_cust_order_pleaseDo)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1,
-					javax.swing.GroupLayout.PREFERRED_SIZE, 130,
-					javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(
-					javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-						250, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(
-					javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                .addComponent(scrPnl_cust_order_table,
+javax.swing.GroupLayout.PREFERRED_SIZE, 257,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_order_listedCost)
+                    .addComponent(lbl_cust_order_listedCost_val))
+                .addGap(12, 12, 12)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_order_plusGST)
+                    .addComponent(lbl_cust_order_plusGST_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cust_order_totalCost)
+                    .addComponent(lbl_cust_order_totalCost_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+18, Short.MAX_VALUE)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_cust_order_confirmLine)
+                    .addComponent(btn_cust_order_removeLine)
+                    .addComponent(btn_cust_order_proceed)
+                    .addComponent(btn_cust_order_cancel))
                 .addGap(39, 39, 39))
         );
 
-        getContentPane().add(jPanel2, "card3");
+        getContentPane().add(panel_cust_order, "card3");
+
+        lbl_doc_detail_cust_name.setText("Customer Name:");
+
+        lbl_doc_detail_cust_name_val.setText("lblCustFullName");
+
+        lbl_doc_detail_cust_billAddr.setText("Billing Address:");
+
+        lbl_doc_detail_cust_billAddr_line1_val.setText("lblCustBillAddrLine1");
+
+        lbl_doc_detail_cust_billAddr_line2_val.setText("lblCustBillAddrLine2");
+
+        lbl_doc_detail_cust_ABN.setText("Customer ABN:");
+
+        lbl_doc_detail_cust_ABN_val.setText("lblCustABN");
+
+        lbl_doc_detail_cust_shpAddr.setText("Shipping Address:");
+
+        lbl_doc_detail_cust_shpAddr_line2_val.setText("lblCustShpAddrLine2");
+
+        lbl_doc_detail_cust_shpAddr_line1_val.setText("lblCustShpAddrLine1");
+
+        lbl_doc_detail_supp_name.setText("Supplier:");
+
+        lbl_doc_detail_supp_ABN.setText("Supplier ABN:");
+
+        lbl_doc_detail_supp_addr.setText("Supplier Address:");
+
+        lbl_doc_detail_jobStatus.setText("Job Status:");
+
+        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 14));
+// NOI18N
+        lbl_doc_detail_taxInvoice.setText("lblTaxInvoice");
+
+        tbl_cust_order1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Glass Type", "Glass Location", "Lockable", "Description",
+"Length (cm)", "Width (cm)", "Thickness (cm)", "Quantity", "Cost"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class,
+java.lang.Boolean.class, java.lang.String.class, java.lang.Double.class,
+java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class,
+java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tbl_cust_order1.getTableHeader().setReorderingAllowed(false);
+        scrPnl_cust_order_table1.setViewportView(tbl_cust_order1);
+        tbl_cust_order1.getColumnModel().getColumn(0).setResizable(false);
+        tbl_cust_order1.getColumnModel().getColumn(2).setResizable(false);
+
+        lbl_doc_detail_listedCost.setText("Listed Cost:");
+
+        lbl_doc_detail_lessDiscount.setText("Less Discount of:");
+
+        lbl_doc_detail_plusGST.setText("Plus GST:");
+
+        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18)); //
+NOI18N
+        lbl_doc_detail_totalCost.setText("Total Cost:");
+
+        lbl_doc_detail_listedCost_val.setText("$ListedCost");
+
+        lbl_doc_detail_lessDiscount_val.setText("$Discount");
+
+        lbl_doc_detail_plusGST_val.setText("$GST");
+
+        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1,
+18)); // NOI18N
+        lbl_doc_detail_totalCost_val.setText("$Total");
+
+        lbl_doc_detail_supp_name_val.setText("Modern Glass Company");
+
+        lbl_doc_detail_supp_ABN_val.setText("111 222 333 44");
+
+        lbl_doc_detail_supp_addr_line1_val.setText("XX Fakington St");
+
+        lbl_doc_detail_supp_addr_line2_val.setText("TestTown, QLD, 0000");
+
+        lbl_doc_deetail_jobStatus_val.setText("lblStatusCheck");
+
+        lbl_doc_detail_invoicedOn.setText("Invoiced on:");
+
+        lbl_doc_detail_invoicedOn_val.setText("lblInvoiceDate");
+
+        lbl_doc_detail_payableOn.setText("Payable by:");
+
+        lbl_doc_detail_payableOn_val.setText("lblPayableDate");
+
+        javax.swing.GroupLayout panel_doc_detailLayout = new
+javax.swing.GroupLayout(panel_doc_detail);
+        panel_doc_detail.setLayout(panel_doc_detailLayout);
+        panel_doc_detailLayout.setHorizontalGroup(
+            panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_doc_detail_cust_billAddr)
+                    .addComponent(lbl_doc_detail_cust_ABN)
+                    .addComponent(lbl_doc_detail_cust_name)
+                    .addComponent(lbl_doc_detail_cust_shpAddr))
+                .addGap(18, 18, 18)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                        .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_doc_detail_cust_name_val)
+                            .addComponent(lbl_doc_detail_cust_shpAddr_line1_val)
+                            .addComponent(lbl_doc_detail_cust_ABN_val)
+                            .addComponent(lbl_doc_detail_cust_billAddr_line1_val))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+239, Short.MAX_VALUE)
+                        .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_doc_detail_supp_name)
+                            .addComponent(lbl_doc_detail_supp_ABN)
+                            .addComponent(lbl_doc_detail_supp_addr)))
+                    .addComponent(lbl_doc_detail_cust_billAddr_line2_val)
+                    .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                        .addComponent(lbl_doc_detail_cust_shpAddr_line2_val)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+287, Short.MAX_VALUE)
+                        .addComponent(lbl_doc_detail_jobStatus)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_doc_detail_supp_name_val)
+                    .addComponent(lbl_doc_detail_supp_ABN_val)
+                    .addComponent(lbl_doc_detail_supp_addr_line1_val)
+                    .addComponent(lbl_doc_detail_supp_addr_line2_val)
+                    .addComponent(lbl_doc_deetail_jobStatus_val))
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                .addGap(387, 387, 387)
+                .addComponent(lbl_doc_detail_taxInvoice)
+                .addContainerGap(391, Short.MAX_VALUE))
+            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrPnl_cust_order_table1,
+javax.swing.GroupLayout.PREFERRED_SIZE, 856,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+panel_doc_detailLayout.createSequentialGroup()
+                .addContainerGap(713, Short.MAX_VALUE)
+                .addComponent(lbl_doc_detail_plusGST)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_doc_detail_plusGST_val)
+                .addGap(60, 60, 60))
+            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+false)
+                    .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+Short.MAX_VALUE)
+                        .addComponent(lbl_doc_detail_payableOn))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+panel_doc_detailLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(lbl_doc_detail_invoicedOn)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                        .addComponent(lbl_doc_detail_invoicedOn_val)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+406, Short.MAX_VALUE)
+                        .addComponent(lbl_doc_detail_listedCost)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_doc_detail_listedCost_val)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+panel_doc_detailLayout.createSequentialGroup()
+                        .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                                .addComponent(lbl_doc_detail_totalCost)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbl_doc_detail_totalCost_val))
+                            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                                .addComponent(lbl_doc_detail_payableOn_val)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+362, Short.MAX_VALUE)
+                                .addComponent(lbl_doc_detail_lessDiscount)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_doc_detail_lessDiscount_val)))
+                        .addGap(25, 25, 25))))
+        );
+        panel_doc_detailLayout.setVerticalGroup(
+            panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_cust_name_val)
+                    .addComponent(lbl_doc_detail_cust_name)
+                    .addComponent(lbl_doc_detail_supp_name)
+                    .addComponent(lbl_doc_detail_supp_name_val))
+                .addGap(8, 8, 8)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_cust_ABN_val)
+                    .addComponent(lbl_doc_detail_cust_ABN)
+                    .addComponent(lbl_doc_detail_supp_ABN)
+                    .addComponent(lbl_doc_detail_supp_ABN_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_cust_billAddr_line1_val,
+javax.swing.GroupLayout.PREFERRED_SIZE, 15,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_doc_detail_cust_billAddr)
+                    .addComponent(lbl_doc_detail_supp_addr)
+                    .addComponent(lbl_doc_detail_supp_addr_line1_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_cust_billAddr_line2_val,
+javax.swing.GroupLayout.PREFERRED_SIZE, 15,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_doc_detail_supp_addr_line2_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_cust_shpAddr_line1_val,
+javax.swing.GroupLayout.PREFERRED_SIZE, 15,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_doc_detail_cust_shpAddr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_cust_shpAddr_line2_val)
+                    .addComponent(lbl_doc_detail_jobStatus)
+                    .addComponent(lbl_doc_deetail_jobStatus_val))
+                .addGap(18, 18, 18)
+                .addComponent(lbl_doc_detail_taxInvoice)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrPnl_cust_order_table1,
+javax.swing.GroupLayout.PREFERRED_SIZE, 229,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_listedCost)
+                    .addComponent(lbl_doc_detail_listedCost_val)
+                    .addComponent(lbl_doc_detail_invoicedOn)
+                    .addComponent(lbl_doc_detail_invoicedOn_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_lessDiscount)
+                    .addComponent(lbl_doc_detail_lessDiscount_val)
+                    .addComponent(lbl_doc_detail_payableOn)
+                    .addComponent(lbl_doc_detail_payableOn_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_plusGST)
+                    .addComponent(lbl_doc_detail_plusGST_val,
+javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_doc_detail_totalCost,
+javax.swing.GroupLayout.PREFERRED_SIZE, 40,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_doc_detail_totalCost_val)))
+        );
+
+        getContentPane().add(panel_doc_detail, "card3");
+
+        tbl_job_list_jobList.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Job ID", "Job Status", "Customer First Name", "Customer Last
+Name"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class,
+java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tbl_job_list_jobList);
+
+        lbl_job_list_jobList.setText("Job List");
+
+        lbl_job_list_stockLevels.setText("Stock Levels");
+
+        tbl_job_list_stockLevel.setModel(new
+javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Glass Type", "Stock Level"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tbl_job_list_stockLevel);
+
+        javax.swing.GroupLayout panel_job_listLayout = new
+javax.swing.GroupLayout(panel_job_list);
+        panel_job_list.setLayout(panel_job_listLayout);
+        panel_job_listLayout.setHorizontalGroup(
+            panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_job_listLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_job_list_jobList)
+                    .addComponent(jScrollPane1,
+javax.swing.GroupLayout.PREFERRED_SIZE, 609,
+javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+39, Short.MAX_VALUE)
+                .addGroup(panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_job_list_stockLevels)
+                    .addComponent(jScrollPane2,
+javax.swing.GroupLayout.PREFERRED_SIZE, 287,
+javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        panel_job_listLayout.setVerticalGroup(
+            panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_job_listLayout.createSequentialGroup()
+                .addGroup(panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_job_listLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(lbl_job_list_jobList))
+                    .addGroup(panel_job_listLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(lbl_job_list_stockLevels)))
+                .addGap(18, 18, 18)
+                .addGroup(panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1,
+javax.swing.GroupLayout.PREFERRED_SIZE, 330,
+javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2,
+javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(416, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(panel_job_list, "card5");
+
+        menu_head_customer.setText("Customer");
+
+        menu_item_cust_details.setText("Enter Customer Details");
+        menu_item_cust_details.addActionListener(new
+java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_item_cust_detailsActionPerformed(evt);
+            }
+        });
+        menu_head_customer.add(menu_item_cust_details);
+
+        menu_item_cust_order.setText("Enter Order Details");
+        menu_head_customer.add(menu_item_cust_order);
+
+        menu_item_cust_docDetail.setText("View Document Details");
+        menu_head_customer.add(menu_item_cust_docDetail);
+
+        navMenuBar.add(menu_head_customer);
+
+        menu_head_changeUser.setText("Change User");
+
+        menu_item_changeUser_manager.setText("Manager");
+        menu_head_changeUser.add(menu_item_changeUser_manager);
+
+        menu_item_changeUser_salesPerson.setText("Salesperson");
+        menu_head_changeUser.add(menu_item_changeUser_salesPerson);
+
+        menu_item_changeUser_glazier.setText("Glazier");
+        menu_head_changeUser.add(menu_item_changeUser_glazier);
+
+        menu_item_changeUser_customer.setText("Customer");
+        menu_head_changeUser.add(menu_item_changeUser_customer);
+
+        navMenuBar.add(menu_head_changeUser);
+
+        setJMenuBar(navMenuBar);
 
         pack();
     }// </editor-fold>
 
-private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+private void btn_cust_order_cancelActionPerformed(java.awt.event.ActionEvent
+evt) {                                         
 // TODO add your handling code here:
 }                                        
+
+private void btn_cust_order_removeLineActionPerformed(java.awt.event.ActionEvent
+evt) {
+// TODO add your handling code here:
+}
+
+private void menu_item_cust_detailsActionPerformed(java.awt.event.ActionEvent
+evt) {
+// TODO add your handling code here:
+}
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-/* Set the Nimbus look and feel */
-//<editor-fold defaultstate="collapsed" desc=" Look and feel setting
-//code (optional) ">
-/* If Nimbus (introduced in Java SE 6) is not available, stay with the
-* default look and feel.
-* For details see
-* http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-*/
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting
+        //code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the
+ * default look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info :
-						javax.swing.UIManager.getInstalledLookAndFeels()) {
+javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(
-					gui.class.getName()).log(
-						java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE,
+null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(
-					gui.class.getName()).log(
-						java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE,
+null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(
-					gui.class.getName()).log(
-						java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE,
+null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(
-					gui.class.getName()).log(
-						java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE,
+null, ex);
         }
         //</editor-fold>
 
@@ -359,30 +849,90 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         });
     }
     // Variables declaration - do not modify
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton btn_cust_details_proceed;
+    private javax.swing.JButton btn_cust_order_cancel;
+    private javax.swing.JButton btn_cust_order_confirmLine;
+    private javax.swing.JButton btn_cust_order_proceed;
+    private javax.swing.JButton btn_cust_order_removeLine;
+    private javax.swing.JComboBox cbx_cust_details_state;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbl_cust_details_addr_postCode;
+    private javax.swing.JLabel lbl_cust_details_addr_state;
+    private javax.swing.JLabel lbl_cust_details_addr_street;
+    private javax.swing.JLabel lbl_cust_details_addr_suburb;
+    private javax.swing.JLabel lbl_cust_details_firstName;
+    private javax.swing.JLabel lbl_cust_details_lastName;
+    private javax.swing.JLabel lbl_cust_details_welcome;
+    private javax.swing.JLabel lbl_cust_order_firstName;
+    private javax.swing.JLabel lbl_cust_order_listedCost;
+    private javax.swing.JLabel lbl_cust_order_listedCost_val;
+    private javax.swing.JLabel lbl_cust_order_pleaseDo;
+    private javax.swing.JLabel lbl_cust_order_plusGST;
+    private javax.swing.JLabel lbl_cust_order_plusGST_val;
+    private javax.swing.JLabel lbl_cust_order_totalCost;
+    private javax.swing.JLabel lbl_cust_order_totalCost_val;
+    private javax.swing.JLabel lbl_cust_order_welcome;
+    private javax.swing.JLabel lbl_cust_order_welcome2;
+    private javax.swing.JLabel lbl_doc_deetail_jobStatus_val;
+    private javax.swing.JLabel lbl_doc_detail_cust_ABN;
+    private javax.swing.JLabel lbl_doc_detail_cust_ABN_val;
+    private javax.swing.JLabel lbl_doc_detail_cust_billAddr;
+    private javax.swing.JLabel lbl_doc_detail_cust_billAddr_line1_val;
+    private javax.swing.JLabel lbl_doc_detail_cust_billAddr_line2_val;
+    private javax.swing.JLabel lbl_doc_detail_cust_name;
+    private javax.swing.JLabel lbl_doc_detail_cust_name_val;
+    private javax.swing.JLabel lbl_doc_detail_cust_shpAddr;
+    private javax.swing.JLabel lbl_doc_detail_cust_shpAddr_line1_val;
+    private javax.swing.JLabel lbl_doc_detail_cust_shpAddr_line2_val;
+    private javax.swing.JLabel lbl_doc_detail_invoicedOn;
+    private javax.swing.JLabel lbl_doc_detail_invoicedOn_val;
+    private javax.swing.JLabel lbl_doc_detail_jobStatus;
+    private javax.swing.JLabel lbl_doc_detail_lessDiscount;
+    private javax.swing.JLabel lbl_doc_detail_lessDiscount_val;
+    private javax.swing.JLabel lbl_doc_detail_listedCost;
+    private javax.swing.JLabel lbl_doc_detail_listedCost_val;
+    private javax.swing.JLabel lbl_doc_detail_payableOn;
+    private javax.swing.JLabel lbl_doc_detail_payableOn_val;
+    private javax.swing.JLabel lbl_doc_detail_plusGST;
+    private javax.swing.JLabel lbl_doc_detail_plusGST_val;
+    private javax.swing.JLabel lbl_doc_detail_supp_ABN;
+    private javax.swing.JLabel lbl_doc_detail_supp_ABN_val;
+    private javax.swing.JLabel lbl_doc_detail_supp_addr;
+    private javax.swing.JLabel lbl_doc_detail_supp_addr_line1_val;
+    private javax.swing.JLabel lbl_doc_detail_supp_addr_line2_val;
+    private javax.swing.JLabel lbl_doc_detail_supp_name;
+    private javax.swing.JLabel lbl_doc_detail_supp_name_val;
+    private javax.swing.JLabel lbl_doc_detail_taxInvoice;
+    private javax.swing.JLabel lbl_doc_detail_totalCost;
+    private javax.swing.JLabel lbl_doc_detail_totalCost_val;
+    private javax.swing.JLabel lbl_job_list_jobList;
+    private javax.swing.JLabel lbl_job_list_stockLevels;
+    private javax.swing.JMenu menu_head_changeUser;
+    private javax.swing.JMenu menu_head_customer;
+    private javax.swing.JMenuItem menu_item_changeUser_customer;
+    private javax.swing.JMenuItem menu_item_changeUser_glazier;
+    private javax.swing.JMenuItem menu_item_changeUser_manager;
+    private javax.swing.JMenuItem menu_item_changeUser_salesPerson;
+    private javax.swing.JMenuItem menu_item_cust_details;
+    private javax.swing.JMenuItem menu_item_cust_docDetail;
+    private javax.swing.JMenuItem menu_item_cust_order;
+    private javax.swing.JMenuBar navMenuBar;
+    private javax.swing.JPanel panel_cust_details;
+    private javax.swing.JPanel panel_cust_order;
+    private javax.swing.JPanel panel_doc_detail;
+    private javax.swing.JPanel panel_job_list;
+    private javax.swing.JScrollPane scrPnl_cust_order_table;
+    private javax.swing.JScrollPane scrPnl_cust_order_table1;
+    private javax.swing.JTable tbl_cust_order;
+    private javax.swing.JTable tbl_cust_order1;
+    private javax.swing.JTable tbl_job_list_jobList;
+    private javax.swing.JTable tbl_job_list_stockLevel;
+    private javax.swing.JTextField txt_cust_details_addr_postCode;
+    private javax.swing.JTextField txt_cust_details_addr_street;
+    private javax.swing.JTextField txt_cust_details_addr_suburb;
+    private javax.swing.JTextField txt_cust_details_firstName;
+    private javax.swing.JTextField txt_cust_details_lastName;
     // End of variables declaration
 }
 
