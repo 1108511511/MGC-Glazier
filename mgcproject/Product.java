@@ -6,13 +6,17 @@
 
 package mgcproject;
 
+import com.sun.rowset.CachedRowSetImpl;
+import java.sql.SQLException;
+import javax.sql.rowset.CachedRowSet;
+
 /**
  *
  * @author 3106909413
  */
 public class Product {   
     private int productID;
-    private boolean isLaminate;
+    private String type;
     private boolean isLockable;
     private boolean isOutdoor;
     private int length;
@@ -21,15 +25,28 @@ public class Product {
     private int quantity;
     private float price;
     
-    public Product(boolean isLaminate, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity, float price) {
-        this.isLaminate = isLaminate;
+    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
+        this.type = type;
         this.isLockable = isLockable;
         this.isOutdoor = isOutdoor;
         this.length = length;
         this.width = width;
         this.thickness = thickness;
         this.quantity = quantity;
-        this.price = price;
+        this.price = getUnitPrice(type);
+    }
+    
+    public float getUnitPrice(String type) {
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable("select * from stock");
+//            SQLStatements.selectPriceStmt(type)
+            float unitPrice = crs.getFloat("type");
+            return unitPrice;
+        } catch (SQLException e) {
+            System.err.println("Error: " + e.getMessage());
+            return -1;
+        }
     }
 
     /**
@@ -47,17 +64,17 @@ public class Product {
     }
 
     /**
-     * @return the isLaminate
+     * @return the type
      */
-    public boolean isIsLaminate() {
-        return isLaminate;
+    public String getType() {
+        return type;
     }
 
     /**
-     * @param isLaminate the isLaminate to set
+     * @param type the type to set
      */
-    public void setIsLaminate(boolean isLaminate) {
-        this.isLaminate = isLaminate;
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
