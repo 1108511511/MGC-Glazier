@@ -8,7 +8,7 @@ package mgcproject;
 
 /**
 *
-* @author 3106909413
+* @author Daniel Bassett
 */
 public class SQLStatements {
     
@@ -46,6 +46,12 @@ public class SQLStatements {
         return statement;
     }
     
+    public static String selectPriceStmt(String glassType) {
+        String statement = (
+                "SELECT price FROM stock "
+              + "WHERE glass_type = '" + glassType + "'");
+        return statement;
+    }              
     
     // UPDATE TABLE
     public static String updatePriceStmt (double price, String glassType) {
@@ -76,7 +82,6 @@ public class SQLStatements {
               + lockable + "','" + description + "','" + setting + "','" 
               + glassType);
         return statement;
-    }
-    
+    }    
 
 }

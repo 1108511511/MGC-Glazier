@@ -1,9 +1,9 @@
-package person;
+package mgcproject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private int customerAbn;
     private String baStreet;
     private String baSuburb;

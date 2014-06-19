@@ -11,10 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.sql.rowset.CachedRowSet;
 import javax.swing.table.DefaultTableModel;
-import mgcproject.Job;
-import mgcproject.ProductTable;
-import mgcproject.Query;
-import mgcproject.SQLStatements;
 
 /**
  *

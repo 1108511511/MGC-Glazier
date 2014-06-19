@@ -12,13 +12,8 @@ public class MGCProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {          
-//        try {
-//            Query.printFromTable("SELECT * FROM customer;");            
-//        } catch (SQLException e) {
-//            System.err.println(e.getMessage());
-//        }  
-        
-        JobTable jt = new JobTable();
-        jt.setVisible(true);
+        Product p = new Product("Tough", true, true, 12, 23, 3, 1);
+        System.out.println(p.getUnitPrice());
+        System.out.println(p.getProductPrice());
     }
 }
