@@ -22,8 +22,8 @@ public class MGCProject {
         // Create new job list
         System.out.println("testing");                      
         
-        Job.cacheJobList();
-        Job.printCacheJobList();
+        Job.getJobList();
+        Job.printJobList();
         
         JobTable jt = new JobTable();
         jt.setVisible(true);

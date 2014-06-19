@@ -27,14 +27,14 @@ public class Job {
     private String custLastName;
     private static ArrayList<Job> jobsList = new ArrayList<>();
     private static ArrayList<Product> productList = new ArrayList<>();
+    private static Customer customer;
 
     // constructors
     public Job() {
     }
     
     public Job(int jobID, String jobStatus, double taxPercent, 
-            double discountPercent, int quantityUsed, String customerABN,
-            String custFirstName, String custLastName, 
+            double discountPercent, int quantityUsed, String customerABN, 
             ArrayList<Product> productList, Customer customer) {
         this.jobID = jobID;
         this.jobStatus = jobStatus;
@@ -48,7 +48,21 @@ public class Job {
 
     
     // methods
-    public static ArrayList cacheJobList() {                                     
+    /**
+     * @return the jobID
+     */
+    public int getJobID() {
+        return jobID;
+    }
+
+    /**
+     * @param jobID the jobID to set
+     */
+    public void setJobID(int jobID) {
+        this.jobID = jobID;
+    }
+    
+    public static ArrayList getJobList() {                                     
         try {
         CachedRowSet crs = new CachedRowSetImpl();
         crs = Query.readFromTable(SQLStatements.selectJobListStmt());
@@ -63,8 +77,8 @@ public class Job {
                 String custFirstName = crs.getString("cust_first_name");
                 String custLastName = crs.getString("cust_last_name");
                 Job newJob = new Job(jobID, jobStatus, taxPercent,
-                discountPercent, quantityUsed, customerABN, custFirstName,
-                custLastName, productList);
+                    discountPercent, quantityUsed, customerABN, 
+                    productList, customer);
                 jobsList.add(newJob);
             }
         } catch(SQLException e) {
@@ -73,13 +87,37 @@ public class Job {
         return jobsList;
     }
     
+    public static ArrayList getProductListPerJob() {
+    try {
+    CachedRowSet crs = new CachedRowSetImpl();
+    crs = Query.readFromTable(SQLStatements.selectProductListStmt(jobID));
+        while (crs.next())
+        {
+            int productID = crs.getInt("product_id");
+            int height = crs.getInt("product_dimension_height");
+            int width = crs.getInt("product_dimension_width");
+            int thickness = crs.getInt("product_dimension_thickness");
+            boolean lockable = crs.getBoolean("product_flag_lockable");
+            String description = crs.getString("product_description");
+            String type = crs.getString("stock_glass_type");
+            int setting = crs.getInt("product_setting");
+            Product newProducts = new Product();
+            productList.add(newProducts);
+        }
+    } catch(SQLException e) {
+        e.printStackTrace();
+    }
+    return productList;
+    }
+   
+    
     /** 
      * testing cacheJobList
      * <p>
      * to test in main method, use Job.cacheJobList(); and then 
      * Job.printCacheJobList();
      */
-    public static void printCacheJobList() {
+    public static void printJobList() {
         System.out.println(jobsList.size());
         System.out.println("start of printCacheJobList");
         for(int i = 0; i < jobsList.size(); i++) {
@@ -93,25 +131,13 @@ public class Job {
         String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
                 + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
                 + getQuantityUsed() + "\t" + getCustomerABN() + "\t"
-                + getCustFirstName() + "\t" + getCustLastName();
+                + productList;
         return jobValues;
     }
     // end of testing cacheJoblist
 
     
-    /**
-     * @return the jobID
-     */
-    public int getJobID() {
-        return jobID;
-    }
 
-    /**
-     * @param jobID the jobID to set
-     */
-    public void setJobID(int jobID) {
-        this.jobID = jobID;
-    }
 
     /**
      * @return the jobStatus

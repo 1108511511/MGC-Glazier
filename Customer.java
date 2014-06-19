@@ -1,4 +1,4 @@
-package person;
+package mgcproject;
 
 import java.util.ArrayList;
 import java.util.List;
