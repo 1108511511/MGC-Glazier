@@ -23,8 +23,9 @@ public class Product {
     private int width;
     private int thickness;
     private int quantity;
-    private float price;
-    
+    private float unitPrice;
+    private float productPrice;
+        
     public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
         this.type = type;
         this.isLockable = isLockable;
@@ -33,15 +34,21 @@ public class Product {
         this.width = width;
         this.thickness = thickness;
         this.quantity = quantity;
-        this.price = getUnitPrice(type);
+        this.unitPrice = getUnitPriceFromDB(type);
+        this.productPrice = calculatePrice();
     }
     
-    public float getUnitPrice(String type) {
+    public float calculatePrice() {
+        float productPrice = length * width * thickness * quantity * unitPrice;
+        return productPrice;
+    }
+    
+    public float getUnitPriceFromDB(String type) {
         try {
             CachedRowSet crs = new CachedRowSetImpl();
-            crs = Query.readFromTable("select * from stock");
-//            SQLStatements.selectPriceStmt(type)
-            float unitPrice = crs.getFloat("type");
+            crs = Query.readFromTable(SQLStatements.selectPriceStmt(type)); 
+            crs.next();
+            float unitPrice = crs.getFloat("price");
             return unitPrice;
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
@@ -160,18 +167,27 @@ public class Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+    
+    
+    public float getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(float unitPrice) {
+        this.unitPrice = unitPrice;
+    }
 
     /**
      * @return the price
      */
-    public float getPrice() {
-        return price;
+    public float getProductPrice() {
+        return productPrice;
     }
 
     /**
      * @param price the price to set
      */
-    public void setPrice(float price) {
-        this.price = price;
+    public void setProductPrice(float productPrice) {
+        this.productPrice = productPrice;
     }
 }
