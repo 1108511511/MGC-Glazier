@@ -22,7 +22,7 @@ import mgcproject.SQLStatements;
  */
 public class JobTable extends javax.swing.JFrame {
 
-    ArrayList<Job> jobsList = new ArrayList<Job>();
+    ArrayList<Job> jobsList = new ArrayList<>();
     
     /**
      * Creates new form NewJFrame
