@@ -27,6 +27,10 @@ public class Person {
         this.lastName = lastName;
     }
     
+    public void writeToTable() {
+        
+    }
+    
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
