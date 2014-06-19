@@ -38,18 +38,18 @@ public class Product {
         this.productPrice = calculatePrice();
     }
     
-    public float calculatePrice() {
-        float productPrice = length * width * thickness * quantity * unitPrice;
-        return productPrice;
+    private float calculatePrice() {
+        float thisProductPrice = length * width * thickness * quantity * unitPrice;
+        return thisProductPrice;
     }
     
-    public float getUnitPriceFromDB(String type) {
+    private float getUnitPriceFromDB(String type) {
         try {
             CachedRowSet crs = new CachedRowSetImpl();
             crs = Query.readFromTable(SQLStatements.selectPriceStmt(type)); 
             crs.next();
-            float unitPrice = crs.getFloat("price");
-            return unitPrice;
+            float thisUnitPrice = crs.getFloat("price");
+            return thisUnitPrice;
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
             return -1;
@@ -168,24 +168,29 @@ public class Product {
         this.quantity = quantity;
     }
     
-    
+    /**
+     * @return the unitPrice
+     */
     public float getUnitPrice() {
         return unitPrice;
     }
 
+    /**
+     * @param unitPrice the price to set
+     */
     public void setUnitPrice(float unitPrice) {
         this.unitPrice = unitPrice;
     }
 
     /**
-     * @return the price
+     * @return the prodcutPrice
      */
     public float getProductPrice() {
         return productPrice;
     }
 
     /**
-     * @param price the price to set
+     * @param productPrice the price to set
      */
     public void setProductPrice(float productPrice) {
         this.productPrice = productPrice;
