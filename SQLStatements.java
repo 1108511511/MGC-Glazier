@@ -24,7 +24,8 @@ public class SQLStatements {
             "SELECT job_id, job_status, tax_percent, discount_percent, "
           + "job_qty_used, customer_cust_abn, cust_first_name, cust_last_name "  
           + "FROM job LEFT JOIN customer "
-          + "ON job.customer_cust_abn = customer.cust_abn ");
+          + "ON job.customer_cust_abn = customer.cust_abn "
+          + "ORDER BY job_id");
         return statement;
     }
     

@@ -1,6 +1,7 @@
 package mgcproject;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,6 +18,12 @@ public class MGCProject {
 //        } catch (SQLException e) {
 //            System.err.println(e.getMessage());
 //        }  
+        
+        // Create new job list
+        System.out.println("testing");                      
+        
+        Job.cacheJobList();
+        Job.printCacheJobList();
         
         JobTable jt = new JobTable();
         jt.setVisible(true);

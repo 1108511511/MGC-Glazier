@@ -6,6 +6,11 @@
 
 package mgcproject;
 
+import com.sun.rowset.CachedRowSetImpl;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.sql.rowset.CachedRowSet;
+
 /**
  *
  * @author 3106909413
@@ -19,8 +24,13 @@ public class Job {
     private String customerABN;
     private String custFirstName;
     private String custLastName;
+    private static ArrayList<Job> jobsList = new ArrayList<>();
+    private static ArrayList<Product> productList = new ArrayList<>();
 
     // constructor
+    public Job() {
+    }
+    
     public Job(int jobID, String jobStatus, double taxPercent, 
             double discountPercent, int quantityUsed, String customerABN,
             String custFirstName, String custLastName) {
@@ -33,7 +43,59 @@ public class Job {
         this.custFirstName = custFirstName;
         this.custLastName = custLastName;
     }
+    
+    
+    public static ArrayList cacheJobList() {                                     
+        try {
+        CachedRowSet crs = new CachedRowSetImpl();
+        crs = Query.readFromTable(SQLStatements.selectJobListStmt());
+            while (crs.next())
+            {
+                int jobID = crs.getInt("job_id");
+                String jobStatus = crs.getString("job_status");
+                double taxPercent = crs.getDouble("tax_percent");
+                double discountPercent = crs.getDouble("discount_percent");
+                int quantityUsed = crs.getInt("job_qty_used");
+                String customerABN = crs.getString("customer_cust_abn");
+                String custFirstName = crs.getString("cust_first_name");
+                String custLastName = crs.getString("cust_last_name");
+                Job newJob = new Job(jobID, jobStatus, taxPercent,
+                discountPercent, quantityUsed, customerABN, custFirstName,
+                custLastName);
+                jobsList.add(newJob);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return jobsList;
+    }
+    
+    /** 
+     * testing cacheJobList
+     * <p>
+     * to test in main method, use Job.cacheJobList(); and then 
+     * Job.printCacheJobList();
+     */
+    public static void printCacheJobList() {
+        System.out.println(jobsList.size());
+        System.out.println("start of printCacheJobList");
+        for(int i = 0; i < jobsList.size(); i++) {
+            System.out.println(jobsList.get(i).toString());
+        }
+        System.out.println("end of printCacheJobList for loop");
+    }
+    
+    @Override
+    public String toString(){
+        String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
+                + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
+                + getQuantityUsed() + "\t" + getCustomerABN() + "\t"
+                + getCustFirstName() + "\t" + getCustLastName();
+        return jobValues;
+    }
+    // end of testing cacheJoblist
 
+    
     /**
      * @return the jobID
      */
