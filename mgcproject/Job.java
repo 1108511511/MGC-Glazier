@@ -45,7 +45,7 @@ public class Job {
         this.productList = productList;
         this.customer = customer;
     }
-
+    
     
     // methods
     /**
