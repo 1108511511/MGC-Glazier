@@ -8,45 +8,81 @@ package mgcproject;
 
 /**
 *
-* @author 3106909413
+* @author Daniel Bassett
 */
 public class SQLStatements {
     
-    public static String getProductList (int jobID) {
+    
+    // SELECT FROM TABLE
+    public static String selectProductListStmt (int jobID) {
         String statement = ("SELECT * FROM product WHERE job_id = " + jobID);
         return statement;
     }
     
-    public static String getJobList () {
+    public static String selectJobListStmt () {
         String statement = (
-            "SELECT job_id, job_status, tax_percent, dsicount_percent "
+            "SELECT job_id, job_status, tax_percent, discount_percent, "
           + "job_qty_used, customer_cust_abn, cust_first_name, cust_last_name "  
           + "FROM job LEFT JOIN customer "
-          + "ON job.customer_cust_abn = customer.cust_abn ");
+          + "ON job.customer_cust_abn = customer.cust_abn "
+          + "ORDER BY job_id");
         return statement;
     }
     
-    public static String getCustomerList () {
-        String statement = ("SELECT * FROM customer");
+    public static String selectCustomerListStmt () {
+        String statement = (
+                "SELECT cust_abn, cust_first_name, cust_last_name "
+              + "FROM customer");
         return statement;
     }
+    
+    public static String selectCustomerDetailsStmt (String custABN) {
+        String statement = ("SELECT * FROM customer WHERE cust_abn = " 
+                + custABN);
+        return statement;
+    } 
        
-    public static String getEmployeeList () {
+    public static String selectEmployeeListStmt () {
         String statement = ("SELECT * FROM employee");
         return statement;
     }
     
-    public static String setPrice (double price, String glassType) {
+    public static String selectPriceStmt(String glassType) {
+        String statement = (
+                "SELECT price FROM stock "
+              + "WHERE glass_type = '" + glassType + "'");
+        return statement;
+    }              
+    
+    // UPDATE TABLE
+    public static String updatePriceStmt (double price, String glassType) {
         String statement = (
                 "UPDATE stock SET price = '" + price + "'"
-              + "WHERE glass_type ='" + glassType + "';");
+              + "WHERE glass_type ='" + glassType + "'");
         return statement;
     }
     
-    public static String setStockLevel (int stockLevel, String glassType) {
+    public static String updateStockLevelStmt (int stockLevel, String glassType) {
         String statement = (
                 "UPDATE stock SET stock_level = '" + stockLevel + "'"
-              + "WHERE glass_type ='" + glassType + "';");
+              + "WHERE glass_type ='" + glassType + "'");
         return statement;
     }
+    
+    
+    // INSERT INTO TABLE
+    public static String insertProductStmt (int height, int width, int thickness,
+            boolean lockable, String description, boolean setting, 
+            String glassType) {
+        String statement = (
+                "INSERT INTO product "
+              + "(product_dimension_height,product_dimension_width,"
+              + "product_dimension_thickness,product_flag_lockable,setting,"
+              + "stock_glass_type "
+              + "VALUES ('" + height + "','" + width + "','" + thickness  + "','"
+              + lockable + "','" + description + "','" + setting + "','" 
+              + glassType);
+        return statement;
+    }    
+
 }
