@@ -159,6 +159,10 @@ public class Gui extends javax.swing.JFrame {
         menu_head_manager = new javax.swing.JMenu();
         menu_item_mgr_reports = new javax.swing.JMenuItem();
         menu_item_mgr_addEmployee = new javax.swing.JMenuItem();
+        menu_head_sales = new javax.swing.JMenu();
+        menu_item_sales_viewQuotes = new javax.swing.JMenuItem();
+        menu_head_glazier = new javax.swing.JMenu();
+        menu_item_glazier_workList = new javax.swing.JMenuItem();
         menu_head_changeUser = new javax.swing.JMenu();
         menu_item_changeUser_manager = new javax.swing.JMenuItem();
         menu_item_changeUser_salesPerson = new javax.swing.JMenuItem();
@@ -1134,6 +1138,20 @@ public class Gui extends javax.swing.JFrame {
 
         navMenuBar.add(menu_head_manager);
 
+        menu_head_sales.setText("Sales");
+
+        menu_item_sales_viewQuotes.setText("View Quotes");
+        menu_head_sales.add(menu_item_sales_viewQuotes);
+
+        navMenuBar.add(menu_head_sales);
+
+        menu_head_glazier.setText("Glazier");
+
+        menu_item_glazier_workList.setText("View Open Jobs");
+        menu_head_glazier.add(menu_item_glazier_workList);
+
+        navMenuBar.add(menu_head_glazier);
+
         menu_head_changeUser.setText("Change User");
 
         menu_item_changeUser_manager.setText("Manager");
@@ -1236,6 +1254,17 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
         if (txt_usr_login_employeeID.getText().equalsIgnoreCase("Manager")
             && txt_usr_login_password.getText().equals("test") ) {
             modifyGuiForUsr("manager");
+        }
+        else if (txt_usr_login_employeeID.getText().equalsIgnoreCase("Sales")
+            && txt_usr_login_password.getText().equals("test") ) {
+            modifyGuiForUsr("sales");
+        }
+        else if (txt_usr_login_employeeID.getText().equalsIgnoreCase("Glazier")
+            && txt_usr_login_password.getText().equals("test") ) {
+            modifyGuiForUsr("glazier");
+        }
+        else {
+            modifyGuiForUsr("unknown");
         }
     }//GEN-LAST:event_btn_usr_login_fireLoginActionPerformed
 
@@ -1425,7 +1454,9 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
     private javax.swing.JLabel lbl_usr_login_password;
     private javax.swing.JMenu menu_head_changeUser;
     private javax.swing.JMenu menu_head_customer;
+    private javax.swing.JMenu menu_head_glazier;
     private javax.swing.JMenu menu_head_manager;
+    private javax.swing.JMenu menu_head_sales;
     private javax.swing.JMenuItem menu_item_changeUser_customer;
     private javax.swing.JMenuItem menu_item_changeUser_glazier;
     private javax.swing.JMenuItem menu_item_changeUser_manager;
@@ -1433,8 +1464,10 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
     private javax.swing.JMenuItem menu_item_cust_details;
     private javax.swing.JMenuItem menu_item_cust_docDetail;
     private javax.swing.JMenuItem menu_item_cust_order;
+    private javax.swing.JMenuItem menu_item_glazier_workList;
     private javax.swing.JMenuItem menu_item_mgr_addEmployee;
     private javax.swing.JMenuItem menu_item_mgr_reports;
+    private javax.swing.JMenuItem menu_item_sales_viewQuotes;
     private javax.swing.JMenuBar navMenuBar;
     private javax.swing.JPanel panel_cust_details;
     private javax.swing.JPanel panel_cust_order;
@@ -1549,6 +1582,8 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             
             //change menu to for manager
             menu_head_customer.setVisible(false);
+            menu_head_sales.setVisible(false);
+            menu_head_glazier.setVisible(false);
             menu_head_manager.setVisible(true);
             
             //show manager buttons
@@ -1573,13 +1608,79 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             txt_job_list_mgr_newTaxRate.setVisible(true);
             
         }
-        else if (userType.equalsIgnoreCase("SalesPerson")) {
+        else if (userType.equalsIgnoreCase("Sales")) {
+            displayPanel(panel_job_list);
+            
+            menu_head_customer.setVisible(false);
+            menu_head_manager.setVisible(false);
+            menu_head_glazier.setVisible(false);
+            menu_head_sales.setVisible(true);
+            
+            btn_job_list_viewJobDetails.setVisible(true);
+            
+            //hide manager buttons
+            btn_job_list_mgr_addNewEmployee.setVisible(false);
+            btn_job_list_mgr_newTaxRate.setVisible(false);
+            btn_job_list_mgr_submitNewPrice.setVisible(false);
+            
+            //hide manager tables
+            lbl_job_list_stockLevels.setVisible(false);
+            scrPane_job_list_stockLevel.setVisible(false);
+            tbl_job_list_stockLevel.setVisible(false);
+            scrPane_job_list_mgr_changePrice.setVisible(false);
+            tbl_job_list_mgr_changePrice.setVisible(false);
+            
+            //hide manager specific labels
+            lbl_job_list_mgr_changePrice.setVisible(false);
+            lbl_job_list_mgr_currentTaxRate.setVisible(false);
+            lbl_job_list_mgr_currentTaxRate_val.setVisible(false);
+            lbl_job_list_mgr_newTaxRate.setVisible(false);
+            
+            //hide manager specific text fields
+            txt_job_list_mgr_newTaxRate.setVisible(false);
+            
+        }
+        else if (userType.equalsIgnoreCase("Glazier")) {
+            displayPanel(panel_job_list);
+            
+            menu_head_customer.setVisible(false);
+            menu_head_manager.setVisible(false);
+            menu_head_sales.setVisible(false);
+            menu_head_glazier.setVisible(true);
             
             
+            btn_job_list_viewJobDetails.setVisible(true);
+            
+            //hide manager buttons
+            btn_job_list_mgr_addNewEmployee.setVisible(false);
+            btn_job_list_mgr_newTaxRate.setVisible(false);
+            btn_job_list_mgr_submitNewPrice.setVisible(false);
+            
+            //hide manager tables
+            lbl_job_list_stockLevels.setVisible(false);
+            scrPane_job_list_stockLevel.setVisible(false);
+            tbl_job_list_stockLevel.setVisible(false);
+            scrPane_job_list_mgr_changePrice.setVisible(false);
+            tbl_job_list_mgr_changePrice.setVisible(false);
+            
+            //hide manager specific labels
+            lbl_job_list_mgr_changePrice.setVisible(false);
+            lbl_job_list_mgr_currentTaxRate.setVisible(false);
+            lbl_job_list_mgr_currentTaxRate_val.setVisible(false);
+            lbl_job_list_mgr_newTaxRate.setVisible(false);
+            
+            //hide manager specific text fields
+            txt_job_list_mgr_newTaxRate.setVisible(false);
+            
+            //hide sales specific buttons
+            btn_doc_detail_changeDiscount.setVisible(false);
         }
         else if (userType.equalsIgnoreCase("Customer")) {
             displayPanel(panel_cust_details);
+            
             menu_head_manager.setVisible(false);
+            menu_head_sales.setVisible(false);
+            menu_head_glazier.setVisible(false);
             
         }
         
@@ -1597,16 +1698,23 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
      * </p>
      * 
      * <p>
-     * KNOWN BUGS!!!
+     * --------------------------KNOWN BUGS!!!-------------------------
      * 1:
      * The JTable checkBox cellEditor doesn't render correctly, however
      * the toggle functionality is working fine. This can be fixed by
      * creating a custom class extending DefaultTableModel and 
-     * overriding the getColumnClass method to return a boolean type.
+     * overriding the getColumnClass method to return a specific data types.
      * This will cause the JTable to render the column as boolean by
-     * default. 
+     * default. (May abolish the need for checkBox code below...)
      * Will implement fix if I have time (Donovan).
-     * <p>
+     * 
+     * 2:
+     * The commit line button will not work correctly if the user has not 
+     * finished the entire row of data (i.e they have not tabbed off the last
+     * cell in the table once they have entered the data). This can be fixed
+     * by checking the current editing cell and pulling data from it.
+     * Will implement fix if I have time (Donovan).
+     * </p>
      * 
      * @author Donovan Crichton
      * @param table - the JTable object to be replaced.
@@ -1621,6 +1729,7 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
       // Instantiate new table model and generic Object
       javax.swing.table.DefaultTableModel model = new 
          javax.swing.table.DefaultTableModel();
+      
       // 9 is the number of columns in tbl_cust_order - need to consider
       // rewriting to avoid magic number.
       Object[] temp = new Object[9];
@@ -1629,6 +1738,7 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
       for(int i = 0; i < table.getColumnCount(); i++) {
           model.addColumn(table.getColumnName(i));
       }
+      
       //populate the model
       for(int i = 0; i < table.getRowCount(); i++) {
           for(int j = 0; j < table.getColumnCount(); j++) {

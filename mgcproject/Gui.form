@@ -58,6 +58,30 @@
             </MenuItem>
           </SubComponents>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_head_sales">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sales"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_sales_viewQuotes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Quotes"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_head_glazier">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Glazier"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_glazier_workList">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Open Jobs"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
         <Menu class="javax.swing.JMenu" name="menu_head_changeUser">
           <Properties>
             <Property name="text" type="java.lang.String" value="Change User"/>
