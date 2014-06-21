@@ -193,16 +193,6 @@ public class Gui extends javax.swing.JFrame {
         lbl_cust_details_welcome.setFont(new java.awt.Font("Tahoma", 0, 14));
         lbl_cust_details_welcome.setText("Welcome valued Customer! Please Enter your details and click proceed to begin!");
 
-        txt_cust_details_firstName.setText("jTextField1");
-
-        txt_cust_details_lastName.setText("jTextField1");
-
-        txt_cust_details_billAddr_street.setText("jTextField1");
-
-        txt_cust_details_billAddr_postCode.setText("jTextField4");
-
-        txt_cust_details_billAddr_suburb.setText("jTextField5");
-
         cbx_cust_details_billAddr_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA" }));
 
         btn_cust_details_proceed.setFont(new java.awt.Font("Tahoma", 0, 14));
@@ -215,15 +205,9 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_details_ABN.setText("ABN:");
 
-        btn_cust_details_ABN.setText("jTextField1");
-
         lbl_cust_details_shpAddr_street.setText("Delivery Steet Address:");
 
         lbl_cust_details_shpAddr_suburb.setText("Delivery Suburb:");
-
-        txt_cust_details_shpAddr_suburb.setText("jTextField5");
-
-        txt_cust_details_shpAddr_street.setText("jTextField1");
 
         cbx_cust_details_shpAddr_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA" }));
 
@@ -231,15 +215,9 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_details_shpAddr_postCode.setText("Delivery PostCode:");
 
-        txt_cust_details_shpAddr_postCode.setText("jTextField4");
-
         jLabel1.setText("Primary Phone Number:");
 
         jLabel2.setText("Alternative Phone Number:");
-
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
 
         javax.swing.GroupLayout panel_cust_detailsLayout = new javax.swing.GroupLayout(panel_cust_details);
         panel_cust_details.setLayout(panel_cust_detailsLayout);
@@ -271,41 +249,40 @@ public class Gui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                        .addComponent(txt_cust_details_shpAddr_postCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                            .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                                            .addGap(6, 6, 6)
-                                            .addComponent(btn_cust_details_proceed))
-                                        .addComponent(txt_cust_details_shpAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(6, 6, 6))
+                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_cust_details_billAddr_postCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbx_cust_details_billAddr_state, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cust_details_billAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
                                     .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txt_cust_details_firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(81, 81, 81)
-                                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(lbl_cust_details_lastName))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txt_cust_details_lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(btn_cust_details_ABN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)))
-                            .addContainerGap(192, Short.MAX_VALUE))
-                        .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                            .addComponent(cbx_cust_details_shpAddr_state, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap()))))
+                                        .addGap(6, 6, 6)
+                                        .addComponent(btn_cust_details_proceed))
+                                    .addComponent(txt_cust_details_shpAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6))
+                            .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_cust_details_billAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+                                .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+                                .addGroup(panel_cust_detailsLayout.createSequentialGroup()
+                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(btn_cust_details_ABN, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(txt_cust_details_firstName, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addGap(81, 81, 81)
+                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel2)
+                                        .addComponent(lbl_cust_details_lastName))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField2)
+                                        .addComponent(txt_cust_details_lastName, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)))
+                                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txt_cust_details_billAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbx_cust_details_billAddr_state, javax.swing.GroupLayout.Alignment.LEADING, 0, 97, Short.MAX_VALUE))))
+                        .addContainerGap(192, Short.MAX_VALUE))
+                    .addGroup(panel_cust_detailsLayout.createSequentialGroup()
+                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txt_cust_details_shpAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbx_cust_details_shpAddr_state, javax.swing.GroupLayout.Alignment.LEADING, 0, 97, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         panel_cust_detailsLayout.setVerticalGroup(
             panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,19 +449,16 @@ public class Gui extends javax.swing.JFrame {
                         .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_cust_order_listedCost_val, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lbl_cust_order_plusGST_val, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_cust_order_totalCost_val, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap(167, Short.MAX_VALUE))
+                            .addComponent(lbl_cust_order_totalCost_val, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(panel_cust_orderLayout.createSequentialGroup()
-                        .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_cust_orderLayout.createSequentialGroup()
-                                .addComponent(lbl_cust_order_welcome)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lbl_cust_order_firstName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_cust_order_welcome2))
-                            .addComponent(lbl_cust_order_pleaseDo)
-                            .addComponent(scrPane_cust_order_table, javax.swing.GroupLayout.PREFERRED_SIZE, 1132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(23, Short.MAX_VALUE))))
+                        .addComponent(lbl_cust_order_welcome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbl_cust_order_firstName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_cust_order_welcome2))
+                    .addComponent(lbl_cust_order_pleaseDo)
+                    .addComponent(scrPane_cust_order_table, javax.swing.GroupLayout.PREFERRED_SIZE, 1132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_cust_orderLayout.setVerticalGroup(
             panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -514,7 +488,7 @@ public class Gui extends javax.swing.JFrame {
                     .addComponent(btn_cust_order_removeLine)
                     .addComponent(btn_cust_order_proceed)
                     .addComponent(btn_cust_order_cancel))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_cust_order, "card3");
@@ -551,7 +525,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_jobStatus.setText("Job Status:");
 
-        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 18));
         lbl_doc_detail_taxInvoice.setText("lblTaxInvoice");
 
         tbl_cust_order1.setModel(new javax.swing.table.DefaultTableModel(
@@ -584,7 +558,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_plusGST.setText("Plus GST:");
 
-        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18));
         lbl_doc_detail_totalCost.setText("Total Cost:");
 
         lbl_doc_detail_listedCost_val.setText("$ListedCost");
@@ -593,7 +567,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_plusGST_val.setText("$GST");
 
-        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1, 18));
         lbl_doc_detail_totalCost_val.setText("$Total");
 
         lbl_doc_detail_supp_ABN_val.setText("111 222 333 44");
@@ -630,7 +604,7 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_doc_detailLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.DEFAULT_SIZE, 1011, Short.MAX_VALUE))
+                        .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE))
                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(panel_doc_detailLayout.createSequentialGroup()
@@ -676,7 +650,7 @@ public class Gui extends javax.swing.JFrame {
                                     .addComponent(lbl_doc_detail_cust_shpAddr_line1_val)
                                     .addComponent(lbl_doc_detail_cust_billAddr_line1_val)
                                     .addComponent(lbl_doc_detail_cust_billAddr_line2_val))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
                                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -843,7 +817,7 @@ public class Gui extends javax.swing.JFrame {
         tbl_job_list_mgr_changePrice.getColumnModel().getColumn(0).setResizable(false);
         tbl_job_list_mgr_changePrice.getColumnModel().getColumn(1).setResizable(false);
 
-        lbl_job_list_mgr_changePrice.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_job_list_mgr_changePrice.setFont(new java.awt.Font("Tahoma", 0, 12));
         lbl_job_list_mgr_changePrice.setText("Add or change the Price of Glass Types");
 
         btn_job_list_mgr_submitNewPrice.setText("Submit New Pricing");
@@ -957,8 +931,6 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_usr_login_password.setFont(new java.awt.Font("Tahoma", 0, 12));
         lbl_usr_login_password.setText("Password:");
-
-        txt_usr_login_password.setText("jTextField2");
 
         lbl_usr_login_loginType.setFont(new java.awt.Font("Tahoma", 0, 14));
         lbl_usr_login_loginType.setText("You are attempting to login as a:");
@@ -1650,6 +1622,7 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             
             
             btn_job_list_viewJobDetails.setVisible(true);
+            
             
             //hide manager buttons
             btn_job_list_mgr_addNewEmployee.setVisible(false);

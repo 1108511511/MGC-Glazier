@@ -11,6 +11,7 @@ public class MGCProject {
     /**
      * @param args the command line arguments
      */
+    /*
     public static void main(String[] args) {          
 //        try {
 //            Query.printFromTable("SELECT * FROM customer;");            
@@ -21,4 +22,6 @@ public class MGCProject {
         JobTable jt = new JobTable();
         jt.setVisible(true);
     }
+     
+     */
 }
