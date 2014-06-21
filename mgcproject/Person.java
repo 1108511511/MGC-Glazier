@@ -16,29 +16,28 @@ import java.util.List;
 public class Person {
     private String firstName;
     private String lastName;
-    private String setFirstName;
     
-    Person(){
+    Person() {
         firstName = "Not Set";
         lastName = "Not set";
     }
     
-    Person(String fName,String lName)
-    {
-        firstName = fName;
-        lastName = lName;
+    Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
     
-    public void setFirstName(String fname)
-    {
-        this.firstName = fname;
+    public void writeToTable() {
+        
     }
     
-    public String getFirstName()
-    {
-        return this.firstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
     
-}
+    public String getFirstName() {
+        return this.firstName;    
+    }
 
     /**
      * @return the lastName
@@ -54,23 +53,9 @@ public class Person {
         this.lastName = lastName;
     }
 
-    /**
-     * @return the setFirstName
-     */
-    public String getSetFirstName() {
-        return setFirstName;
-    }
-
-    /**
-     * @param setFirstName the setFirstName to set
-     */
-    public void setSetFirstName(String setFirstName) {
-        this.setFirstName = setFirstName;}
-    
     @Override
-    public String toString()
-    {
-    return "\n\nFirst Name: " + this.firstName + "\n Last Name: " + this.lastName;
+    public String toString() {
+        return "\n\nFirst Name: " + this.firstName + "\n Last Name: " + this.lastName;
     }
     
     public List getFields() {

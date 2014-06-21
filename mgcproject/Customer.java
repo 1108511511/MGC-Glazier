@@ -3,39 +3,35 @@ package mgcproject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer extends Person{
-    private int customerAbn;
+public class Customer extends Person {
+    private String customerAbn;
     private String baStreet;
     private String baSuburb;
     private String baState;
-    private int postCode;
-    private int phoneNu;
+    private String postCode;
+    private String phoneNu;
     
-    Customer(){
-        super();
-       
-    }
-    Customer(int customerABN, String fName, String lName, String baStreet, String baSuburb, String baState, int postCode, int phoneNu ){
-    super(fName,lName);
-    this.customerAbn = customerABN;
-    this.baState = baState;
-    this.baStreet = baStreet;
-    this.baSuburb = baSuburb;
-    this.phoneNu = phoneNu;
-    this.postCode = postCode;
+    Customer(String customerABN, String fName, String lName, String baStreet, String baSuburb, String baState, String postCode, String phoneNu ) {
+        super(fName,lName);
+        this.customerAbn = customerABN;
+        this.baState = baState;
+        this.baStreet = baStreet;
+        this.baSuburb = baSuburb;
+        this.phoneNu = phoneNu;
+        this.postCode = postCode;
     }
 
     /**
      * @return the managerId
      */
-    public int getCustomerABN() {
+    public String getCustomerABN() {
         return customerAbn;
     }
 
     /**
      * @param CustomerAbn the managerId to set
      */
-    public void setCustomerABN(int CustomerAbn) {
+    public void setCustomerABN(String CustomerAbn) {
         this.customerAbn = CustomerAbn;
     }
     @Override
@@ -49,5 +45,5 @@ public class Customer extends Person{
         list.add(phoneNu);
         list.add(postCode);
         return list;
-        }
+    }
 }

@@ -1,4 +1,3 @@
-//testing netbeans git integration
 package mgcproject;
 
 import java.sql.*;
@@ -15,7 +14,7 @@ public class Query {
     private static final String USER = "root";
     private static final String PASS = "";  
     
-    public static void printFromTable(String sqlString) throws SQLException {
+    public static void printFromTable(String sqlString) {
         try {
             Connection conn = getConnection();
             Statement stmt = conn.createStatement();
@@ -35,13 +34,13 @@ public class Query {
             stmt.close();
             conn.close();
         } catch(SQLException e) {
-            System.err.println("Read SQLException: " + e.getMessage());
+            System.err.println("Print SQLException: " + e.getMessage());
         }
     }
     
-    public static CachedRowSet readFromTable(String sqlString) throws SQLException {
-        CachedRowSet crs = new CachedRowSetImpl();
+    public static CachedRowSet readFromTable(String sqlString) {        
         try {
+            CachedRowSet crs = new CachedRowSetImpl();
             Connection conn = getConnection();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sqlString);            
@@ -57,7 +56,7 @@ public class Query {
         }
     }
     
-    public static void writeToTable(String sqlString) throws SQLException {
+    public static void writeToTable(String sqlString) {
         try {
             Connection conn = getConnection();
             Statement stmt = conn.createStatement();
@@ -81,7 +80,7 @@ public class Query {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             System.out.println("Connected to database");
         } catch(SQLException e) {
-            System.err.println("Write SQLException: " + e.getMessage());
+            System.err.println("Connection SQLException: " + e.getMessage());
             return null;
         }
         return conn;
