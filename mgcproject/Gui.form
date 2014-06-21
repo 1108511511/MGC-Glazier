@@ -479,51 +479,46 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btn_cust_order_confirmLine" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="btn_cust_order_removeLine" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="btn_cust_order_proceed" min="-2" pref="147" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="btn_cust_order_cancel" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+                                  <Component id="lbl_cust_order_totalCost" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lbl_cust_order_listedCost" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_plusGST" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbl_cust_order_listedCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_plusGST_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_totalCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="167" max="32767" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="scrPane_cust_order_table" alignment="0" min="-2" pref="856" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lbl_cust_order_welcome" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="lbl_cust_order_firstName" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lbl_cust_order_welcome2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="lbl_cust_order_pleaseDo" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="scrPane_cust_order_table" alignment="0" min="-2" pref="1132" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="194" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="181" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="btn_cust_order_confirmLine" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="btn_cust_order_removeLine" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="btn_cust_order_proceed" min="-2" pref="147" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="btn_cust_order_cancel" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="307" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="lbl_cust_order_plusGST" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_cust_order_listedCost" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_cust_order_totalCost" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lbl_cust_order_plusGST_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_cust_order_totalCost_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_cust_order_listedCost_val" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace pref="23" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -532,39 +527,36 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_cust_order_welcome" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_order_firstName" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_order_welcome2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_welcome" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lbl_cust_order_pleaseDo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="scrPane_cust_order_table" min="-2" pref="257" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_cust_order_listedCost" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_order_listedCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lbl_cust_order_plusGST" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_cust_order_plusGST_val" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_cust_order_totalCost" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_cust_order_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_plusGST_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_listedCost" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_totalCost" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_confirmLine" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_removeLine" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_proceed" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_cancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -745,9 +737,13 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="scrPnl_cust_order_table1" pref="1011" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" alignment="1" attributes="1">
                                   <EmptySpace max="32767" attributes="0"/>
@@ -759,155 +755,126 @@
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbl_doc_detail_payableOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_doc_detail_invoicedOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lbl_doc_detail_plusGST" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="lbl_doc_detail_payableOn_val" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="288" max="32767" attributes="0"/>
-                                  <Component id="btn_doc_detail_changeDiscount" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbl_doc_detail_lessDiscount" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lbl_doc_detail_totalCost" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="btn_doc_detail_changeDiscount" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbl_doc_detail_lessDiscount" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lbl_doc_detail_listedCost" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_plusGST" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lbl_doc_detail_listedCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_lessDiscount_val" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_plusGST_val" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_totalCost_val" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lbl_doc_detail_invoicedOn_val" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="515" max="32767" attributes="0"/>
-                                  <Component id="lbl_doc_detail_listedCost" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lbl_doc_detail_cust_billAddr" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_name" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_shpAddr" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lbl_doc_detail_cust_ABN_val" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_name_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_shpAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_shpAddr_line1_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_billAddr_line1_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_billAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="399" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_ABN" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_addr" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_jobStatus" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_glazier" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_ABN_val" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_addr_line1_val" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_deetail_jobStatus_val" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_glazier_val" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lbl_doc_detail_totalCost" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lbl_doc_detail_lessDiscount_val" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_doc_detail_listedCost_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_doc_detail_totalCost_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_doc_detail_plusGST_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="387" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
                           <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="scrPnl_cust_order_table1" min="-2" pref="927" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lbl_doc_detail_cust_billAddr" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_name" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_shpAddr" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_doc_detail_cust_shpAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_name_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_shpAddr_line1_val" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_ABN_val" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_billAddr_line1_val" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_cust_billAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="419" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lbl_doc_detail_supp_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_supp_name" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_supp_addr" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_jobStatus" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_glazier" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_doc_detail_supp_ABN_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_supp_name_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_supp_addr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_supp_addr_line1_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_deetail_jobStatus_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_glazier_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace pref="110" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_doc_detail_jobStatus" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_deetail_jobStatus_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_supp_name" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_supp_name_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_supp_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_supp_ABN_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_supp_addr" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_supp_addr_line1_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="lbl_doc_detail_supp_addr_line2_val" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_cust_name_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_cust_name" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_cust_ABN_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_cust_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_cust_billAddr_line1_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_cust_billAddr" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbl_doc_detail_cust_billAddr_line2_val" min="-2" pref="15" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbl_doc_detail_cust_shpAddr_line1_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
-                                      <Component id="lbl_doc_detail_cust_shpAddr" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="lbl_doc_detail_cust_shpAddr_line2_val" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_name_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_ABN_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_ABN_val" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_billAddr_line1_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_billAddr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_addr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_addr_line1_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_billAddr_line2_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_shpAddr_line1_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_shpAddr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_jobStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_deetail_jobStatus_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_shpAddr_line2_val" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_doc_detail_glazier" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_doc_detail_glazier_val" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="scrPnl_cust_order_table1" min="-2" pref="229" max="-2" attributes="0"/>
@@ -922,21 +889,21 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lbl_doc_detail_payableOn" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_doc_detail_payableOn_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_doc_detail_changeDiscount" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_doc_detail_lessDiscount_val" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_doc_detail_lessDiscount" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_lessDiscount_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_doc_detail_changeDiscount" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_doc_detail_plusGST_val" alignment="3" pref="21" max="32767" attributes="0"/>
                       <Component id="lbl_doc_detail_plusGST" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_plusGST_val" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_doc_detail_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_doc_detail_totalCost" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -992,11 +959,6 @@
             <Property name="text" type="java.lang.String" value="lblCustShpAddrLine1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_name">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Supplier:"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_ABN">
           <Properties>
             <Property name="text" type="java.lang.String" value="Supplier ABN:"/>
@@ -1015,7 +977,7 @@
         <Component class="javax.swing.JLabel" name="lbl_doc_detail_taxInvoice">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dialog" size="14" style="1"/>
+              <Font name="Dialog" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="lblTaxInvoice"/>
           </Properties>
@@ -1144,11 +1106,6 @@
             <Property name="text" type="java.lang.String" value="$Total"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_name_val">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Modern Glass Company"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_ABN_val">
           <Properties>
             <Property name="text" type="java.lang.String" value="111 222 333 44"/>
@@ -1157,11 +1114,6 @@
         <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_addr_line1_val">
           <Properties>
             <Property name="text" type="java.lang.String" value="XX Fakington St"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_addr_line2_val">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="TestTown, QLD, 0000"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_doc_deetail_jobStatus_val">
@@ -1204,6 +1156,21 @@
             <Property name="text" type="java.lang.String" value="lblGetGlazier"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modern Glass Company"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Supplier:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="TestTown, QLD, 4000"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="panel_job_list">
@@ -1221,13 +1188,13 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" min="-2" pref="609" max="-2" attributes="0"/>
+                              <Component id="scrPane_job_list_jobList" min="-2" pref="609" max="-2" attributes="0"/>
                               <Component id="lbl_job_list_jobList" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btn_job_list_mgr_viewJobDetails" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_job_list_viewJobDetails" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="btn_job_list_mgr_addNewEmployee" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1235,29 +1202,34 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_job_list_changePrice" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane3" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
-                              <Component id="lbl_job_list_stockLevels" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn_job_list_submitNewPrice" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lbl_job_list_mgr_currentTaxRate" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_job_list_mgr_newTaxRate" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txt_job_list_mgr_newTaxRate" pref="109" max="32767" attributes="0"/>
-                                      <Component id="lbl_job_list_mgr_currentTaxRate_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_job_list_stockLevels" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lbl_job_list_mgr_changePrice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="scrPane_job_list_mgr_changePrice" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                                  <Component id="scrPane_job_list_stockLevel" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                                  <Component id="btn_job_list_mgr_submitNewPrice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lbl_job_list_mgr_currentTaxRate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_job_list_mgr_newTaxRate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txt_job_list_mgr_newTaxRate" pref="109" max="32767" attributes="0"/>
+                                          <Component id="lbl_job_list_mgr_currentTaxRate_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
+                              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="btn_job_list_mgr_newTaxRate" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="btn_job_list_mgr_newTaxRate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -1267,20 +1239,20 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="lbl_job_list_jobList" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_job_list_stockLevels" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_job_list_jobList" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_job_list_stockLevels" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="1" attributes="1">
-                          <Component id="jScrollPane2" min="-2" pref="81" max="-2" attributes="0"/>
+                          <Component id="scrPane_job_list_stockLevel" min="-2" pref="81" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="lbl_job_list_changePrice" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_job_list_mgr_changePrice" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" min="-2" pref="89" max="-2" attributes="0"/>
+                          <Component id="scrPane_job_list_mgr_changePrice" min="-2" pref="89" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btn_job_list_submitNewPrice" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_job_list_mgr_submitNewPrice" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_job_list_mgr_currentTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1292,23 +1264,23 @@
                               <Component id="txt_job_list_mgr_newTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane1" min="-2" pref="330" max="-2" attributes="0"/>
+                      <Component id="scrPane_job_list_jobList" min="-2" pref="330" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btn_job_list_mgr_viewJobDetails" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_job_list_viewJobDetails" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btn_job_list_mgr_addNewEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_job_list_mgr_newTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="163" max="32767" attributes="0"/>
+                  <EmptySpace pref="117" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+        <Container class="javax.swing.JScrollPane" name="scrPane_job_list_jobList">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -1366,7 +1338,7 @@
             <Property name="text" type="java.lang.String" value="Stock Levels"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+        <Container class="javax.swing.JScrollPane" name="scrPane_job_list_stockLevel">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -1402,22 +1374,22 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="btn_job_list_mgr_viewJobDetails">
+        <Component class="javax.swing.JButton" name="btn_job_list_viewJobDetails">
           <Properties>
             <Property name="text" type="java.lang.String" value="View Job Details"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_mgr_viewJobDetailsActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_viewJobDetailsActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+        <Container class="javax.swing.JScrollPane" name="scrPane_job_list_mgr_changePrice">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tbl_job_list_glassPrice">
+            <Component class="javax.swing.JTable" name="tbl_job_list_mgr_changePrice">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="2" rowCount="2">
@@ -1446,7 +1418,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="lbl_job_list_changePrice">
+        <Component class="javax.swing.JLabel" name="lbl_job_list_mgr_changePrice">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
@@ -1454,7 +1426,7 @@
             <Property name="text" type="java.lang.String" value="Add or change the Price of Glass Types"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_job_list_submitNewPrice">
+        <Component class="javax.swing.JButton" name="btn_job_list_mgr_submitNewPrice">
           <Properties>
             <Property name="text" type="java.lang.String" value="Submit New Pricing"/>
           </Properties>
