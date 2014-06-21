@@ -115,8 +115,8 @@ public class Job {
     /** 
      * testing cacheJobList
      * <p>
-     * to test in main method, use Job.cacheJobList(); and then 
-     * Job.printCacheJobList();
+     * to test in main method, use Job.getJobList(); and then 
+     * Job.printJobList();
      */
     public static void printJobList() {
         System.out.println(jobsList.size());
