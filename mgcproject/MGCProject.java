@@ -1,6 +1,7 @@
 package mgcproject;
 
 import java.sql.SQLException;
+import java.util.*;
 
 /**
  *
@@ -12,7 +13,8 @@ public class MGCProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {          
-        Employee e = new Employee("Pete", "Cornell", "manager", "password");
-        System.out.println(e.getEmployeeId());
+        Employee e = new Employee("Rustin", "Cole", "SalesPerson", "flatcircle");
+        Employee.writeToDB(e);
+        Query.printFromTable(SQLStatements.selectEmployeeListStmt());
     }
 }

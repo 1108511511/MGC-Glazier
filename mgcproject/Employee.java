@@ -60,12 +60,39 @@ public class Employee extends Person {
         this.employeeId = employeeId;
     }
     
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public static void writeToDB(Employee e) {
+        List<Object> l = e.getFields();
+        int employeeId = (int)l.get(0);
+        String firstName = (String)l.get(1);
+        String lastName = (String)l.get(2);
+        String role = (String)l.get(3);
+        String password = (String)l.get(4);
+        
+        Query.writeToTable(SQLStatements.insertEmployeeStmt(employeeId, firstName, lastName, role, password));
+    }
+    
     @Override
     public List getFields(){
         List<Object> list = new ArrayList<Object>();
-        list = super.getFields();
-        list.add(employeeRole);
         list.add(employeeId);
+        list.add(super.getFirstName());
+        list.add(super.getLastName());
+        list.add(employeeRole);
+        list.add(password);
         return list;          
     }
     

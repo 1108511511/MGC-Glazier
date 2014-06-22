@@ -10,9 +10,8 @@ package mgcproject;
 *
 * @author Daniel Bassett
 */
-public class SQLStatements {
-    
-    
+public class SQLStatements { 
+ 
     // SELECT FROM TABLE
     public static String selectProductListStmt(int jobID) {
         String statement = ("SELECT * FROM product WHERE job_id = " + jobID);
@@ -90,10 +89,14 @@ public class SQLStatements {
         return statement;
     }
     
-//    public static String insertNewEmployeeStmt(
-//            int employeeId, String firstName, 
-//            String lastName, String employeeRole) {
-//        
-//    }
+    public static String insertEmployeeStmt(
+            int employeeId, String firstName, 
+            String lastName, String employeeRole, String password) {
+        String statement = "INSERT INTO employee "
+                + "VALUES('" + employeeId + "','" + firstName
+                + "','" + lastName + "','" + employeeRole + "','" 
+                + password + "')";
+        return statement;
+    }
 
 }
