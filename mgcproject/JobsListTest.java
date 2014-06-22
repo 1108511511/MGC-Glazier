@@ -1,7 +1,5 @@
-package mgcproject;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
+package mgcproject;
 
 /**
  *
@@ -20,5 +18,7 @@ public class JobsListTest {
         Job.getJobList();
         Job.printJobList();
         Job.printProductList(1);
+
     }
 }
+

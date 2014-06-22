@@ -25,8 +25,8 @@ public class Job {
     private String customerABN;
     private String custFirstName;
     private String custLastName;
-    private static ArrayList<Job> jobsList = new ArrayList<>();
-    private static ArrayList<Product> productList = new ArrayList<>();
+    private static ArrayList<Job> jobsList = new ArrayList<Job>();
+    private static ArrayList<Product> productList = new ArrayList<Product>();
     private static Customer customer;
 
     // constructors

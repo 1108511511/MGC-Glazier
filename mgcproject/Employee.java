@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.sql.rowset.CachedRowSet;
 
+
 /**
  *
  * @author 1108511511
@@ -20,11 +21,13 @@ public class Employee extends Person {
     private int employeeId;
     private String employeeRole;
     private String password;
+
     
     Employee() {
         super();
         employeeId = 0;
     }
+
     
     Employee(String firstName, String lastName, String employeeRole, String password) {
         super(firstName,lastName);

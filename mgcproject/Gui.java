@@ -115,6 +115,7 @@ public class Gui extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        btn_doc_detail_takeJob = new javax.swing.JButton();
         panel_job_list = new javax.swing.JPanel();
         scrPane_job_list_jobList = new javax.swing.JScrollPane();
         tbl_job_list_jobList = new javax.swing.JTable();
@@ -193,16 +194,6 @@ public class Gui extends javax.swing.JFrame {
         lbl_cust_details_welcome.setFont(new java.awt.Font("Tahoma", 0, 14));
         lbl_cust_details_welcome.setText("Welcome valued Customer! Please Enter your details and click proceed to begin!");
 
-        txt_cust_details_firstName.setText("jTextField1");
-
-        txt_cust_details_lastName.setText("jTextField1");
-
-        txt_cust_details_billAddr_street.setText("jTextField1");
-
-        txt_cust_details_billAddr_postCode.setText("jTextField4");
-
-        txt_cust_details_billAddr_suburb.setText("jTextField5");
-
         cbx_cust_details_billAddr_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA" }));
 
         btn_cust_details_proceed.setFont(new java.awt.Font("Tahoma", 0, 14));
@@ -215,15 +206,9 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_details_ABN.setText("ABN:");
 
-        btn_cust_details_ABN.setText("jTextField1");
-
         lbl_cust_details_shpAddr_street.setText("Delivery Steet Address:");
 
         lbl_cust_details_shpAddr_suburb.setText("Delivery Suburb:");
-
-        txt_cust_details_shpAddr_suburb.setText("jTextField5");
-
-        txt_cust_details_shpAddr_street.setText("jTextField1");
 
         cbx_cust_details_shpAddr_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA" }));
 
@@ -231,15 +216,9 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_details_shpAddr_postCode.setText("Delivery PostCode:");
 
-        txt_cust_details_shpAddr_postCode.setText("jTextField4");
-
         jLabel1.setText("Primary Phone Number:");
 
         jLabel2.setText("Alternative Phone Number:");
-
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
 
         javax.swing.GroupLayout panel_cust_detailsLayout = new javax.swing.GroupLayout(panel_cust_details);
         panel_cust_details.setLayout(panel_cust_detailsLayout);
@@ -271,41 +250,40 @@ public class Gui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                        .addComponent(txt_cust_details_shpAddr_postCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                            .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                                            .addGap(6, 6, 6)
-                                            .addComponent(btn_cust_details_proceed))
-                                        .addComponent(txt_cust_details_shpAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(6, 6, 6))
+                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_cust_details_billAddr_postCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbx_cust_details_billAddr_state, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cust_details_billAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
                                     .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txt_cust_details_firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(81, 81, 81)
-                                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(lbl_cust_details_lastName))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txt_cust_details_lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(btn_cust_details_ABN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)))
-                            .addContainerGap(192, Short.MAX_VALUE))
-                        .addGroup(panel_cust_detailsLayout.createSequentialGroup()
-                            .addComponent(cbx_cust_details_shpAddr_state, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap()))))
+                                        .addGap(6, 6, 6)
+                                        .addComponent(btn_cust_details_proceed))
+                                    .addComponent(txt_cust_details_shpAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6))
+                            .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_cust_details_billAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+                                .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+                                .addGroup(panel_cust_detailsLayout.createSequentialGroup()
+                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(btn_cust_details_ABN, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(txt_cust_details_firstName, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addGap(81, 81, 81)
+                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel2)
+                                        .addComponent(lbl_cust_details_lastName))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField2)
+                                        .addComponent(txt_cust_details_lastName, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)))
+                                .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txt_cust_details_billAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbx_cust_details_billAddr_state, javax.swing.GroupLayout.Alignment.LEADING, 0, 97, Short.MAX_VALUE))))
+                        .addContainerGap(192, Short.MAX_VALUE))
+                    .addGroup(panel_cust_detailsLayout.createSequentialGroup()
+                        .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txt_cust_details_shpAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbx_cust_details_shpAddr_state, javax.swing.GroupLayout.Alignment.LEADING, 0, 97, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         panel_cust_detailsLayout.setVerticalGroup(
             panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,19 +450,16 @@ public class Gui extends javax.swing.JFrame {
                         .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_cust_order_listedCost_val, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lbl_cust_order_plusGST_val, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_cust_order_totalCost_val, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap(167, Short.MAX_VALUE))
+                            .addComponent(lbl_cust_order_totalCost_val, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(panel_cust_orderLayout.createSequentialGroup()
-                        .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_cust_orderLayout.createSequentialGroup()
-                                .addComponent(lbl_cust_order_welcome)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lbl_cust_order_firstName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_cust_order_welcome2))
-                            .addComponent(lbl_cust_order_pleaseDo)
-                            .addComponent(scrPane_cust_order_table, javax.swing.GroupLayout.PREFERRED_SIZE, 1132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(23, Short.MAX_VALUE))))
+                        .addComponent(lbl_cust_order_welcome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbl_cust_order_firstName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_cust_order_welcome2))
+                    .addComponent(lbl_cust_order_pleaseDo)
+                    .addComponent(scrPane_cust_order_table, javax.swing.GroupLayout.PREFERRED_SIZE, 1132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_cust_orderLayout.setVerticalGroup(
             panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -514,7 +489,7 @@ public class Gui extends javax.swing.JFrame {
                     .addComponent(btn_cust_order_removeLine)
                     .addComponent(btn_cust_order_proceed)
                     .addComponent(btn_cust_order_cancel))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_cust_order, "card3");
@@ -522,6 +497,11 @@ public class Gui extends javax.swing.JFrame {
         panel_doc_detail.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 panel_doc_detailFocusGained(evt);
+            }
+        });
+        panel_doc_detail.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                panel_doc_detailPropertyChange(evt);
             }
         });
 
@@ -551,7 +531,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_jobStatus.setText("Job Status:");
 
-        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 18));
         lbl_doc_detail_taxInvoice.setText("lblTaxInvoice");
 
         tbl_cust_order1.setModel(new javax.swing.table.DefaultTableModel(
@@ -584,7 +564,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_plusGST.setText("Plus GST:");
 
-        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18));
         lbl_doc_detail_totalCost.setText("Total Cost:");
 
         lbl_doc_detail_listedCost_val.setText("$ListedCost");
@@ -593,7 +573,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_plusGST_val.setText("$GST");
 
-        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1, 18));
         lbl_doc_detail_totalCost_val.setText("$Total");
 
         lbl_doc_detail_supp_ABN_val.setText("111 222 333 44");
@@ -611,6 +591,11 @@ public class Gui extends javax.swing.JFrame {
         lbl_doc_detail_payableOn_val.setText("lblPayableDate");
 
         btn_doc_detail_changeDiscount.setText("Change Discount %");
+        btn_doc_detail_changeDiscount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_doc_detail_changeDiscountActionPerformed(evt);
+            }
+        });
 
         lbl_doc_detail_glazier.setText("Glazier:");
 
@@ -622,6 +607,18 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel5.setText("TestTown, QLD, 4000");
 
+        btn_doc_detail_takeJob.setText("Take Job");
+        btn_doc_detail_takeJob.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_doc_detail_takeJobActionPerformed(evt);
+            }
+        });
+        btn_doc_detail_takeJob.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                btn_doc_detail_takeJobPropertyChange(evt);
+            }
+        });
+
         javax.swing.GroupLayout panel_doc_detailLayout = new javax.swing.GroupLayout(panel_doc_detail);
         panel_doc_detail.setLayout(panel_doc_detailLayout);
         panel_doc_detailLayout.setHorizontalGroup(
@@ -630,7 +627,7 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_doc_detailLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.DEFAULT_SIZE, 1011, Short.MAX_VALUE))
+                        .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE))
                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(panel_doc_detailLayout.createSequentialGroup()
@@ -676,7 +673,7 @@ public class Gui extends javax.swing.JFrame {
                                     .addComponent(lbl_doc_detail_cust_shpAddr_line1_val)
                                     .addComponent(lbl_doc_detail_cust_billAddr_line1_val)
                                     .addComponent(lbl_doc_detail_cust_billAddr_line2_val))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
                                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -690,8 +687,10 @@ public class Gui extends javax.swing.JFrame {
                                             .addComponent(jLabel3)
                                             .addComponent(lbl_doc_detail_supp_ABN_val)
                                             .addComponent(lbl_doc_detail_supp_addr_line1_val)
-                                            .addComponent(lbl_doc_deetail_jobStatus_val)
-                                            .addComponent(lbl_doc_detail_glazier_val)))
+                                            .addComponent(lbl_doc_detail_glazier_val)
+                                            .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(btn_doc_detail_takeJob)
+                                                .addComponent(lbl_doc_deetail_jobStatus_val))))
                                     .addComponent(jLabel5)))))
                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                         .addGap(436, 436, 436)
@@ -734,7 +733,9 @@ public class Gui extends javax.swing.JFrame {
                     .addComponent(lbl_doc_detail_cust_shpAddr_line2_val)
                     .addComponent(lbl_doc_detail_glazier)
                     .addComponent(lbl_doc_detail_glazier_val))
-                .addGap(66, 66, 66)
+                .addGap(18, 18, 18)
+                .addComponent(btn_doc_detail_takeJob)
+                .addGap(23, 23, 23)
                 .addComponent(lbl_doc_detail_taxInvoice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -763,6 +764,12 @@ public class Gui extends javax.swing.JFrame {
         );
 
         getContentPane().add(panel_doc_detail, "card3");
+
+        panel_job_list.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                panel_job_listPropertyChange(evt);
+            }
+        });
 
         tbl_job_list_jobList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -843,10 +850,15 @@ public class Gui extends javax.swing.JFrame {
         tbl_job_list_mgr_changePrice.getColumnModel().getColumn(0).setResizable(false);
         tbl_job_list_mgr_changePrice.getColumnModel().getColumn(1).setResizable(false);
 
-        lbl_job_list_mgr_changePrice.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_job_list_mgr_changePrice.setFont(new java.awt.Font("Tahoma", 0, 12));
         lbl_job_list_mgr_changePrice.setText("Add or change the Price of Glass Types");
 
         btn_job_list_mgr_submitNewPrice.setText("Submit New Pricing");
+        btn_job_list_mgr_submitNewPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_job_list_mgr_submitNewPriceActionPerformed(evt);
+            }
+        });
 
         btn_job_list_mgr_addNewEmployee.setText("Add New Employee");
         btn_job_list_mgr_addNewEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -958,8 +970,6 @@ public class Gui extends javax.swing.JFrame {
         lbl_usr_login_password.setFont(new java.awt.Font("Tahoma", 0, 12));
         lbl_usr_login_password.setText("Password:");
 
-        txt_usr_login_password.setText("jTextField2");
-
         lbl_usr_login_loginType.setFont(new java.awt.Font("Tahoma", 0, 14));
         lbl_usr_login_loginType.setText("You are attempting to login as a:");
 
@@ -974,6 +984,11 @@ public class Gui extends javax.swing.JFrame {
         });
 
         btn_usr_login_cancel.setText("Cancel");
+        btn_usr_login_cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_usr_login_cancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_usr_loginLayout = new javax.swing.GroupLayout(panel_usr_login);
         panel_usr_login.setLayout(panel_usr_loginLayout);
@@ -1038,6 +1053,11 @@ public class Gui extends javax.swing.JFrame {
         });
 
         btn_new_employee_addNewEmployee.setText("Add New Employee");
+        btn_new_employee_addNewEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_new_employee_addNewEmployeeActionPerformed(evt);
+            }
+        });
 
         lbl_new_employee_pleaseEnter.setFont(new java.awt.Font("Tahoma", 0, 14));
         lbl_new_employee_pleaseEnter.setText("Please enter the details for the new Employee.");
@@ -1194,13 +1214,14 @@ public class Gui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void btn_cust_order_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_cancelActionPerformed
-//TODO save quotation data as uncommited!asdf
+//TODO save data to DB as uncommited (job class responsibility?)
     displayPanel(panel_cust_details);
     
 }//GEN-LAST:event_btn_cust_order_cancelActionPerformed
 
 private void btn_cust_order_removeLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_removeLineActionPerformed
-// TODO add your handling code here:
+    //TODO remove a previously created product from ArrayList
+    //TODO call hackTable to shrink table
 }//GEN-LAST:event_btn_cust_order_removeLineActionPerformed
 
 private void menu_item_cust_detailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_cust_detailsActionPerformed
@@ -1208,46 +1229,47 @@ private void menu_item_cust_detailsActionPerformed(java.awt.event.ActionEvent ev
 }//GEN-LAST:event_menu_item_cust_detailsActionPerformed
 
 private void menu_item_cust_orderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_cust_orderActionPerformed
-// TODO add your handling code here:
+
     displayPanel(panel_cust_order);
 }//GEN-LAST:event_menu_item_cust_orderActionPerformed
 
 private void menu_item_cust_docDetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_cust_docDetailActionPerformed
-// TODO add your handling code here:
+
     displayPanel(panel_doc_detail);
 }//GEN-LAST:event_menu_item_cust_docDetailActionPerformed
 
 private void btn_cust_order_proceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_proceedActionPerformed
-// TODO add your handling code here:
+    //TODO create a new job class and save to DB If not jobClass then create new method
     displayPanel(panel_doc_detail);
 }//GEN-LAST:event_btn_cust_order_proceedActionPerformed
 
 private void menu_item_changeUser_managerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_changeUser_managerActionPerformed
-// TODO add your handling code here:
+
      displayPanel(panel_usr_login);
 }//GEN-LAST:event_menu_item_changeUser_managerActionPerformed
 
 private void menu_item_changeUser_salesPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_changeUser_salesPersonActionPerformed
-// TODO add your handling code here:
+
      displayPanel(panel_usr_login);
 }//GEN-LAST:event_menu_item_changeUser_salesPersonActionPerformed
 
 private void menu_item_changeUser_glazierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_changeUser_glazierActionPerformed
-// TODO add your handling code here:
+
     displayPanel(panel_usr_login);
 }//GEN-LAST:event_menu_item_changeUser_glazierActionPerformed
 
 private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_changeUser_customerActionPerformed
-// TODO add your handling code here:
+
     displayPanel(panel_usr_login);
 }//GEN-LAST:event_menu_item_changeUser_customerActionPerformed
 
     private void menu_item_mgr_reportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_mgr_reportsActionPerformed
-        // TODO add your handling code here:
+
         displayPanel(panel_job_list);
     }//GEN-LAST:event_menu_item_mgr_reportsActionPerformed
 
     private void btn_usr_login_fireLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_usr_login_fireLoginActionPerformed
+        //TODO search DB for employee that matches login credentials, replacing below code.
         System.out.println("userLogin button fires!");
         System.out.println(txt_usr_login_employeeID.getText());
         System.out.println(txt_usr_login_password.getText());
@@ -1269,60 +1291,102 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
     }//GEN-LAST:event_btn_usr_login_fireLoginActionPerformed
 
     private void btn_job_list_viewJobDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_job_list_viewJobDetailsActionPerformed
-        // TODO add your handling code here:
+        displayPanel(panel_doc_detail);
+        //TODO modify panel_doc_detail to allow user to return to this screen with a close button or something
     }//GEN-LAST:event_btn_job_list_viewJobDetailsActionPerformed
-
+        
     private void txt_job_list_mgr_newTaxRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_job_list_mgr_newTaxRateActionPerformed
-        // TODO add your handling code here:
+        //EMPTY - CANNOT DELTE - PLEASE IGNORE
     }//GEN-LAST:event_txt_job_list_mgr_newTaxRateActionPerformed
 
     private void btn_job_list_mgr_newTaxRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_job_list_mgr_newTaxRateActionPerformed
-        // TODO add your handling code here:
+        //TODO overwrite the existing system tax rate with a new one, update all jobs in memory
     }//GEN-LAST:event_btn_job_list_mgr_newTaxRateActionPerformed
 
     private void menu_item_mgr_addEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_mgr_addEmployeeActionPerformed
-        // TODO add your handling code here:
+
         displayPanel(panel_new_employee);
     }//GEN-LAST:event_menu_item_mgr_addEmployeeActionPerformed
 
     private void btn_job_list_mgr_addNewEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_job_list_mgr_addNewEmployeeActionPerformed
-        // TODO add your handling code here:
+
         displayPanel(panel_new_employee);
     }//GEN-LAST:event_btn_job_list_mgr_addNewEmployeeActionPerformed
 
     private void btn_cust_details_proceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_details_proceedActionPerformed
-        // TODO add save customer details data!
+
+        if (!checkCustomer()) {
+            addCustomer();
+        }
         displayPanel(panel_cust_order);
     }//GEN-LAST:event_btn_cust_details_proceedActionPerformed
 
     private void btn_cust_order_confirmLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_confirmLineActionPerformed
-        // TODO add your handling code here:
+       //TODO call addProduct (or job class method?) to add a new product
        hackTable(tbl_cust_order, scrPane_cust_order_table, true);
     }//GEN-LAST:event_btn_cust_order_confirmLineActionPerformed
 
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_formWindowStateChanged
 
     private void panel_doc_detailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_panel_doc_detailFocusGained
-        // TODO add your handling code here:
+
         
     }//GEN-LAST:event_panel_doc_detailFocusGained
 
     private void panel_cust_orderFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_panel_cust_orderFocusGained
-        // TODO add your handling code here:
+
         
     }//GEN-LAST:event_panel_cust_orderFocusGained
 
     private void panel_cust_orderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_panel_cust_orderPropertyChange
-        // TODO add your handling code here:
+        //TODO modify the label to display customers first name
+        //TODO modify the table to display the current job (ifExists)
+        //TODO modify the price labels to display the current job info
         hackTable(tbl_cust_order, scrPane_cust_order_table, false);
          
     }//GEN-LAST:event_panel_cust_orderPropertyChange
 
 private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_new_employee_employeeNameActionPerformed
-// TODO add your handling code here:
+
 }//GEN-LAST:event_txt_new_employee_employeeNameActionPerformed
+
+private void panel_doc_detailPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_panel_doc_detailPropertyChange
+// TODO modify all labels to display correct data from current job and customer classes
+// TODO get product details of job and display in read-only table
+}//GEN-LAST:event_panel_doc_detailPropertyChange
+
+private void btn_doc_detail_changeDiscountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_doc_detail_changeDiscountActionPerformed
+// TODO get new discount value (do we need a table for this? or a JDialogue box?)
+// TODO update label with new discount value and save to job
+}//GEN-LAST:event_btn_doc_detail_changeDiscountActionPerformed
+
+private void btn_doc_detail_takeJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_doc_detail_takeJobActionPerformed
+// TODO update the labels to reflect the data of the logged on employee
+// TODO save the new glazier to the DB for that job
+}//GEN-LAST:event_btn_doc_detail_takeJobActionPerformed
+
+private void btn_doc_detail_takeJobPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_btn_doc_detail_takeJobPropertyChange
+
+}//GEN-LAST:event_btn_doc_detail_takeJobPropertyChange
+
+private void btn_job_list_mgr_submitNewPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_job_list_mgr_submitNewPriceActionPerformed
+// TODO update the price of glass type in DB and update any jobs in memory to reflect change.
+}//GEN-LAST:event_btn_job_list_mgr_submitNewPriceActionPerformed
+
+private void panel_job_listPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_panel_job_listPropertyChange
+// TODO get list of open jobs based on userType
+// TODO pull the correct stock level and pricing data from the DB
+}//GEN-LAST:event_panel_job_listPropertyChange
+
+private void btn_usr_login_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_usr_login_cancelActionPerformed
+// TODO return user to previous screen
+}//GEN-LAST:event_btn_usr_login_cancelActionPerformed
+
+private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_new_employee_addNewEmployeeActionPerformed
+// TODO check DB for existing Employee and then add one to DB if false.
+}//GEN-LAST:event_btn_new_employee_addNewEmployeeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1369,6 +1433,7 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
     private javax.swing.JButton btn_cust_order_proceed;
     private javax.swing.JButton btn_cust_order_removeLine;
     private javax.swing.JButton btn_doc_detail_changeDiscount;
+    private javax.swing.JButton btn_doc_detail_takeJob;
     private javax.swing.JButton btn_job_list_mgr_addNewEmployee;
     private javax.swing.JButton btn_job_list_mgr_newTaxRate;
     private javax.swing.JButton btn_job_list_mgr_submitNewPrice;
@@ -1566,14 +1631,28 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
     /******************************************************************
      * Modifies the visible components of the GUI based on the userType
      * 
+     * <p>
+     * ---------------------------NICE TO ADD--------------------------
+     * Improve efficiency by iterating over variable names with "*mgr*"
+     * Implement access levels over user types...better structure.
+     * ---------------------------------------------------------------
+     * </p>
+     * 
+     * <p>
+     * --------------------------KNOWN BUGS!!!-------------------------
+     * 1:
+     * Currently there is no way to handle an incorrect user input.
+     * Nothing will happen, and the user will just need to re enter the 
+     * correct information.
+     * Will implement if i have time. (Donovan)
+     * -----------------------------------------------------------------
+     * 
      * @author Donovan Crichton
      * @param userType - String to denote the type or role of the user.
      * @return void.
      * @see btn_usr_login_fireLoginActionPerformed()
      * 
-     * @TODO Specifically hide individual components on forms per type.
-     * @TODO Improve efficiency by iterating over variable names with "*mgr*"
-     * @TODO Implement access levels over user types...better structure.
+     * @TODO Add in the glazier takeJob button to panel_doc_detail
     *******************************************************************/
     private void modifyGuiForUsr(String userType) {
         //System.out.println("modifyGuiForUsr fires!");
@@ -1607,6 +1686,9 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             //show manager specific text fields
             txt_job_list_mgr_newTaxRate.setVisible(true);
             
+            //hide Glazier button
+            btn_doc_detail_takeJob.setVisible(false);
+            
         }
         else if (userType.equalsIgnoreCase("Sales")) {
             displayPanel(panel_job_list);
@@ -1639,6 +1721,9 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             //hide manager specific text fields
             txt_job_list_mgr_newTaxRate.setVisible(false);
             
+            //hide glazier button
+            btn_doc_detail_takeJob.setVisible(false);
+            
         }
         else if (userType.equalsIgnoreCase("Glazier")) {
             displayPanel(panel_job_list);
@@ -1650,6 +1735,7 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             
             
             btn_job_list_viewJobDetails.setVisible(true);
+            btn_doc_detail_takeJob.setVisible(true);
             
             //hide manager buttons
             btn_job_list_mgr_addNewEmployee.setVisible(false);
@@ -1681,6 +1767,12 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
             menu_head_manager.setVisible(false);
             menu_head_sales.setVisible(false);
             menu_head_glazier.setVisible(false);
+            
+            //hide glazier button
+            btn_doc_detail_takeJob.setVisible(false);
+            
+            //hide sales specific buttons
+            btn_doc_detail_changeDiscount.setVisible(false);
             
         }
         
@@ -1714,6 +1806,7 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
      * cell in the table once they have entered the data). This can be fixed
      * by checking the current editing cell and pulling data from it.
      * Will implement fix if I have time (Donovan).
+     * -----------------------------------------------------------------
      * </p>
      * 
      * @author Donovan Crichton
@@ -1721,7 +1814,10 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
      * @param scrollpane - JScrollPane object assosicated with table.
      * @return void.
      * @see btn_cust_order_confirmLineActionPerformed(...)
+     * @see btn_cust_order_removeLineActionPerformed(...)
      * @see panel_cust_orderPropertyChange(...)
+     * 
+     * @TODO modify hackTable so that it can account for line removals too
      *******************************************************************/
     private void hackTable(javax.swing.JTable table, 
                                 javax.swing.JScrollPane scrollpane,
@@ -1788,5 +1884,68 @@ private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionE
         //update the scrollpane - not sure if this is necessary?
         scrollpane.getViewport().add(table);
     }
+     
+     /******************************************************************
+     * Check to see if the customer already exists in the database
+     * 
+     * <p>
+     * This method will check all the txtFields from panel_cust_details for a
+     * match again the customer databse (or alternatively, if we load all the
+     * customers in memory first, it just needs to check the customer classes
+     * in memory - left up to programmer to decide how to implement).
+     * This will avoid adding new customers where one already exists.
+     * <p>
+     * 
+     * <p>
+     * -------------------------------IDEAS-----------------------------
+     * consider how you want to implement the search algorithm, if it is
+     * common to other searches (employee, product, job, user etc) then
+     * maybe we can abstract it out and just feed it parameters
+     * -----------------------------------------------------------------
+     * </p>
+     * 
+     * @author PLEASE ENTER
+     * @param list the parameters and a description here
+     * @return boolean - true if the customer exists
+     * @see btn_cust_details_proceedActionPerformed(...)
+     * 
+     * @TODO implement the checkCustomer method if not in Customer Class
+     *******************************************************************/
+    private boolean checkCustomer() {
+        //TODO correct this return flag based on result.
+        return false;
+    }
+    
+    /******************************************************************
+     * Adds a new customer class (can add to database as well?)
+     * 
+     * <p>
+     * This method should add a new customer class with the details obtained
+     * from the text fields in panel_cust_details. The customer class should
+     * ideally be responsibile for then saving the class back to the DB - but
+     * depending on time we may needs to just save it from here.
+     * <p>
+     * 
+     * <p>
+     * -------------------------------IDEAS-----------------------------
+     * consider how you want to implement the search algorithm, if it is
+     * common to other searches (employee, product, job, user etc) then
+     * maybe we can abstract it out and just feed it parameters
+     * -----------------------------------------------------------------
+     * </p>
+     * 
+     * @author PLEASE ENTER
+     * @param list the parameters and a description here
+     * @return void 
+     * @see btn_cust_details_proceedActionPerformed(...)
+     * 
+     * @TODO implement the addCustomer method if not in Customer Class
+     *******************************************************************/
+    private void addCustomer() {
+        
+    }
+    
+    
+    
 }
 
