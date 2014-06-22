@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="navMenuBar">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="menu_head_customer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Customer"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_cust_details">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enter Customer Details"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_cust_detailsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_cust_order">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enter Order Details"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_cust_orderActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_cust_docDetail">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Document Details"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_cust_docDetailActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_head_manager">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Manager"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_mgr_reports">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Management Overview"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_mgr_reportsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_mgr_addEmployee">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add a new Employee"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_mgr_addEmployeeActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_head_sales">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sales"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_sales_viewQuotes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Quotes"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_head_glazier">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Glazier"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_glazier_workList">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Open Jobs"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_head_changeUser">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Change User"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_changeUser_manager">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Manager"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_changeUser_managerActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_changeUser_salesPerson">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salesperson"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_changeUser_salesPersonActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_changeUser_glazier">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Glazier"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_changeUser_glazierActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menu_item_changeUser_customer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_item_changeUser_customerActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="navMenuBar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowStateChanged" listener="java.awt.event.WindowStateListener" parameters="java.awt.event.WindowEvent" handler="formWindowStateChanged"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,57,0,0,4,38"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="panel_cust_details">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card2"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="309" max="32767" attributes="0"/>
+                  <Component id="lbl_cust_details_welcome" min="-2" pref="593" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="lbl_cust_details_billAddr_postCode" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_billAddr_state" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_billAddr_suburb" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_firstName" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_billAddr_street" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_shpAddr_street" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lbl_cust_details_shpAddr_postCode" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_cust_details_shpAddr_suburb" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Component id="lbl_cust_details_shpAddr_state" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="btn_cust_details_proceed" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="txt_cust_details_shpAddr_suburb" min="-2" pref="199" max="-2" attributes="1"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                  <Component id="txt_cust_details_billAddr_suburb" alignment="0" min="-2" pref="222" max="-2" attributes="1"/>
+                                  <Component id="txt_cust_details_billAddr_street" pref="665" max="32767" attributes="1"/>
+                                  <Component id="txt_cust_details_shpAddr_street" alignment="0" pref="665" max="32767" attributes="1"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="btn_cust_details_ABN" alignment="0" max="32767" attributes="1"/>
+                                          <Component id="jTextField1" alignment="0" pref="152" max="32767" attributes="1"/>
+                                          <Component id="txt_cust_details_firstName" alignment="0" max="32767" attributes="1"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_cust_details_lastName" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jTextField2" max="32767" attributes="1"/>
+                                          <Component id="txt_cust_details_lastName" alignment="0" pref="178" max="32767" attributes="1"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="txt_cust_details_billAddr_postCode" alignment="0" max="32767" attributes="1"/>
+                                      <Component id="cbx_cust_details_billAddr_state" alignment="0" pref="97" max="32767" attributes="1"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="192" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="txt_cust_details_shpAddr_postCode" alignment="0" max="32767" attributes="1"/>
+                              <Component id="cbx_cust_details_shpAddr_state" alignment="0" pref="97" max="32767" attributes="1"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbl_cust_details_welcome" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_details_firstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_firstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_lastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_lastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_cust_details_billAddr_street" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_billAddr_street" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_cust_details_billAddr_suburb" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_billAddr_suburb" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cbx_cust_details_billAddr_state" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_billAddr_state" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_cust_details_billAddr_postCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_billAddr_postCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_details_shpAddr_street" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_shpAddr_street" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_details_shpAddr_suburb" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_shpAddr_suburb" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_details_shpAddr_state" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbx_cust_details_shpAddr_state" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_details_shpAddr_postCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_shpAddr_postCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="btn_cust_details_proceed" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_firstName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="First Name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_lastName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Last Name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_billAddr_street">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Billing Steet Address:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_billAddr_state">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Billing State:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_billAddr_postCode">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Billiing PostCode:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_billAddr_suburb">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Billing Suburb:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_welcome">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Welcome valued Customer! Please Enter your details and click proceed to begin!"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_firstName">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_lastName">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_billAddr_street">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_billAddr_postCode">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_billAddr_suburb">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbx_cust_details_billAddr_state">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="8">
+                <StringItem index="0" value="ACT"/>
+                <StringItem index="1" value="NSW"/>
+                <StringItem index="2" value="NT"/>
+                <StringItem index="3" value="QLD"/>
+                <StringItem index="4" value="SA"/>
+                <StringItem index="5" value="TAS"/>
+                <StringItem index="6" value="VIC"/>
+                <StringItem index="7" value="WA"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_cust_details_proceed">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Proceed"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cust_details_proceedActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_ABN">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ABN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="btn_cust_details_ABN">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_shpAddr_street">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delivery Steet Address:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_shpAddr_suburb">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delivery Suburb:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_shpAddr_suburb">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_shpAddr_street">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbx_cust_details_shpAddr_state">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="8">
+                <StringItem index="0" value="ACT"/>
+                <StringItem index="1" value="NSW"/>
+                <StringItem index="2" value="NT"/>
+                <StringItem index="3" value="QLD"/>
+                <StringItem index="4" value="SA"/>
+                <StringItem index="5" value="TAS"/>
+                <StringItem index="6" value="VIC"/>
+                <StringItem index="7" value="WA"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_shpAddr_state">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delivery State:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_shpAddr_postCode">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delivery PostCode:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_cust_details_shpAddr_postCode">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Primary Phone Number:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Alternative Phone Number:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField2">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_cust_order">
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="panel_cust_orderFocusGained"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="panel_cust_orderPropertyChange"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card3"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btn_cust_order_confirmLine" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="btn_cust_order_removeLine" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="btn_cust_order_proceed" min="-2" pref="147" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="btn_cust_order_cancel" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+                                  <Component id="lbl_cust_order_totalCost" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lbl_cust_order_listedCost" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_plusGST" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbl_cust_order_listedCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_plusGST_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_totalCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lbl_cust_order_welcome" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lbl_cust_order_firstName" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lbl_cust_order_welcome2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="lbl_cust_order_pleaseDo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="scrPane_cust_order_table" alignment="0" min="-2" pref="1132" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_firstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_welcome2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_welcome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="lbl_cust_order_pleaseDo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="scrPane_cust_order_table" min="-2" pref="257" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_listedCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_plusGST" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_plusGST_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_listedCost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_totalCost" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_cust_order_confirmLine" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_cust_order_removeLine" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_cust_order_proceed" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_cust_order_cancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="84" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_welcome">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Welcome"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_firstName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="firstName"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_welcome2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=", to your order!"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_pleaseDo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Please enter the information for your glass pane order below:"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="scrPane_cust_order_table">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tbl_cust_order">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="9" rowCount="1">
+                    <Column editable="true" title="Glass Type" type="java.lang.String"/>
+                    <Column editable="true" title="Glass Location" type="java.lang.String"/>
+                    <Column editable="true" title="Lockable" type="java.lang.Boolean"/>
+                    <Column editable="true" title="Description" type="java.lang.String"/>
+                    <Column editable="true" title="Length (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Width (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Thickness (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Quantity" type="java.lang.Integer"/>
+                    <Column editable="true" title="Cost" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btn_cust_order_cancel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="C(a)ncel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cust_order_cancelActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_cust_order_proceed">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(P)roceed"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cust_order_proceedActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_cust_order_confirmLine">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(C)onfirm Line"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cust_order_confirmLineActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_cust_order_removeLine">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(R)emove Line"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cust_order_removeLineActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_listedCost">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Listed Cost:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_plusGST">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Plus GST of:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_totalCost">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Total Cost of Order:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_listedCost_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$sum"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_plusGST_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$tax"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_cust_order_totalCost_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$quote"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_doc_detail">
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="panel_doc_detailFocusGained"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="panel_doc_detailPropertyChange"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card3"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="scrPnl_cust_order_table1" pref="1038" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lbl_doc_detail_totalCost" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="btn_doc_detail_changeDiscount" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbl_doc_detail_lessDiscount" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lbl_doc_detail_listedCost" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_plusGST" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lbl_doc_detail_listedCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_lessDiscount_val" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_plusGST_val" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_totalCost_val" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lbl_doc_detail_cust_billAddr" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_name" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_shpAddr" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lbl_doc_detail_cust_ABN_val" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_name_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_shpAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_shpAddr_line1_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_billAddr_line1_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_cust_billAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="426" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_ABN" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_addr" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_jobStatus" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_glazier" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_ABN_val" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_supp_addr_line1_val" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_doc_detail_glazier_val" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                  <Component id="btn_doc_detail_takeJob" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_doc_deetail_jobStatus_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="1" attributes="1">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="lbl_doc_detail_payableOn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="lbl_doc_detail_invoicedOn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lbl_doc_detail_payableOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_invoicedOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
+                                  <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_name_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_ABN_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_ABN_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_billAddr_line1_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_billAddr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_addr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_supp_addr_line1_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_billAddr_line2_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_shpAddr_line1_val" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_cust_shpAddr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_jobStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_deetail_jobStatus_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_cust_shpAddr_line2_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_glazier" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_glazier_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btn_doc_detail_takeJob" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="scrPnl_cust_order_table1" min="-2" pref="229" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_invoicedOn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_invoicedOn_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_listedCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_listedCost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_payableOn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_payableOn_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_lessDiscount" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_lessDiscount_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_doc_detail_changeDiscount" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_plusGST" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_plusGST_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_doc_detail_totalCost" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="lbl_doc_detail_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_name">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Customer Name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_name_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblCustFullName"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_billAddr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Billing Address:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_billAddr_line1_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblCustBillAddrLine1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_billAddr_line2_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblCustBillAddrLine2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_ABN">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Customer ABN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_ABN_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblCustABN"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_shpAddr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Shipping Address:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_shpAddr_line2_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblCustShpAddrLine2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_cust_shpAddr_line1_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblCustShpAddrLine1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_ABN">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Supplier ABN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_addr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Supplier Address:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_jobStatus">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Job Status:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_taxInvoice">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="lblTaxInvoice"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="scrPnl_cust_order_table1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tbl_cust_order1">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="9" rowCount="4">
+                    <Column editable="true" title="Glass Type" type="java.lang.String"/>
+                    <Column editable="true" title="Glass Location" type="java.lang.String"/>
+                    <Column editable="true" title="Lockable" type="java.lang.Boolean"/>
+                    <Column editable="true" title="Description" type="java.lang.String"/>
+                    <Column editable="true" title="Length (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Width (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Thickness (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Quantity" type="java.lang.Integer"/>
+                    <Column editable="true" title="Cost" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_listedCost">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Listed Cost:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_lessDiscount">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Less Discount of:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_plusGST">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Plus GST:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_totalCost">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Total Cost:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_listedCost_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$ListedCost"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_lessDiscount_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$Discount"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_plusGST_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$GST"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_totalCost_val">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="$Total"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_ABN_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="111 222 333 44"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_supp_addr_line1_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="XX Fakington St"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_deetail_jobStatus_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblStatusCheck"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_invoicedOn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Invoiced on:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_invoicedOn_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblInvoiceDate"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_payableOn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Payable by:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_payableOn_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblPayableDate"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_doc_detail_changeDiscount">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Change Discount %"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_doc_detail_changeDiscountActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_glazier">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Glazier:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_doc_detail_glazier_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lblGetGlazier"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modern Glass Company"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Supplier:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="TestTown, QLD, 4000"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_doc_detail_takeJob">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Take Job"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_doc_detail_takeJobActionPerformed"/>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="btn_doc_detail_takeJobPropertyChange"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_job_list">
+      <Events>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="panel_job_listPropertyChange"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card5"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="scrPane_job_list_jobList" min="-2" pref="609" max="-2" attributes="0"/>
+                              <Component id="lbl_job_list_jobList" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="btn_job_list_viewJobDetails" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="btn_job_list_mgr_addNewEmployee" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="lbl_job_list_stockLevels" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lbl_job_list_mgr_changePrice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="scrPane_job_list_mgr_changePrice" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                                  <Component id="scrPane_job_list_stockLevel" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                                  <Component id="btn_job_list_mgr_submitNewPrice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lbl_job_list_mgr_currentTaxRate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_job_list_mgr_newTaxRate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txt_job_list_mgr_newTaxRate" max="32767" attributes="0"/>
+                                          <Component id="lbl_job_list_mgr_currentTaxRate_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="btn_job_list_mgr_newTaxRate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_job_list_jobList" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_job_list_stockLevels" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="1" attributes="1">
+                          <Component id="scrPane_job_list_stockLevel" min="-2" pref="81" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="lbl_job_list_mgr_changePrice" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="scrPane_job_list_mgr_changePrice" min="-2" pref="89" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btn_job_list_mgr_submitNewPrice" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_job_list_mgr_currentTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_job_list_mgr_currentTaxRate_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_job_list_mgr_newTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_job_list_mgr_newTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="scrPane_job_list_jobList" min="-2" pref="330" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btn_job_list_viewJobDetails" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn_job_list_mgr_addNewEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_job_list_mgr_newTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="117" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="scrPane_job_list_jobList">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tbl_job_list_jobList">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Job ID" type="java.lang.Integer"/>
+                    <Column editable="true" title="Job Status" type="java.lang.String"/>
+                    <Column editable="true" title="Customer First Name" type="java.lang.String"/>
+                    <Column editable="true" title="Customer Last Name" type="java.lang.String"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="lbl_job_list_jobList">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Job List"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_job_list_stockLevels">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Stock Levels"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="scrPane_job_list_stockLevel">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tbl_job_list_stockLevel">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="2" rowCount="2">
+                    <Column editable="true" title="Glass Type" type="java.lang.String"/>
+                    <Column editable="true" title="Stock Level" type="java.lang.Integer"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btn_job_list_viewJobDetails">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="View Job Details"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_viewJobDetailsActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="scrPane_job_list_mgr_changePrice">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tbl_job_list_mgr_changePrice">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="2" rowCount="2">
+                    <Column editable="false" title="Glass Type" type="java.lang.String"/>
+                    <Column editable="true" title="Price" type="java.lang.Double"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="lbl_job_list_mgr_changePrice">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add or change the Price of Glass Types"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_job_list_mgr_submitNewPrice">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Submit New Pricing"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_mgr_submitNewPriceActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_job_list_mgr_addNewEmployee">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Add New Employee"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_mgr_addNewEmployeeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_job_list_mgr_currentTaxRate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Current Tax Rate is:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_job_list_mgr_currentTaxRate_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="%Tax"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_job_list_mgr_newTaxRate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="New tax rate (%):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_job_list_mgr_newTaxRate">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_job_list_mgr_newTaxRateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_job_list_mgr_newTaxRate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Submit New Tax Rate"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_mgr_newTaxRateActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_usr_login">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card6"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="319" max="-2" attributes="0"/>
+                          <Component id="lbl_usr_login_loginType" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lbl_usr_login_loginType_val" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="325" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lbl_usr_login_employeeID" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_usr_login_password" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txt_usr_login_employeeID" min="-2" pref="172" max="-2" attributes="0"/>
+                              <Component id="txt_usr_login_password" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btn_usr_login_fireLogin" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btn_usr_login_cancel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="432" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_usr_login_loginType" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_usr_login_loginType_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_usr_login_employeeID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_usr_login_employeeID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_usr_login_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_usr_login_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_usr_login_fireLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_usr_login_cancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="264" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbl_usr_login_employeeID">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Employee ID:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_usr_login_password">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_usr_login_employeeID">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_usr_login_password">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_usr_login_loginType">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="You are attempting to login as a:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_usr_login_loginType_val">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="lblUserType"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_usr_login_fireLogin">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Login"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_usr_login_fireLoginActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_usr_login_cancel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_usr_login_cancelActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_new_employee">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card7"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="391" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lbl_new_employee_employeeRole" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_new_employee_employeeName" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_new_employee_employeePassword" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btn_new_employee_addNewEmployee" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txt_new_employee_employeeRole" max="32767" attributes="0"/>
+                                  <Component id="txt_new_employee_employeeName" max="32767" attributes="0"/>
+                                  <Component id="txt_new_employee_employeePassword" min="-2" pref="196" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="lbl_new_employee_pleaseEnter" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="310" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                  <Component id="lbl_new_employee_pleaseEnter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_new_employee_employeeName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_new_employee_employeeName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_new_employee_employeeRole" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_new_employee_employeeRole" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_new_employee_employeePassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_new_employee_employeePassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btn_new_employee_addNewEmployee" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="239" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbl_new_employee_employeeName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Employee Name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_new_employee_employeeRole">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Employee Role:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_new_employee_employeePassword">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Employee Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_new_employee_employeeName">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_new_employee_employeeNameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_new_employee_employeeRole">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_new_employee_employeePassword">
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_new_employee_addNewEmployee">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Add New Employee"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_new_employee_addNewEmployeeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_new_employee_pleaseEnter">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Please enter the details for the new Employee."/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

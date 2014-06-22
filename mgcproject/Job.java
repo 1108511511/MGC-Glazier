@@ -25,8 +25,8 @@ public class Job {
     private String customerABN;
     private String custFirstName;
     private String custLastName;
-    private static ArrayList<Job> jobsList = new ArrayList<>();
-    private static ArrayList<Product> productList = new ArrayList<>();
+    private static ArrayList<Job> jobsList = new ArrayList<Job>();
+    private static ArrayList<Product> productList = new ArrayList<Product>();
     private static Customer customer;
 
     // constructors
@@ -45,7 +45,7 @@ public class Job {
         this.productList = productList;
         this.customer = customer;
     }
-
+    
     
     // methods
     /**
@@ -90,9 +90,10 @@ public class Job {
     public static ArrayList getProductListPerJob() {
     try {
     CachedRowSet crs = new CachedRowSetImpl();
-    crs = Query.readFromTable(SQLStatements.selectProductListStmt(jobID));
+    crs = Query.readFromTable(SQLStatements.selectProductListStmt(2));
         while (crs.next())
         {
+            int jobID = crs.getInt("job_job_id");
             int productID = crs.getInt("product_id");
             int height = crs.getInt("product_dimension_height");
             int width = crs.getInt("product_dimension_width");
@@ -100,8 +101,10 @@ public class Job {
             boolean lockable = crs.getBoolean("product_flag_lockable");
             String description = crs.getString("product_description");
             String type = crs.getString("stock_glass_type");
-            int setting = crs.getInt("product_setting");
-            Product newProducts = new Product();
+            boolean setting = crs.getBoolean("product_setting");
+            int quantity = crs.getInt("product_quantity");
+            Product newProducts = new Product(type, lockable, setting, height, 
+                    width, thickness, quantity);
             productList.add(newProducts);
         }
     } catch(SQLException e) {
@@ -114,26 +117,38 @@ public class Job {
     /** 
      * testing cacheJobList
      * <p>
-     * to test in main method, use Job.cacheJobList(); and then 
-     * Job.printCacheJobList();
+     * to test in main method, use Job.getJobList(); and then 
+     * Job.printJobList();
      */
     public static void printJobList() {
         System.out.println(jobsList.size());
-        System.out.println("start of printCacheJobList");
+        System.out.println("start of printJobList");
         for(int i = 0; i < jobsList.size(); i++) {
-            System.out.println(jobsList.get(i).toString());
+            System.out.println(jobsList.get(i).jobsListString());
         }
-        System.out.println("end of printCacheJobList for loop");
+        System.out.println("end of printJobList for loop");
     }
     
-    @Override
-    public String toString(){
+    public static void printProductList(int jobID) {
+        System.out.println(productList.size());
+        System.out.println("start of printProductList");
+        for(int i = 0; i < productList.size(); i++) {
+            System.out.println(productList.get(i).productListString());
+        }
+        System.out.println("end of printProductList for loop");
+    }
+    
+    public String jobsListString(){
         String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
                 + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
                 + getQuantityUsed() + "\t" + getCustomerABN() + "\t"
                 + productList;
         return jobValues;
     }
+    
+    
+    
+    
     // end of testing cacheJoblist
 
     
