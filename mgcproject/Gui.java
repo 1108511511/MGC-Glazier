@@ -1220,8 +1220,9 @@ private void btn_cust_order_cancelActionPerformed(java.awt.event.ActionEvent evt
 }//GEN-LAST:event_btn_cust_order_cancelActionPerformed
 
 private void btn_cust_order_removeLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_removeLineActionPerformed
-    //TODO remove a previously created product from ArrayList
-    //TODO call hackTable to shrink table
+   //TODO remove a previously created product from ArrayList
+    
+   hackTable(tbl_cust_order, scrPane_cust_order_table, false, true); 
 }//GEN-LAST:event_btn_cust_order_removeLineActionPerformed
 
 private void menu_item_cust_detailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_cust_detailsActionPerformed
@@ -1296,7 +1297,7 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
     }//GEN-LAST:event_btn_job_list_viewJobDetailsActionPerformed
         
     private void txt_job_list_mgr_newTaxRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_job_list_mgr_newTaxRateActionPerformed
-        //EMPTY - CANNOT DELTE - PLEASE IGNORE
+        //EMPTY - CANNOT DELETE - PLEASE IGNORE
     }//GEN-LAST:event_txt_job_list_mgr_newTaxRateActionPerformed
 
     private void btn_job_list_mgr_newTaxRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_job_list_mgr_newTaxRateActionPerformed
@@ -1323,7 +1324,7 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
 
     private void btn_cust_order_confirmLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_confirmLineActionPerformed
        //TODO call addProduct (or job class method?) to add a new product
-       hackTable(tbl_cust_order, scrPane_cust_order_table, true);
+       hackTable(tbl_cust_order, scrPane_cust_order_table, true, false);
     }//GEN-LAST:event_btn_cust_order_confirmLineActionPerformed
 
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
@@ -1344,7 +1345,7 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
         //TODO modify the label to display customers first name
         //TODO modify the table to display the current job (ifExists)
         //TODO modify the price labels to display the current job info
-        hackTable(tbl_cust_order, scrPane_cust_order_table, false);
+        hackTable(tbl_cust_order, scrPane_cust_order_table, false, false);
          
     }//GEN-LAST:event_panel_cust_orderPropertyChange
 
@@ -1635,6 +1636,8 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * ---------------------------NICE TO ADD--------------------------
      * Improve efficiency by iterating over variable names with "*mgr*"
      * Implement access levels over user types...better structure.
+     * ---> Each level could inherit the previous level.
+     * 
      * ---------------------------------------------------------------
      * </p>
      * 
@@ -1652,7 +1655,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * @return void.
      * @see btn_usr_login_fireLoginActionPerformed()
      * 
-     * @TODO Add in the glazier takeJob button to panel_doc_detail
+     * @TODO strong testing of GUI modification required.
     *******************************************************************/
     private void modifyGuiForUsr(String userType) {
         //System.out.println("modifyGuiForUsr fires!");
@@ -1817,11 +1820,11 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * @see btn_cust_order_removeLineActionPerformed(...)
      * @see panel_cust_orderPropertyChange(...)
      * 
-     * @TODO modify hackTable so that it can account for line removals too
+     * @TODO modify hackTable to set previously entered lines as read only
      *******************************************************************/
     private void hackTable(javax.swing.JTable table, 
                                 javax.swing.JScrollPane scrollpane,
-                                boolean addRow) {
+                                boolean addRow, boolean removeRow) {
       // Instantiate new table model and generic Object
       javax.swing.table.DefaultTableModel model = new 
          javax.swing.table.DefaultTableModel();
@@ -1848,8 +1851,12 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
            //note the 9 instances of null - see above: needs rewrite.
            new Object[] { null, null, null, null, null, 
            null, null, null, null });
-           tbl_cust_order.setModel(model);
+           table.setModel(model);
         }
+      if (removeRow) {
+         model.removeRow(table.getSelectedRow());
+         table.setModel(model);
+      }
      
       //edit the glassType column to contain a comboBox editor
       javax.swing.table.TableColumn glassType = 
@@ -1882,7 +1889,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
             new javax.swing.DefaultCellEditor(lockBox));
         
         //update the scrollpane - not sure if this is necessary?
-        scrollpane.getViewport().add(table);
+        //scrollpane.getViewport().add(table);
     }
      
      /******************************************************************
