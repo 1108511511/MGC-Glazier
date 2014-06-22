@@ -12,9 +12,10 @@ public class MGCProject {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {          
-        Employee e = new Employee("Rustin", "Cole", "SalesPerson", "flatcircle");
-        Employee.writeToDB(e);
-        Query.printFromTable(SQLStatements.selectEmployeeListStmt());
+    public static void main(String[] args) {    
+        Product p = new Product("Delicate", true, false, 12, 32, 10, 2);
+        Product.writeToDB(p);
+        Query.printFromTable(SQLStatements.selectProductListStmt());
+               
     }
 }
