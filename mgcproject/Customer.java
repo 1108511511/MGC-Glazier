@@ -34,15 +34,32 @@ public class Customer extends Person {
     public void setCustomerABN(String CustomerAbn) {
         this.customerAbn = CustomerAbn;
     }
+    
+    public static void writeToDB(Customer c) {
+        List<Object> l = c.getFields();
+        String abn = (String)l.get(0);
+        String firstName = (String)l.get(1);
+        String lastName = (String)l.get(2);
+        String phone = (String)l.get(3);
+        String street = (String)l.get(4);
+        String suburb = (String)l.get(5);
+        String state = (String)l.get(6);
+        String postcode = (String)l.get(7);
+        
+        Query.writeToTable(SQLStatements.insertCustomerStmt(
+                abn, firstName, lastName, phone, street, suburb, state, postcode));
+    }
+    
     @Override
     public List getFields(){
         List<Object> list = new ArrayList<Object>();
-        list = super.getFields();
         list.add(customerAbn);
-        list.add(baState);
-        list.add(baSuburb);
-        list.add(baStreet);
+        list.add(super.getFirstName());
+        list.add(super.getLastName());
         list.add(phoneNu);
+        list.add(baStreet);
+        list.add(baSuburb);
+        list.add(baState);                
         list.add(postCode);
         return list;
     }

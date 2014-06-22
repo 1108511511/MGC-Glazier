@@ -88,27 +88,26 @@ public class Job {
     }
     
     public static ArrayList getProductListPerJob() {
-    try {
-    CachedRowSet crs = new CachedRowSetImpl();
-    crs = Query.readFromTable(SQLStatements.selectProductListStmt(jobID));
-        while (crs.next())
-        {
-            int productID = crs.getInt("product_id");
-            int height = crs.getInt("product_dimension_height");
-            int width = crs.getInt("product_dimension_width");
-            int thickness = crs.getInt("product_dimension_thickness");
-            boolean lockable = crs.getBoolean("product_flag_lockable");
-            String description = crs.getString("product_description");
-            String type = crs.getString("stock_glass_type");
-            boolean setting = crs.getBoolean("product_setting");
-            int quantity = crs.getInt("product_quantity");
-            Product newProducts = new Product(type, lockable, setting, height, width, thickness, quantity);
-            productList.add(newProducts);
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable(SQLStatements.selectProductListStmt());
+            while (crs.next()) {
+                int productID = crs.getInt("product_id");
+                int height = crs.getInt("product_dimension_height");
+                int width = crs.getInt("product_dimension_width");
+                int thickness = crs.getInt("product_dimension_thickness");
+                boolean lockable = crs.getBoolean("product_flag_lockable");
+                String description = crs.getString("product_description");
+                String type = crs.getString("stock_glass_type");
+                boolean setting = crs.getBoolean("product_setting");
+                int quantity = crs.getInt("product_quantity");
+                Product newProducts = new Product(type, lockable, setting, height, width, thickness, quantity);
+                productList.add(newProducts);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
         }
-    } catch(SQLException e) {
-        e.printStackTrace();
-    }
-    return productList;
+        return productList;
     }
    
     
