@@ -25,8 +25,10 @@ public class Product {
     private int quantity;
     private float unitPrice;
     private float productPrice;
+    private int jobID;
         
-    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
+    public Product(String type, boolean isLockable, boolean isOutdoor, 
+            int length, int width, int thickness, int quantity) {
         this.type = type;
         this.isLockable = isLockable;
         this.isOutdoor = isOutdoor;
@@ -37,6 +39,23 @@ public class Product {
         this.unitPrice = getUnitPriceFromDB(type);
         this.productPrice = calculatePrice();
     }
+    
+    public Product(int jobID, int productID, String type, boolean isLockable, 
+            boolean isOutdoor, int length, int width, int thickness, 
+            int quantity) {
+        this.jobID = jobID;
+        this.productID = productID;
+        this.type = type;
+        this.isLockable = isLockable;
+        this.isOutdoor = isOutdoor;
+        this.length = length;
+        this.width = width;
+        this.thickness = thickness;
+        this.quantity = quantity;
+        this.unitPrice = getUnitPriceFromDB(type);
+        this.productPrice = calculatePrice();
+    }
+    
     
     private float calculatePrice() {
         float thisProductPrice = length * width * thickness * quantity * unitPrice;

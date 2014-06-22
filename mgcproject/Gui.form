@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
@@ -131,6 +131,7 @@
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="navMenuBar"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <Events>
     <EventHandler event="windowStateChanged" listener="java.awt.event.WindowStateListener" parameters="java.awt.event.WindowEvent" handler="formWindowStateChanged"/>
@@ -528,23 +529,18 @@
                               <Component id="lbl_cust_order_plusGST_val" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_cust_order_totalCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="167" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbl_cust_order_welcome" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="lbl_cust_order_firstName" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbl_cust_order_welcome2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="lbl_cust_order_pleaseDo" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="scrPane_cust_order_table" alignment="0" min="-2" pref="1132" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="23" max="32767" attributes="0"/>
+                          <Component id="lbl_cust_order_welcome" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lbl_cust_order_firstName" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lbl_cust_order_welcome2" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="lbl_cust_order_pleaseDo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="scrPane_cust_order_table" alignment="0" min="-2" pref="1132" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -768,24 +764,6 @@
                           <Component id="scrPnl_cust_order_table1" pref="1011" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="1" attributes="1">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="lbl_doc_detail_payableOn" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="lbl_doc_detail_invoicedOn" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_doc_detail_payableOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_doc_detail_invoicedOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
@@ -847,9 +825,31 @@
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
-                          <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="1" attributes="1">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="lbl_doc_detail_payableOn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="lbl_doc_detail_invoicedOn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lbl_doc_detail_payableOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_doc_detail_invoicedOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
+                                  <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -1243,7 +1243,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_job_list_mgr_newTaxRate" pref="109" max="32767" attributes="0"/>
+                                          <Component id="txt_job_list_mgr_newTaxRate" max="32767" attributes="0"/>
                                           <Component id="lbl_job_list_mgr_currentTaxRate_val" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>

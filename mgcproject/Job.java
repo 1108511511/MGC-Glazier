@@ -93,6 +93,7 @@ public class Job {
     crs = Query.readFromTable(SQLStatements.selectProductListStmt(jobID));
         while (crs.next())
         {
+            int jobID = crs.getInt("job_id");
             int productID = crs.getInt("product_id");
             int height = crs.getInt("product_dimension_height");
             int width = crs.getInt("product_dimension_width");
@@ -102,7 +103,8 @@ public class Job {
             String type = crs.getString("stock_glass_type");
             boolean setting = crs.getBoolean("product_setting");
             int quantity = crs.getInt("product_quantity");
-            Product newProducts = new Product(type, lockable, setting, height, width, thickness, quantity);
+            Product newProducts = new Product(type, lockable, setting, height, 
+                    width, thickness, quantity);
             productList.add(newProducts);
         }
     } catch(SQLException e) {

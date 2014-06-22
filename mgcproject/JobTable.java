@@ -114,21 +114,21 @@ public class JobTable extends javax.swing.JFrame {
         try {
         CachedRowSet crs = new CachedRowSetImpl();
         crs = Query.readFromTable(SQLStatements.selectJobListStmt());
-            while (crs.next())
-            {
-                int jobID = crs.getInt("job_id");
-                String jobStatus = crs.getString("job_status");
-                double taxPercent = crs.getDouble("tax_percent");
-                double discountPercent = crs.getDouble("discount_percent");
-                int quantityUsed = crs.getInt("job_qty_used");
-                String customerABN = crs.getString("customer_cust_abn");
-                String custFirstName = crs.getString("cust_first_name");
-                String custLastName = crs.getString("cust_last_name");
-                Job newJob = new Job(jobID, jobStatus, taxPercent,
-                discountPercent, quantityUsed, customerABN, custFirstName,
-                custLastName);
-                jobsList.add(newJob);
-            }
+//            while (crs.next())
+//            {
+//                int jobID = crs.getInt("job_id");
+//                String jobStatus = crs.getString("job_status");
+//                double taxPercent = crs.getDouble("tax_percent");
+//                double discountPercent = crs.getDouble("discount_percent");
+//                int quantityUsed = crs.getInt("job_qty_used");
+//                String customerABN = crs.getString("customer_cust_abn");
+//                String custFirstName = crs.getString("cust_first_name");
+//                String custLastName = crs.getString("cust_last_name");
+//                Job newJob = new Job(jobID, jobStatus, taxPercent,
+//                discountPercent, quantityUsed, customerABN, custFirstName,
+//                custLastName);
+//                jobsList.add(newJob);
+//            }
         } catch(SQLException e) {
             e.printStackTrace();
         }

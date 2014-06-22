@@ -1194,7 +1194,7 @@ public class Gui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void btn_cust_order_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_cancelActionPerformed
-//TODO save quotation data as uncommited!
+//TODO save quotation data as uncommited!asdf
     displayPanel(panel_cust_details);
     
 }//GEN-LAST:event_btn_cust_order_cancelActionPerformed

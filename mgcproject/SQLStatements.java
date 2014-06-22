@@ -83,8 +83,8 @@ public class SQLStatements {
         String statement = (
                 "INSERT INTO product "
               + "(product_dimension_height, product_dimension_width,"
-              + "product_dimension_thickness, product_flag_lockable, setting,"
-              + "stock_glass_type "
+              + "product_dimension_thickness, product_flag_lockable,"
+              + "product_description, product_setting, stock_glass_type "
               + "VALUES ('" + height + "','" + width + "','" + thickness  + "','"
               + lockable + "','" + description + "','" + setting + "','" 
               + glassType);
