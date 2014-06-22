@@ -25,10 +25,12 @@ public class Product {
     private int width;
     private int thickness;
     private int quantity;
+    private int matsUsed;
     private float unitPrice;
     private float productPrice;
         
-    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
+    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quanityt) {
+        this.productID = getProductIdFromDB() + 1;
         this.type = type;
         this.isLockable = isLockable;
         this.isOutdoor = isOutdoor;
@@ -36,6 +38,8 @@ public class Product {
         this.width = width;
         this.thickness = thickness;
         this.quantity = quantity;
+        this.matsUsed = length * width * thickness;
+        deductMatsFromDB();
         this.unitPrice = getUnitPriceFromDB(type);
         this.productPrice = calculatePrice();
     }
@@ -52,6 +56,23 @@ public class Product {
             crs.next();
             float thisUnitPrice = crs.getFloat("price");
             return thisUnitPrice;
+        } catch (SQLException e) {
+            System.err.println("Error: " + e.getMessage());
+            return -1;
+        }
+    }
+    
+    private void deductMatsFromDB() {
+        Query.writeToTable(SQLStatements.updateStockLevelStmt(matsUsed, type));
+    }
+    
+    private int getProductIdFromDB() {
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable(SQLStatements.selectMaxProductIdStmt()); 
+            crs.next();
+            int maxId = crs.getInt("product_id");
+            return maxId;
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
             return -1;

@@ -62,6 +62,16 @@ public class SQLStatements {
         return statement;
     }
     
+    public static String selectMaxJobIdStmt() {
+        String statement = ("SELECT MAX(job_id) AS job_id FROM job");
+        return statement;
+    }
+    
+    public static String selectMaxProductIdStmt() {
+        String statement = ("SELECT MAX(product_id) AS product_id FROM product");
+        return statement;
+    }
+    
     // UPDATE TABLE
     public static String updatePriceStmt(double price, String glassType) {
         String statement = (

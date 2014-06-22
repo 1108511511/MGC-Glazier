@@ -21,18 +21,11 @@ public class Job {
     private String jobStatus;
     private double taxPercent;
     private double discountPercent;
-    private int quantityUsed;
-    private String customerABN;
-    private String custFirstName;
-    private String custLastName;
     private static ArrayList<Job> jobsList = new ArrayList<Job>();
     private static ArrayList<Product> productList = new ArrayList<Product>();
     private static Customer customer;
 
     // constructors
-    public Job() {
-    }
-    
     public Job(int jobID, String jobStatus, double taxPercent, 
             double discountPercent, int quantityUsed, String customerABN, 
             ArrayList<Product> productList, Customer customer) {
@@ -40,12 +33,9 @@ public class Job {
         this.jobStatus = jobStatus;
         this.taxPercent = taxPercent;
         this.discountPercent = discountPercent;
-        this.quantityUsed = quantityUsed;
-        this.customerABN = customerABN;
         this.productList = productList;
         this.customer = customer;
     }
-    
     
     // methods
     /**
@@ -139,14 +129,10 @@ public class Job {
     public String toString(){
         String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
                 + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
-                + getQuantityUsed() + "\t" + getCustomerABN() + "\t"
                 + productList;
         return jobValues;
     }
     // end of testing cacheJoblist
-
-    
-
 
     /**
      * @return the jobStatus
@@ -193,57 +179,5 @@ public class Job {
     /**
      * @return the quantityUsed
      */
-    public int getQuantityUsed() {
-        return quantityUsed;
-    }
-
-    /**
-     * @param quantityUsed the quantityUsed to set
-     */
-    public void setQuantityUsed(int quantityUsed) {
-        this.quantityUsed = quantityUsed;
-    }
-
-    /**
-     * @return the customerABN
-     */
-    public String getCustomerABN() {
-        return customerABN;
-    }
-
-    /**
-     * @param customerABN the customerABN to set
-     */
-    public void setCustomerABN(String customerABN) {
-        this.customerABN = customerABN;
-    }
-
-    /**
-     * @return the custFirstName
-     */
-    public String getCustFirstName() {
-        return custFirstName;
-    }
-
-    /**
-     * @param custFirstName the custFirstName to set
-     */
-    public void setCustFirstName(String custFirstName) {
-        this.custFirstName = custFirstName;
-    }
-
-    /**
-     * @return the custLastName
-     */
-    public String getCustLastName() {
-        return custLastName;
-    }
-
-    /**
-     * @param custLastName the custLastName to set
-     */
-    public void setCustLastName(String custLastName) {
-        this.custLastName = custLastName;
-    }
     
 }
