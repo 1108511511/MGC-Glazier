@@ -712,6 +712,7 @@
     <Container class="javax.swing.JPanel" name="panel_doc_detail">
       <Events>
         <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="panel_doc_detailFocusGained"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="panel_doc_detailPropertyChange"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -799,8 +800,11 @@
                                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                               <Component id="lbl_doc_detail_supp_ABN_val" min="-2" max="-2" attributes="0"/>
                                               <Component id="lbl_doc_detail_supp_addr_line1_val" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lbl_doc_deetail_jobStatus_val" min="-2" max="-2" attributes="0"/>
                                               <Component id="lbl_doc_detail_glazier_val" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                  <Component id="btn_doc_detail_takeJob" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_doc_deetail_jobStatus_val" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -859,7 +863,9 @@
                       <Component id="lbl_doc_detail_glazier" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_doc_detail_glazier_val" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btn_doc_detail_takeJob" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="scrPnl_cust_order_table1" min="-2" pref="229" max="-2" attributes="0"/>
@@ -1130,6 +1136,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Change Discount %"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_doc_detail_changeDiscountActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_doc_detail_glazier">
           <Properties>
@@ -1156,9 +1165,21 @@
             <Property name="text" type="java.lang.String" value="TestTown, QLD, 4000"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btn_doc_detail_takeJob">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Take Job"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_doc_detail_takeJobActionPerformed"/>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="btn_doc_detail_takeJobPropertyChange"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="panel_job_list">
+      <Events>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="panel_job_listPropertyChange"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
           <CardConstraints cardName="card5"/>
@@ -1415,6 +1436,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Submit New Pricing"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_job_list_mgr_submitNewPriceActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_job_list_mgr_addNewEmployee">
           <Properties>
@@ -1571,6 +1595,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_usr_login_cancelActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -1668,6 +1695,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Add New Employee"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_new_employee_addNewEmployeeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_new_employee_pleaseEnter">
           <Properties>

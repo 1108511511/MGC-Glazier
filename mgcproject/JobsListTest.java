@@ -1,14 +1,11 @@
 
 package mgcproject;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-
 /**
  *
  * @author 3106909413
  */
-public class MGCProject {
+public class JobsListTest {
 
     /**
      * @param args the command line arguments
@@ -26,9 +23,7 @@ public class MGCProject {
         Job.getJobList();
         Job.printJobList();
         Job.printProductList(1);
-        
-        JobTable jt = new JobTable();
-       // jt.setVisible(true);
+
     }
 }
 
