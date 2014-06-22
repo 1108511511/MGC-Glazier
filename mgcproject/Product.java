@@ -29,7 +29,7 @@ public class Product {
     private float unitPrice;
     private float productPrice;
         
-    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quanityt) {
+    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
         this.productID = getProductIdFromDB() + 1;
         this.type = type;
         this.isLockable = isLockable;

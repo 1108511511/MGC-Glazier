@@ -17,7 +17,7 @@ import javax.sql.rowset.CachedRowSet;
  */
 public class Job {
     // fields
-    private static int jobID;
+    private int jobID;
     private String jobStatus;
     private double taxPercent;
     private double discountPercent;
@@ -26,33 +26,32 @@ public class Job {
     private static Customer customer;
 
     // constructors
-    public Job(int jobID, String jobStatus, double taxPercent, 
-            double discountPercent, int quantityUsed, String customerABN, 
-            ArrayList<Product> productList, Customer customer) {
-        this.jobID = jobID;
+    public Job(String jobStatus, double taxPercent, 
+            double discountPercent, ArrayList<Product> productList, 
+            Customer customer) {
+        this.jobID = getJobIdFromDB() + 1;
         this.jobStatus = jobStatus;
         this.taxPercent = taxPercent;
         this.discountPercent = discountPercent;
-        this.productList = productList;
-        this.customer = customer;
+        Job.productList = productList;
+        Job.customer = customer;
     }
     
     // methods
-    /**
-     * @return the jobID
-     */
-    public int getJobID() {
-        return jobID;
+    private int getJobIdFromDB() {
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable(SQLStatements.selectMaxJobIdStmt()); 
+            crs.next();
+            int maxId = crs.getInt("job_id");
+            return maxId;
+        } catch (SQLException e) {
+            System.err.println("Error: " + e.getMessage());
+            return -1;
+        }
     }
-
-    /**
-     * @param jobID the jobID to set
-     */
-    public void setJobID(int jobID) {
-        this.jobID = jobID;
-    }
-    
-    public static ArrayList getJobList() {                                     
+        
+        public static ArrayList getJobList() {                                     
         try {
         CachedRowSet crs = new CachedRowSetImpl();
         crs = Query.readFromTable(SQLStatements.selectJobListStmt());
@@ -61,14 +60,9 @@ public class Job {
                 int jobID = crs.getInt("job_id");
                 String jobStatus = crs.getString("job_status");
                 double taxPercent = crs.getDouble("tax_percent");
-                double discountPercent = crs.getDouble("discount_percent");
-                int quantityUsed = crs.getInt("job_qty_used");
-                String customerABN = crs.getString("customer_cust_abn");
-                String custFirstName = crs.getString("cust_first_name");
-                String custLastName = crs.getString("cust_last_name");
-                Job newJob = new Job(jobID, jobStatus, taxPercent,
-                    discountPercent, quantityUsed, customerABN, 
-                    productList, customer);
+                double discountPercent = crs.getDouble("discount_percent");                
+                Job newJob = new Job(jobStatus, taxPercent,
+                    discountPercent, productList, customer);
                 jobsList.add(newJob);
             }
         } catch(SQLException e) {
@@ -133,7 +127,21 @@ public class Job {
         return jobValues;
     }
     // end of testing cacheJoblist
+    
+    /**
+     * @return the jobID
+     */
+    public int getJobID() {
+        return jobID;
+    }
 
+    /**
+     * @param jobID the jobID to set
+     */
+    public void setJobID(int jobID) {
+        this.jobID = jobID;
+    }
+    
     /**
      * @return the jobStatus
      */
