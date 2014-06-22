@@ -17,6 +17,8 @@ public class JobsListTest {
         // Create new job list
         Job.getJobList();
         Job.printJobList();
+        
+        Job.getProductListPerJob();
         Job.printProductList(1);
 
     }

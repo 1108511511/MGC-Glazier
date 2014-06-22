@@ -8,6 +8,8 @@ package mgcproject;
 
 import com.sun.rowset.CachedRowSetImpl;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.sql.rowset.CachedRowSet;
 
 /**
@@ -25,10 +27,8 @@ public class Product {
     private int quantity;
     private float unitPrice;
     private float productPrice;
-    private int jobID;
         
-    public Product(String type, boolean isLockable, boolean isOutdoor, 
-            int length, int width, int thickness, int quantity) {
+    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
         this.type = type;
         this.isLockable = isLockable;
         this.isOutdoor = isOutdoor;
@@ -39,23 +39,6 @@ public class Product {
         this.unitPrice = getUnitPriceFromDB(type);
         this.productPrice = calculatePrice();
     }
-    
-    public Product(int jobID, int productID, String type, boolean isLockable, 
-            boolean isOutdoor, int length, int width, int thickness, 
-            int quantity) {
-        this.jobID = jobID;
-        this.productID = productID;
-        this.type = type;
-        this.isLockable = isLockable;
-        this.isOutdoor = isOutdoor;
-        this.length = length;
-        this.width = width;
-        this.thickness = thickness;
-        this.quantity = quantity;
-        this.unitPrice = getUnitPriceFromDB(type);
-        this.productPrice = calculatePrice();
-    }
-    
     
     private float calculatePrice() {
         float thisProductPrice = length * width * thickness * quantity * unitPrice;
@@ -214,4 +197,47 @@ public class Product {
     public void setProductPrice(float productPrice) {
         this.productPrice = productPrice;
     }
+    
+    public List getFields(){
+        List<Object> list = new ArrayList<Object>();
+        list.add(productID);
+        list.add(type);
+        list.add(isLockable);
+        list.add(isOutdoor);
+        list.add(length);
+        list.add(width);
+        list.add(thickness);                
+        list.add(quantity);
+        list.add(unitPrice);
+        list.add(productPrice);
+        return list;
+    }
+    
+    public static void writeToDB(Product p) {
+        List<Object> l = p.getFields();
+        int productId = (int)l.get(0);
+        String type = (String)l.get(1);
+        boolean isLockable = (boolean)l.get(2);
+        boolean isOutdoor = (boolean)l.get(3);
+        int length = (int)l.get(4);
+        int width = (int)l.get(5);
+        int thickness = (int)l.get(6);
+        int quantity = (int)l.get(7);
+        float unitPrice = (float)l.get(8);
+        float productPrice = (float)l.get(9);
+        
+        Query.writeToTable(SQLStatements.insertProductStmt(
+                length, width, thickness, isLockable, "A product", type, 
+                isOutdoor, quantity));
+    }
+
+    // for testing output to console
+    public String productListString(){
+        String productValues = getProductID() + "\t" + getType() + "\t" 
+                + isIsLockable() + "\t" + isIsOutdoor() + "\t"
+                + getLength() + "\t" + getWidth() + "\t"
+                + getThickness();
+        return productValues;
+    }
+    
 }

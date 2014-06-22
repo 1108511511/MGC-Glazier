@@ -90,10 +90,10 @@ public class Job {
     public static ArrayList getProductListPerJob() {
     try {
     CachedRowSet crs = new CachedRowSetImpl();
-    crs = Query.readFromTable(SQLStatements.selectProductListStmt(jobID));
+    crs = Query.readFromTable(SQLStatements.selectProductListStmt(2));
         while (crs.next())
         {
-            int jobID = crs.getInt("job_id");
+            int jobID = crs.getInt("job_job_id");
             int productID = crs.getInt("product_id");
             int height = crs.getInt("product_dimension_height");
             int width = crs.getInt("product_dimension_width");
@@ -124,7 +124,7 @@ public class Job {
         System.out.println(jobsList.size());
         System.out.println("start of printJobList");
         for(int i = 0; i < jobsList.size(); i++) {
-            System.out.println(jobsList.get(i).toString());
+            System.out.println(jobsList.get(i).jobsListString());
         }
         System.out.println("end of printJobList for loop");
     }
@@ -133,19 +133,22 @@ public class Job {
         System.out.println(productList.size());
         System.out.println("start of printProductList");
         for(int i = 0; i < productList.size(); i++) {
-            System.out.println(productList.get(i).toString());
+            System.out.println(productList.get(i).productListString());
         }
         System.out.println("end of printProductList for loop");
     }
     
-    @Override
-    public String toString(){
+    public String jobsListString(){
         String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
                 + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
                 + getQuantityUsed() + "\t" + getCustomerABN() + "\t"
                 + productList;
         return jobValues;
     }
+    
+    
+    
+    
     // end of testing cacheJoblist
 
     
