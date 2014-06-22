@@ -1,6 +1,8 @@
+
 package mgcproject;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,7 +13,6 @@ public class MGCProject {
     /**
      * @param args the command line arguments
      */
-    /*
     public static void main(String[] args) {          
 //        try {
 //            Query.printFromTable("SELECT * FROM customer;");            
@@ -19,9 +20,15 @@ public class MGCProject {
 //            System.err.println(e.getMessage());
 //        }  
         
+        // Create new job list
+        System.out.println("testing");                      
+        
+        Job.getJobList();
+        Job.printJobList();
+        Job.printProductList(1);
+        
         JobTable jt = new JobTable();
-        jt.setVisible(true);
+       // jt.setVisible(true);
     }
-     
-     */
 }
+
