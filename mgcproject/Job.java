@@ -9,6 +9,7 @@ package mgcproject;
 import com.sun.rowset.CachedRowSetImpl;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import javax.sql.rowset.CachedRowSet;
 
 /**
@@ -17,24 +18,26 @@ import javax.sql.rowset.CachedRowSet;
  */
 public class Job {
     // fields
-    private int jobID;
+    private int jobId;
     private String jobStatus;
     private double taxPercent;
     private double discountPercent;
     private static ArrayList<Job> jobsList = new ArrayList<Job>();
-    private static ArrayList<Product> productList = new ArrayList<Product>();
-    private static Customer customer;
+    private ArrayList<Product> productList = new ArrayList<Product>();
+    private Customer customer;
+    private Employee employee;
 
     // constructors
-    public Job(String jobStatus, double taxPercent, 
-            double discountPercent, ArrayList<Product> productList, 
+    public Job(String jobStatus, double discountPercent, 
+            ArrayList<Product> productList, 
             Customer customer) {
-        this.jobID = getJobIdFromDB() + 1;
+        this.jobId = getJobIdFromDB() + 1;
         this.jobStatus = jobStatus;
-        this.taxPercent = taxPercent;
+        this.taxPercent = getTaxPercent();
         this.discountPercent = discountPercent;
-        Job.productList = productList;
-        Job.customer = customer;
+        this.productList = productList;
+        this.customer = customer;
+        this.employee = null;
     }
     
     // methods
@@ -57,12 +60,15 @@ public class Job {
         crs = Query.readFromTable(SQLStatements.selectJobListStmt());
             while (crs.next())
             {
-                int jobID = crs.getInt("job_id");
+                int jobId = crs.getInt("job_id");
                 String jobStatus = crs.getString("job_status");
                 double taxPercent = crs.getDouble("tax_percent");
                 double discountPercent = crs.getDouble("discount_percent");                
-                Job newJob = new Job(jobStatus, taxPercent,
-                    discountPercent, productList, customer);
+                ArrayList<Product> productList = getProductListPerJob(jobId);
+                //TODO get customer based on abn
+                Job newJob = new Job(jobStatus, discountPercent, 
+                        productList, customer);
+                newJob.setJobId(jobId);
                 jobsList.add(newJob);
             }
         } catch(SQLException e) {
@@ -71,10 +77,11 @@ public class Job {
         return jobsList;
     }
     
-    public static ArrayList getProductListPerJob() {
-        try {
+    public static ArrayList getProductListPerJob(int jobId) {
+        ArrayList<Product> p = new ArrayList();
+        try { 
             CachedRowSet crs = new CachedRowSetImpl();
-            crs = Query.readFromTable(SQLStatements.selectProductListStmt());
+            crs = Query.readFromTable(SQLStatements.selectProductListStmt(jobId));
             while (crs.next()) {
                 int productID = crs.getInt("product_id");
                 int height = crs.getInt("product_dimension_height");
@@ -85,13 +92,13 @@ public class Job {
                 String type = crs.getString("stock_glass_type");
                 boolean setting = crs.getBoolean("product_setting");
                 int quantity = crs.getInt("product_quantity");
-                Product newProducts = new Product(type, lockable, setting, height, width, thickness, quantity);
-                productList.add(newProducts);
+                Product newProducts = new Product(type, lockable, setting, height, width, thickness, quantity, description);
+                p.add(newProducts);
             }
         } catch(SQLException e) {
             e.printStackTrace();
         }
-        return productList;
+        return p;
     }
    
     
@@ -110,7 +117,7 @@ public class Job {
         System.out.println("end of printJobList for loop");
     }
     
-    public static void printProductList(int jobID) {
+    public void printProductList() {
         System.out.println(productList.size());
         System.out.println("start of printProductList");
         for(int i = 0; i < productList.size(); i++) {
@@ -126,23 +133,51 @@ public class Job {
         return jobValues;
     }
     
+    public static void writeToDB(Job j) {
+        List<Object> l = j.getFields();
+        int jobId = (int)l.get(0);
+        String jobStatus = (String)l.get(1);
+        double taxPercent = (double)l.get(2);
+        double discountPercent = (double)l.get(3);
+        String custAbn = (String)l.get(4);
+        int employeeId;
+        if(j.getEmployee() != null) {
+            employeeId = (int)l.get(5);
+        } else {
+            employeeId = -1;
+        }
+        Query.writeToTable(SQLStatements.insertJobStmt(
+                jobId, jobStatus, taxPercent, discountPercent, 
+                custAbn, employeeId));
+    }
     
-    
+   public List getFields(){
+        List<Object> list = new ArrayList<Object>();
+        list.add(jobId);
+        list.add(jobStatus);
+        list.add(taxPercent);
+        list.add(discountPercent);
+        list.add(this.customer.getCustomerABN());
+        if(this.getEmployee() != null) {
+            list.add(employee);
+        }
+        return list;
+    }
     
     // end of testing cacheJoblist
     
     /**
-     * @return the jobID
+     * @return the jobId
      */
     public int getJobID() {
-        return jobID;
+        return jobId;
     }
 
     /**
-     * @param jobID the jobID to set
+     * @param jobID the jobId to set
      */
     public void setJobID(int jobID) {
-        this.jobID = jobID;
+        this.jobId = jobID;
     }
     
     /**
@@ -188,7 +223,22 @@ public class Job {
     }
 
     /**
-     * @return the quantityUsed
+     * @return the employee
+     */
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    /**
+     * @param employee the employee to set
      */
     
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    /**
+     * @return the quantityUsed
+     */
+        
 }
