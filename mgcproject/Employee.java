@@ -21,6 +21,7 @@ public class Employee extends Person {
     private int employeeId;
     private String employeeRole;
     private String password;
+    private static ArrayList<Employee> employee = new ArrayList<Employee>();
 
     
     Employee() {
@@ -36,6 +37,14 @@ public class Employee extends Person {
         this.password = password;
     }
     
+    Employee(int employeeId, String firstName, String lastName, 
+            String employeeRole, String password) {
+        super(firstName,lastName);
+        this.employeeId = employeeId;
+        this.employeeRole = employeeRole;
+        this.password = password;
+    }
+ 
     private int getEmployeeIdFromDB() {
         try {
             CachedRowSet crs = new CachedRowSetImpl();
@@ -47,6 +56,28 @@ public class Employee extends Person {
             System.err.println("Error: " + e.getMessage());
             return -1;
         }
+    }
+    
+    
+    
+    public static Employee getEmployeeFromDB(int employeeId, String password) {
+        Employee emp = new Employee();
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable(SQLStatements.selectEmployeeLoginStmt(employeeId, password)); 
+            while (crs.next()) {
+                int id = crs.getInt("employee_id");
+                String employeeFirstName = crs.getString("employee_first_name");
+                String employeeLastName = crs.getString("employee_last_name");
+                String employeeRole = crs.getString("employee_role");
+                String pass = crs.getString("employee_password");
+                emp = new Employee(employeeId, employeeFirstName, 
+                        employeeLastName, employeeRole, password);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+        return emp;
     }
 
     /**
