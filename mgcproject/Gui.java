@@ -1998,7 +1998,8 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
        Product product = new Product ((String) list.get(0),
                (Boolean) list.get(2), isOutdoor, 
                (Integer) list.get(4), (Integer) list.get(5), 
-               (Integer) list.get(6), (Integer) list.get(7));
+               (Integer) list.get(6), (Integer) list.get(7),
+               (String) list.get(3));
        return product;
     }
     

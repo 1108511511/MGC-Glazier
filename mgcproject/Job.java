@@ -33,7 +33,7 @@ public class Job {
             Customer customer) {
         this.jobId = getJobIdFromDB() + 1;
         this.jobStatus = jobStatus;
-        this.taxPercent = getTaxPercent();
+        this.taxPercent = getGlobalTaxRate();
         this.discountPercent = discountPercent;
         this.productList = productList;
         this.customer = customer;
@@ -65,7 +65,7 @@ public class Job {
                 double taxPercent = crs.getDouble("tax_percent");
                 double discountPercent = crs.getDouble("discount_percent");                
                 ArrayList<Product> productList = getProductListPerJob(jobId);
-                Customer customer = new Customer();
+                Customer customer = Customer.getCustomerFromDB(jobId);
                 Job newJob = new Job(jobStatus, discountPercent, 
                         productList, customer);
                 newJob.setJobId(jobId);
@@ -128,21 +128,21 @@ public class Job {
     
     public String jobsListString(){
         String jobValues = getJobId() + "\t" + getJobStatus() + "\t" 
-                + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
+                + getGlobalTaxRate() + "\t" + getDiscountPercent() + "\t"
                 + productList;
         return jobValues;
     }
     
     public static void writeToDB(Job j) {
         List<Object> l = j.getFields();
-        int jobId = (int)l.get(0);
+        int jobId = (Integer)l.get(0);
         String jobStatus = (String)l.get(1);
-        double taxPercent = (double)l.get(2);
-        double discountPercent = (double)l.get(3);
+        double taxPercent = (Double)l.get(2);
+        double discountPercent = (Double)l.get(3);
         String custAbn = (String)l.get(4);
         int employeeId;
         if(j.getEmployee() != null) {
-            employeeId = (int)l.get(5);
+            employeeId = (Integer)l.get(5);
         } else {
             employeeId = -1;
         }
@@ -197,7 +197,7 @@ public class Job {
     /**
      * @return the taxPercent
      */
-    public static double getTaxPercent() {
+    public static double getGlobalTaxRate() {
         try {
             CachedRowSet crs = new CachedRowSetImpl();
             crs = Query.readFromTable(SQLStatements.selectTaxRateStmt()); 
@@ -208,6 +208,10 @@ public class Job {
             System.err.println("Error: " + e.getMessage());
             return -1;
         }
+    }
+    
+    public static void setGlobalTaxRate(float rate) {
+        Query.writeToTable(SQLStatements.updateTaxRateStmt(rate));
     }
 
     /**
@@ -251,23 +255,3 @@ public class Job {
      */
         
 }
-
-public static Customer getCustomerFromDB(int abn) {
-        try {
-        CachedRowSet crs = new CachedRowSetImpl();
-        crs = Query.readFromTable(SQLStatements.selectCustomerDetailsStmt(abn));
-            while (crs.next())
-            {
-                int jobId = crs.getInt("job_id");
-                String jobStatus = crs.getString("job_status");
-                double taxPercent = crs.getDouble("tax_percent");
-                double discountPercent = crs.getDouble("discount_percent");                
-                ArrayList<Product> productList = getProductListPerJob(jobId);
-                newJob.setJobId(jobId);
-                jobsList.add(newJob);
-            }
-        } catch(SQLException e) {
-            e.printStackTrace();
-        }
-        return jobsList;
-    }

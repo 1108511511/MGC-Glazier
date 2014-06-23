@@ -1,7 +1,10 @@
 package mgcproject;
 
+import com.sun.rowset.CachedRowSetImpl;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.sql.rowset.CachedRowSet;
 
 public class Customer extends Person {
     private String customerAbn;
@@ -13,6 +16,9 @@ public class Customer extends Person {
     private String phoneNu2nd;
     private String shpStreet, shpSuburb, shpState, shpPostCode;
     
+    Customer() {
+        super();
+    }
     
     Customer(String customerABN, String fName, String lName, String baStreet, 
             String baSuburb, String baState, String postCode, String phoneNu,
@@ -44,6 +50,36 @@ public class Customer extends Person {
      */
     public void setCustomerABN(String CustomerAbn) {
         this.customerAbn = CustomerAbn;
+    }
+    
+    public static Customer getCustomerFromDB(int abn) {
+        Customer newCust = new Customer();
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable(SQLStatements.selectCustomerDetailsStmt(abn));
+            while (crs.next()) {
+                String customerABN = crs.getString("cust_abn"); 
+                String fName = crs.getString("cust_first_name");  
+                String lName = crs.getString("cust_last_name");  
+                String baStreet = crs.getString("cust_primary_phone_number"); 
+                String baSuburb = crs.getString("cust_secondary_phone_number"); 
+                String baState = crs.getString("cust_billing_addr_street"); 
+                String postCode = crs.getString("cust_billing_addr_suburb"); 
+                String phoneNu = crs.getString("cust_billing_addr_state");
+                String phoneNu2nd = crs.getString("cust_billing_addr_postcode"); 
+                String shpStreet = crs.getString("cust_delivery_addr_street"); 
+                String shpSuburb = crs.getString("cust_delivery_addr_suburb"); 
+                String shpState = crs.getString("cust_delivery_addr_state"); 
+                String shpPostCode = crs.getString("cust_delivery_addr_postcode");
+                newCust = new Customer(customerABN, fName, lName, baStreet,
+                        baSuburb, baState, postCode, phoneNu, phoneNu2nd, 
+                        shpStreet, shpSuburb, shpState, shpPostCode);
+                
+            }
+        } catch(SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return newCust;
     }
     
     public static void writeToDB(Customer c) {
