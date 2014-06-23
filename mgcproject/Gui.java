@@ -15,7 +15,8 @@
 package mgcproject;
 
 public class Gui extends javax.swing.JFrame {
-
+    
+    Customer cust;
     /** Creates new form gui_customer_details */
     public Gui() {
         initComponents();
@@ -47,7 +48,7 @@ public class Gui extends javax.swing.JFrame {
         cbx_cust_details_billAddr_state = new javax.swing.JComboBox();
         btn_cust_details_proceed = new javax.swing.JButton();
         lbl_cust_details_ABN = new javax.swing.JLabel();
-        btn_cust_details_ABN = new javax.swing.JTextField();
+        txt_cust_details_ABN = new javax.swing.JTextField();
         lbl_cust_details_shpAddr_street = new javax.swing.JLabel();
         lbl_cust_details_shpAddr_suburb = new javax.swing.JLabel();
         txt_cust_details_shpAddr_suburb = new javax.swing.JTextField();
@@ -56,10 +57,10 @@ public class Gui extends javax.swing.JFrame {
         lbl_cust_details_shpAddr_state = new javax.swing.JLabel();
         lbl_cust_details_shpAddr_postCode = new javax.swing.JLabel();
         txt_cust_details_shpAddr_postCode = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        lbl_cust_details_phoneNumber1st = new javax.swing.JLabel();
+        lbl_cust_details_phoneNumber2nd = new javax.swing.JLabel();
+        txt_cust_details_phoneNumber1st = new javax.swing.JTextField();
+        txt_cust_details_phoneNumber2nd = new javax.swing.JTextField();
         panel_cust_order = new javax.swing.JPanel();
         lbl_cust_order_welcome = new javax.swing.JLabel();
         lbl_cust_order_firstName = new javax.swing.JLabel();
@@ -191,12 +192,12 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_details_billAddr_suburb.setText("Billing Suburb:");
 
-        lbl_cust_details_welcome.setFont(new java.awt.Font("Tahoma", 0, 14));
+        lbl_cust_details_welcome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lbl_cust_details_welcome.setText("Welcome valued Customer! Please Enter your details and click proceed to begin!");
 
         cbx_cust_details_billAddr_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA" }));
 
-        btn_cust_details_proceed.setFont(new java.awt.Font("Tahoma", 0, 14));
+        btn_cust_details_proceed.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_cust_details_proceed.setText("Proceed");
         btn_cust_details_proceed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,9 +217,9 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_details_shpAddr_postCode.setText("Delivery PostCode:");
 
-        jLabel1.setText("Primary Phone Number:");
+        lbl_cust_details_phoneNumber1st.setText("Primary Phone Number:");
 
-        jLabel2.setText("Alternative Phone Number:");
+        lbl_cust_details_phoneNumber2nd.setText("Alternative Phone Number:");
 
         javax.swing.GroupLayout panel_cust_detailsLayout = new javax.swing.GroupLayout(panel_cust_details);
         panel_cust_details.setLayout(panel_cust_detailsLayout);
@@ -237,7 +238,7 @@ public class Gui extends javax.swing.JFrame {
                             .addComponent(lbl_cust_details_billAddr_state)
                             .addComponent(lbl_cust_details_billAddr_suburb)
                             .addComponent(lbl_cust_details_firstName)
-                            .addComponent(jLabel1)
+                            .addComponent(lbl_cust_details_phoneNumber1st)
                             .addComponent(lbl_cust_details_ABN)
                             .addComponent(lbl_cust_details_billAddr_street)
                             .addComponent(lbl_cust_details_shpAddr_street))
@@ -264,16 +265,16 @@ public class Gui extends javax.swing.JFrame {
                                 .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
                                 .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                                     .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(btn_cust_details_ABN, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(txt_cust_details_ABN, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txt_cust_details_phoneNumber1st, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
                                         .addComponent(txt_cust_details_firstName, javax.swing.GroupLayout.Alignment.LEADING))
                                     .addGap(81, 81, 81)
                                     .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel2)
+                                        .addComponent(lbl_cust_details_phoneNumber2nd)
                                         .addComponent(lbl_cust_details_lastName))
                                     .addGap(18, 18, 18)
                                     .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField2)
+                                        .addComponent(txt_cust_details_phoneNumber2nd)
                                         .addComponent(txt_cust_details_lastName, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)))
                                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txt_cust_details_billAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,14 +299,14 @@ public class Gui extends javax.swing.JFrame {
                     .addComponent(txt_cust_details_lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_cust_details_phoneNumber1st)
+                    .addComponent(lbl_cust_details_phoneNumber2nd)
+                    .addComponent(txt_cust_details_phoneNumber1st, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_cust_details_phoneNumber2nd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_cust_details_ABN)
-                    .addComponent(btn_cust_details_ABN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_cust_details_ABN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -345,14 +346,9 @@ public class Gui extends javax.swing.JFrame {
 
         getContentPane().add(panel_cust_details, "card2");
 
-        panel_cust_order.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                panel_cust_orderFocusGained(evt);
-            }
-        });
-        panel_cust_order.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                panel_cust_orderPropertyChange(evt);
+        panel_cust_order.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                panel_cust_orderComponentShown(evt);
             }
         });
 
@@ -382,8 +378,10 @@ public class Gui extends javax.swing.JFrame {
         });
         tbl_cust_order.getTableHeader().setReorderingAllowed(false);
         scrPane_cust_order_table.setViewportView(tbl_cust_order);
-        tbl_cust_order.getColumnModel().getColumn(0).setResizable(false);
-        tbl_cust_order.getColumnModel().getColumn(2).setResizable(false);
+        if (tbl_cust_order.getColumnModel().getColumnCount() > 0) {
+            tbl_cust_order.getColumnModel().getColumn(0).setResizable(false);
+            tbl_cust_order.getColumnModel().getColumn(2).setResizable(false);
+        }
 
         btn_cust_order_cancel.setText("C(a)ncel");
         btn_cust_order_cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -418,12 +416,6 @@ public class Gui extends javax.swing.JFrame {
         lbl_cust_order_plusGST.setText("Plus GST of:");
 
         lbl_cust_order_totalCost.setText("Total Cost of Order:");
-
-        lbl_cust_order_listedCost_val.setText("$sum");
-
-        lbl_cust_order_plusGST_val.setText("$tax");
-
-        lbl_cust_order_totalCost_val.setText("$quote");
 
         javax.swing.GroupLayout panel_cust_orderLayout = new javax.swing.GroupLayout(panel_cust_order);
         panel_cust_order.setLayout(panel_cust_orderLayout);
@@ -531,7 +523,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_jobStatus.setText("Job Status:");
 
-        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 18));
+        lbl_doc_detail_taxInvoice.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbl_doc_detail_taxInvoice.setText("lblTaxInvoice");
 
         tbl_cust_order1.setModel(new javax.swing.table.DefaultTableModel(
@@ -555,8 +547,10 @@ public class Gui extends javax.swing.JFrame {
         });
         tbl_cust_order1.getTableHeader().setReorderingAllowed(false);
         scrPnl_cust_order_table1.setViewportView(tbl_cust_order1);
-        tbl_cust_order1.getColumnModel().getColumn(0).setResizable(false);
-        tbl_cust_order1.getColumnModel().getColumn(2).setResizable(false);
+        if (tbl_cust_order1.getColumnModel().getColumnCount() > 0) {
+            tbl_cust_order1.getColumnModel().getColumn(0).setResizable(false);
+            tbl_cust_order1.getColumnModel().getColumn(2).setResizable(false);
+        }
 
         lbl_doc_detail_listedCost.setText("Listed Cost:");
 
@@ -564,7 +558,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_plusGST.setText("Plus GST:");
 
-        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18));
+        lbl_doc_detail_totalCost.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbl_doc_detail_totalCost.setText("Total Cost:");
 
         lbl_doc_detail_listedCost_val.setText("$ListedCost");
@@ -573,7 +567,7 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_doc_detail_plusGST_val.setText("$GST");
 
-        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1, 18));
+        lbl_doc_detail_totalCost_val.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbl_doc_detail_totalCost_val.setText("$Total");
 
         lbl_doc_detail_supp_ABN_val.setText("111 222 333 44");
@@ -625,9 +619,6 @@ public class Gui extends javax.swing.JFrame {
             panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_doc_detailLayout.createSequentialGroup()
                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_doc_detailLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE))
                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(panel_doc_detailLayout.createSequentialGroup()
@@ -639,12 +630,15 @@ public class Gui extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_doc_detail_payableOn_val)
-                            .addComponent(lbl_doc_detail_invoicedOn_val))
-                        .addGap(317, 317, 317))
+                            .addComponent(lbl_doc_detail_invoicedOn_val)))
+                    .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                        .addGap(436, 436, 436)
+                        .addComponent(lbl_doc_detail_taxInvoice))
                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                        .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_doc_detailLayout.createSequentialGroup()
                                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lbl_doc_detail_totalCost)
                                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
@@ -659,7 +653,7 @@ public class Gui extends javax.swing.JFrame {
                                     .addComponent(lbl_doc_detail_lessDiscount_val)
                                     .addComponent(lbl_doc_detail_plusGST_val)
                                     .addComponent(lbl_doc_detail_totalCost_val)))
-                            .addGroup(panel_doc_detailLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_doc_detailLayout.createSequentialGroup()
                                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lbl_doc_detail_cust_billAddr)
                                     .addComponent(lbl_doc_detail_cust_ABN)
@@ -691,10 +685,7 @@ public class Gui extends javax.swing.JFrame {
                                             .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(btn_doc_detail_takeJob)
                                                 .addComponent(lbl_doc_deetail_jobStatus_val))))
-                                    .addComponent(jLabel5)))))
-                    .addGroup(panel_doc_detailLayout.createSequentialGroup()
-                        .addGap(436, 436, 436)
-                        .addComponent(lbl_doc_detail_taxInvoice)))
+                                    .addComponent(jLabel5))))))
                 .addContainerGap())
         );
         panel_doc_detailLayout.setVerticalGroup(
@@ -847,10 +838,12 @@ public class Gui extends javax.swing.JFrame {
             }
         });
         scrPane_job_list_mgr_changePrice.setViewportView(tbl_job_list_mgr_changePrice);
-        tbl_job_list_mgr_changePrice.getColumnModel().getColumn(0).setResizable(false);
-        tbl_job_list_mgr_changePrice.getColumnModel().getColumn(1).setResizable(false);
+        if (tbl_job_list_mgr_changePrice.getColumnModel().getColumnCount() > 0) {
+            tbl_job_list_mgr_changePrice.getColumnModel().getColumn(0).setResizable(false);
+            tbl_job_list_mgr_changePrice.getColumnModel().getColumn(1).setResizable(false);
+        }
 
-        lbl_job_list_mgr_changePrice.setFont(new java.awt.Font("Tahoma", 0, 12));
+        lbl_job_list_mgr_changePrice.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbl_job_list_mgr_changePrice.setText("Add or change the Price of Glass Types");
 
         btn_job_list_mgr_submitNewPrice.setText("Submit New Pricing");
@@ -920,7 +913,7 @@ public class Gui extends javax.swing.JFrame {
                                         .addComponent(lbl_job_list_mgr_newTaxRate))
                                     .addGap(18, 18, 18)
                                     .addGroup(panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txt_job_list_mgr_newTaxRate, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                                        .addComponent(txt_job_list_mgr_newTaxRate)
                                         .addComponent(lbl_job_list_mgr_currentTaxRate_val))))
                             .addGap(181, 181, 181))
                         .addGroup(panel_job_listLayout.createSequentialGroup()
@@ -964,16 +957,16 @@ public class Gui extends javax.swing.JFrame {
 
         getContentPane().add(panel_job_list, "card5");
 
-        lbl_usr_login_employeeID.setFont(new java.awt.Font("Tahoma", 0, 12));
+        lbl_usr_login_employeeID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbl_usr_login_employeeID.setText("Employee ID:");
 
-        lbl_usr_login_password.setFont(new java.awt.Font("Tahoma", 0, 12));
+        lbl_usr_login_password.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbl_usr_login_password.setText("Password:");
 
-        lbl_usr_login_loginType.setFont(new java.awt.Font("Tahoma", 0, 14));
+        lbl_usr_login_loginType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lbl_usr_login_loginType.setText("You are attempting to login as a:");
 
-        lbl_usr_login_loginType_val.setFont(new java.awt.Font("Tahoma", 0, 14));
+        lbl_usr_login_loginType_val.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lbl_usr_login_loginType_val.setText("lblUserType");
 
         btn_usr_login_fireLogin.setText("Login");
@@ -1059,7 +1052,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        lbl_new_employee_pleaseEnter.setFont(new java.awt.Font("Tahoma", 0, 14));
+        lbl_new_employee_pleaseEnter.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lbl_new_employee_pleaseEnter.setText("Please enter the details for the new Employee.");
 
         javax.swing.GroupLayout panel_new_employeeLayout = new javax.swing.GroupLayout(panel_new_employee);
@@ -1315,10 +1308,9 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
     }//GEN-LAST:event_btn_job_list_mgr_addNewEmployeeActionPerformed
 
     private void btn_cust_details_proceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_details_proceedActionPerformed
-
-        if (!checkCustomer()) {
-            addCustomer();
-        }
+        
+        // TODO query the DB for existing customer ABN    
+        cust = addCustomer();
         displayPanel(panel_cust_order);
     }//GEN-LAST:event_btn_cust_details_proceedActionPerformed
 
@@ -1333,21 +1325,7 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
 
     private void panel_doc_detailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_panel_doc_detailFocusGained
 
-        
     }//GEN-LAST:event_panel_doc_detailFocusGained
-
-    private void panel_cust_orderFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_panel_cust_orderFocusGained
-
-        
-    }//GEN-LAST:event_panel_cust_orderFocusGained
-
-    private void panel_cust_orderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_panel_cust_orderPropertyChange
-        //TODO modify the label to display customers first name
-        //TODO modify the table to display the current job (ifExists)
-        //TODO modify the price labels to display the current job info
-        hackTable(tbl_cust_order, scrPane_cust_order_table, false, false);
-         
-    }//GEN-LAST:event_panel_cust_orderPropertyChange
 
 private void txt_new_employee_employeeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_new_employee_employeeNameActionPerformed
 
@@ -1389,6 +1367,13 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
 // TODO check DB for existing Employee and then add one to DB if false.
 }//GEN-LAST:event_btn_new_employee_addNewEmployeeActionPerformed
 
+    private void panel_cust_orderComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panel_cust_orderComponentShown
+        // TODO add your handling code here:
+        System.out.println("Order fires");
+        lbl_cust_order_firstName.setText(cust.getFirstName());
+        hackTable(tbl_cust_order, scrPane_cust_order_table, false, false);
+    }//GEN-LAST:event_panel_cust_orderComponentShown
+
     /**
      * @param args the command line arguments
      */
@@ -1427,7 +1412,6 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
         
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField btn_cust_details_ABN;
     private javax.swing.JButton btn_cust_details_proceed;
     private javax.swing.JButton btn_cust_order_cancel;
     private javax.swing.JButton btn_cust_order_confirmLine;
@@ -1444,13 +1428,9 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
     private javax.swing.JButton btn_usr_login_fireLogin;
     private javax.swing.JComboBox cbx_cust_details_billAddr_state;
     private javax.swing.JComboBox cbx_cust_details_shpAddr_state;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lbl_cust_details_ABN;
     private javax.swing.JLabel lbl_cust_details_billAddr_postCode;
     private javax.swing.JLabel lbl_cust_details_billAddr_state;
@@ -1458,6 +1438,8 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
     private javax.swing.JLabel lbl_cust_details_billAddr_suburb;
     private javax.swing.JLabel lbl_cust_details_firstName;
     private javax.swing.JLabel lbl_cust_details_lastName;
+    private javax.swing.JLabel lbl_cust_details_phoneNumber1st;
+    private javax.swing.JLabel lbl_cust_details_phoneNumber2nd;
     private javax.swing.JLabel lbl_cust_details_shpAddr_postCode;
     private javax.swing.JLabel lbl_cust_details_shpAddr_state;
     private javax.swing.JLabel lbl_cust_details_shpAddr_street;
@@ -1551,11 +1533,14 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
     private javax.swing.JTable tbl_job_list_jobList;
     private javax.swing.JTable tbl_job_list_mgr_changePrice;
     private javax.swing.JTable tbl_job_list_stockLevel;
+    private javax.swing.JTextField txt_cust_details_ABN;
     private javax.swing.JTextField txt_cust_details_billAddr_postCode;
     private javax.swing.JTextField txt_cust_details_billAddr_street;
     private javax.swing.JTextField txt_cust_details_billAddr_suburb;
     private javax.swing.JTextField txt_cust_details_firstName;
     private javax.swing.JTextField txt_cust_details_lastName;
+    private javax.swing.JTextField txt_cust_details_phoneNumber1st;
+    private javax.swing.JTextField txt_cust_details_phoneNumber2nd;
     private javax.swing.JTextField txt_cust_details_shpAddr_postCode;
     private javax.swing.JTextField txt_cust_details_shpAddr_street;
     private javax.swing.JTextField txt_cust_details_shpAddr_suburb;
@@ -1827,7 +1812,13 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
                                 boolean addRow, boolean removeRow) {
       // Instantiate new table model and generic Object
       javax.swing.table.DefaultTableModel model = new 
-         javax.swing.table.DefaultTableModel();
+         javax.swing.table.DefaultTableModel() {
+            //override isCellEditable to false table to disable editing
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return row == (getRowCount() - 1);
+            }
+         };
       
       // 9 is the number of columns in tbl_cust_order - need to consider
       // rewriting to avoid magic number.
@@ -1844,6 +1835,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
               temp[j] = table.getModel().getValueAt(i,j);
           }
           model.insertRow(i,  temp);
+          
       }
       
       if (addRow) {
@@ -1897,7 +1889,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * 
      * <p>
      * This method will check all the txtFields from panel_cust_details for a
-     * match again the customer databse (or alternatively, if we load all the
+     * match again the customer database (or alternatively, if we load all the
      * customers in memory first, it just needs to check the customer classes
      * in memory - left up to programmer to decide how to implement).
      * This will avoid adding new customers where one already exists.
@@ -1924,35 +1916,39 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
     }
     
     /******************************************************************
-     * Adds a new customer class (can add to database as well?)
+     * Instantiates a new customer object with values from panel_cust_details
      * 
      * <p>
-     * This method should add a new customer class with the details obtained
-     * from the text fields in panel_cust_details. The customer class should
-     * ideally be responsibile for then saving the class back to the DB - but
-     * depending on time we may needs to just save it from here.
+     * This method will get the arguments to be passed to the Customer
+     * constructor from the textField objects on panel_cust_details. Then will
+     * subsequently create that new customer object 
      * <p>
      * 
-     * <p>
-     * -------------------------------IDEAS-----------------------------
-     * consider how you want to implement the search algorithm, if it is
-     * common to other searches (employee, product, job, user etc) then
-     * maybe we can abstract it out and just feed it parameters
-     * -----------------------------------------------------------------
-     * </p>
      * 
-     * @author PLEASE ENTER
-     * @param list the parameters and a description here
-     * @return void 
+     * @author Donovan Crichton
+     * @param null - this method takes no parameters
+     * @return Customer cust - returns the newly added Customer object.
      * @see btn_cust_details_proceedActionPerformed(...)
      * 
      * @TODO implement the addCustomer method if not in Customer Class
      *******************************************************************/
-    private void addCustomer() {
-        
+    private Customer addCustomer() {
+        Customer cust = new Customer(txt_cust_details_ABN.getText(),
+            txt_cust_details_firstName.getText(), 
+            txt_cust_details_lastName.getText(),
+            txt_cust_details_billAddr_street.getText(),
+            txt_cust_details_billAddr_suburb.getText(),
+            cbx_cust_details_billAddr_state.getSelectedItem().toString(),
+            txt_cust_details_billAddr_postCode.getText(),
+            txt_cust_details_phoneNumber1st.getText(),
+            txt_cust_details_phoneNumber2nd.getText(),
+            txt_cust_details_shpAddr_street.getText(),
+            txt_cust_details_shpAddr_suburb.getText(),
+            cbx_cust_details_shpAddr_state.getSelectedItem().toString(),
+            txt_cust_details_shpAddr_postCode.getText());
+       
+       return cust;
     }
-    
-    
     
 }
 

@@ -79,7 +79,7 @@ public class Employee extends Person {
     
     public static void writeToDB(Employee e) {
         List<Object> l = e.getFields();
-        int employeeId = (int)l.get(0);
+        int employeeId = (Integer) l.get(0);
         String firstName = (String)l.get(1);
         String lastName = (String)l.get(2);
         String role = (String)l.get(3);

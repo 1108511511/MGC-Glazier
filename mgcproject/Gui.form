@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
@@ -131,6 +131,7 @@
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="navMenuBar"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <Events>
     <EventHandler event="windowStateChanged" listener="java.awt.event.WindowStateListener" parameters="java.awt.event.WindowEvent" handler="formWindowStateChanged"/>
@@ -174,7 +175,7 @@
                               <Component id="lbl_cust_details_billAddr_state" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_cust_details_billAddr_suburb" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_cust_details_firstName" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_details_phoneNumber1st" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_cust_details_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_cust_details_billAddr_street" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_cust_details_shpAddr_street" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -209,18 +210,18 @@
                                   <Component id="txt_cust_details_shpAddr_street" alignment="0" pref="665" max="32767" attributes="1"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="btn_cust_details_ABN" alignment="0" max="32767" attributes="1"/>
-                                          <Component id="jTextField1" alignment="0" pref="152" max="32767" attributes="1"/>
+                                          <Component id="txt_cust_details_ABN" alignment="0" max="32767" attributes="1"/>
+                                          <Component id="txt_cust_details_phoneNumber1st" alignment="0" pref="152" max="32767" attributes="1"/>
                                           <Component id="txt_cust_details_firstName" alignment="0" max="32767" attributes="1"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_cust_details_phoneNumber2nd" min="-2" max="-2" attributes="0"/>
                                           <Component id="lbl_cust_details_lastName" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jTextField2" max="32767" attributes="1"/>
+                                          <Component id="txt_cust_details_phoneNumber2nd" max="32767" attributes="1"/>
                                           <Component id="txt_cust_details_lastName" alignment="0" pref="178" max="32767" attributes="1"/>
                                       </Group>
                                   </Group>
@@ -257,15 +258,15 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_phoneNumber1st" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_details_phoneNumber2nd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_phoneNumber1st" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_phoneNumber2nd" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lbl_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="17" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -395,7 +396,7 @@
             <Property name="text" type="java.lang.String" value="ABN:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="btn_cust_details_ABN">
+        <Component class="javax.swing.JTextField" name="txt_cust_details_ABN">
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_details_shpAddr_street">
           <Properties>
@@ -439,26 +440,25 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txt_cust_details_shpAddr_postCode">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_phoneNumber1st">
           <Properties>
             <Property name="text" type="java.lang.String" value="Primary Phone Number:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lbl_cust_details_phoneNumber2nd">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alternative Phone Number:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txt_cust_details_phoneNumber1st">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txt_cust_details_phoneNumber2nd">
         </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="panel_cust_order">
       <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="panel_cust_orderFocusGained"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="panel_cust_orderPropertyChange"/>
+        <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="panel_cust_orderComponentShown"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -693,19 +693,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_order_listedCost_val">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="$sum"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_order_plusGST_val">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="$tax"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_order_totalCost_val">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="$quote"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -725,10 +716,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="scrPnl_cust_order_table1" pref="1038" max="32767" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" alignment="1" attributes="1">
@@ -745,12 +732,16 @@
                               <Component id="lbl_doc_detail_payableOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_doc_detail_invoicedOn_val" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
+                          <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="scrPnl_cust_order_table1" alignment="1" pref="1038" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="lbl_doc_detail_totalCost" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
@@ -769,7 +760,7 @@
                                       <Component id="lbl_doc_detail_totalCost_val" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="lbl_doc_detail_cust_billAddr" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Component id="lbl_doc_detail_cust_ABN" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -811,10 +802,6 @@
                                   </Group>
                               </Group>
                           </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
-                          <Component id="lbl_doc_detail_taxInvoice" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -1225,7 +1212,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_job_list_mgr_newTaxRate" pref="109" max="32767" attributes="0"/>
+                                          <Component id="txt_job_list_mgr_newTaxRate" max="32767" attributes="0"/>
                                           <Component id="lbl_job_list_mgr_currentTaxRate_val" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
