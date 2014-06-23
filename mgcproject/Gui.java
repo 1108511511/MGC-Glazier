@@ -2036,7 +2036,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
             System.out.println(tbl_cust_order.getModel().getValueAt(i, 8));
             listedCost += (Float) tbl_cust_order.getModel().getValueAt(i, 8);
         }
-        taxRate = Job.getTaxPercent();
+        taxRate = Job.getGlobalTaxRate();
         if (listedCost != 0) {
             totalCost = listedCost + taxRate;
         }
