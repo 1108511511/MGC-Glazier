@@ -54,7 +54,7 @@ public class Job {
         }
     }
         
-        public static ArrayList getJobList() {                                     
+    public static ArrayList getJobList() {                                     
         try {
         CachedRowSet crs = new CachedRowSetImpl();
         crs = Query.readFromTable(SQLStatements.selectJobListStmt());
@@ -65,7 +65,7 @@ public class Job {
                 double taxPercent = crs.getDouble("tax_percent");
                 double discountPercent = crs.getDouble("discount_percent");                
                 ArrayList<Product> productList = getProductListPerJob(jobId);
-                //TODO get customer based on abn
+                Customer customer = new Customer();
                 Job newJob = new Job(jobStatus, discountPercent, 
                         productList, customer);
                 newJob.setJobId(jobId);
@@ -127,7 +127,7 @@ public class Job {
     }
     
     public String jobsListString(){
-        String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
+        String jobValues = getJobId() + "\t" + getJobStatus() + "\t" 
                 + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
                 + productList;
         return jobValues;
@@ -169,15 +169,15 @@ public class Job {
     /**
      * @return the jobId
      */
-    public int getJobID() {
+    public int getJobId() {
         return jobId;
     }
 
     /**
      * @param jobID the jobId to set
      */
-    public void setJobID(int jobID) {
-        this.jobId = jobID;
+    public void setJobId(int jobId) {
+        this.jobId = jobId;
     }
     
     /**
@@ -197,8 +197,17 @@ public class Job {
     /**
      * @return the taxPercent
      */
-    public double getTaxPercent() {
-        return taxPercent;
+    public static double getTaxPercent() {
+        try {
+            CachedRowSet crs = new CachedRowSetImpl();
+            crs = Query.readFromTable(SQLStatements.selectTaxRateStmt()); 
+            crs.next();
+            double taxPercent = crs.getDouble("tax_rate");
+            return taxPercent;
+        } catch (SQLException e) {
+            System.err.println("Error: " + e.getMessage());
+            return -1;
+        }
     }
 
     /**
@@ -242,3 +251,23 @@ public class Job {
      */
         
 }
+
+public static Customer getCustomerFromDB(int abn) {
+        try {
+        CachedRowSet crs = new CachedRowSetImpl();
+        crs = Query.readFromTable(SQLStatements.selectCustomerDetailsStmt(abn));
+            while (crs.next())
+            {
+                int jobId = crs.getInt("job_id");
+                String jobStatus = crs.getString("job_status");
+                double taxPercent = crs.getDouble("tax_percent");
+                double discountPercent = crs.getDouble("discount_percent");                
+                ArrayList<Product> productList = getProductListPerJob(jobId);
+                newJob.setJobId(jobId);
+                jobsList.add(newJob);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return jobsList;
+    }

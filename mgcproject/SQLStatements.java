@@ -52,7 +52,7 @@ public class SQLStatements {
         return statement;
     }
     
-    public static String selectCustomerDetailsStmt(String custABN) {
+    public static String selectCustomerDetailsStmt(int custABN) {
         String statement = ("SELECT * FROM customer WHERE cust_abn = '" 
                 + custABN + "'");
         return statement;
