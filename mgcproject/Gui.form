@@ -146,7 +146,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,57,0,0,4,38"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,98,0,0,4,-112"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -162,7 +162,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="309" max="32767" attributes="0"/>
+                  <EmptySpace pref="415" max="32767" attributes="0"/>
                   <Component id="lbl_cust_details_welcome" min="-2" pref="593" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
               </Group>
@@ -206,8 +206,8 @@
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                   <Component id="txt_cust_details_billAddr_suburb" alignment="0" min="-2" pref="222" max="-2" attributes="1"/>
-                                  <Component id="txt_cust_details_billAddr_street" pref="665" max="32767" attributes="1"/>
-                                  <Component id="txt_cust_details_shpAddr_street" alignment="0" pref="665" max="32767" attributes="1"/>
+                                  <Component id="txt_cust_details_billAddr_street" pref="743" max="32767" attributes="1"/>
+                                  <Component id="txt_cust_details_shpAddr_street" alignment="0" pref="743" max="32767" attributes="1"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="txt_cust_details_ABN" alignment="0" max="32767" attributes="1"/>
@@ -231,7 +231,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="192" max="32767" attributes="0"/>
+                          <EmptySpace pref="270" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -268,7 +268,7 @@
                       <Component id="lbl_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_cust_details_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                  <EmptySpace pref="62" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txt_cust_details_billAddr_street" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_details_billAddr_street" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
@@ -471,28 +471,33 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="btn_cust_order_confirmLine" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Component id="btn_cust_order_removeLine" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btn_cust_order_proceed" min="-2" pref="147" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btn_cust_order_cancel" min="-2" pref="114" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="btn_cust_order_removeLine" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btn_cust_order_proceed" min="-2" pref="147" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btn_cust_order_cancel" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
-                                  <Component id="lbl_cust_order_totalCost" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="lbl_cust_order_listedCost" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_cust_order_plusGST" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_totalCost" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_plusGST" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cust_order_listedCost" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_cust_order_listedCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_cust_order_plusGST_val" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_cust_order_totalCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="lbl_cust_order_listedCost_val" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lbl_cust_order_plusGST_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_cust_order_totalCost_val" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -522,26 +527,29 @@
                   <Component id="lbl_cust_order_pleaseDo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="scrPane_cust_order_table" min="-2" pref="257" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_listedCost" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_order_listedCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_cust_order_plusGST" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_cust_order_plusGST" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_order_plusGST_val" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_cust_order_listedCost" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_cust_order_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_cust_order_totalCost" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cust_order_totalCost_val" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btn_cust_order_confirmLine" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_removeLine" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_proceed" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cust_order_cancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="84" max="32767" attributes="0"/>
+                  <EmptySpace pref="94" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -693,10 +701,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_order_listedCost_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="test"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_order_plusGST_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="test"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_cust_order_totalCost_val">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="test"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -740,7 +757,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="scrPnl_cust_order_table1" alignment="1" pref="1038" max="32767" attributes="0"/>
+                              <Component id="scrPnl_cust_order_table1" alignment="1" pref="1148" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="lbl_doc_detail_totalCost" min="-2" max="-2" attributes="0"/>
@@ -776,7 +793,7 @@
                                       <Component id="lbl_doc_detail_cust_billAddr_line1_val" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lbl_doc_detail_cust_billAddr_line2_val" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="426" max="32767" attributes="0"/>
+                                  <EmptySpace pref="724" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
@@ -1267,7 +1284,7 @@
                           <Component id="btn_job_list_mgr_newTaxRate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="117" max="32767" attributes="0"/>
+                  <EmptySpace pref="162" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1501,7 +1518,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="432" max="32767" attributes="0"/>
+                  <EmptySpace pref="573" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1528,7 +1545,7 @@
                       <Component id="btn_usr_login_fireLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_usr_login_cancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="264" max="32767" attributes="0"/>
+                  <EmptySpace pref="305" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1599,7 +1616,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="391" max="32767" attributes="0"/>
+                  <EmptySpace pref="545" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -1648,7 +1665,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btn_new_employee_addNewEmployee" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="239" max="32767" attributes="0"/>
+                  <EmptySpace pref="279" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

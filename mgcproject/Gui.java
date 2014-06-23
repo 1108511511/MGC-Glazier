@@ -20,6 +20,7 @@ public class Gui extends javax.swing.JFrame {
      **********************************************************************/
     Customer cust;
     Product prod;
+    Employee emp;
     java.util.ArrayList<Product> productList = new 
         java.util.ArrayList<Product>();
     Job job;
@@ -233,7 +234,7 @@ public class Gui extends javax.swing.JFrame {
         panel_cust_detailsLayout.setHorizontalGroup(
             panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_cust_detailsLayout.createSequentialGroup()
-                .addContainerGap(309, Short.MAX_VALUE)
+                .addContainerGap(415, Short.MAX_VALUE)
                 .addComponent(lbl_cust_details_welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 593, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(160, 160, 160))
             .addGroup(panel_cust_detailsLayout.createSequentialGroup()
@@ -268,8 +269,8 @@ public class Gui extends javax.swing.JFrame {
                                 .addGap(6, 6, 6))
                             .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txt_cust_details_billAddr_suburb, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
-                                .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+                                .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
+                                .addComponent(txt_cust_details_shpAddr_street, javax.swing.GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
                                 .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                                     .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(txt_cust_details_ABN, javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,7 +287,7 @@ public class Gui extends javax.swing.JFrame {
                                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txt_cust_details_billAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cbx_cust_details_billAddr_state, javax.swing.GroupLayout.Alignment.LEADING, 0, 97, Short.MAX_VALUE))))
-                        .addContainerGap(192, Short.MAX_VALUE))
+                        .addContainerGap(270, Short.MAX_VALUE))
                     .addGroup(panel_cust_detailsLayout.createSequentialGroup()
                         .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txt_cust_details_shpAddr_postCode, javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,7 +315,7 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_cust_details_ABN)
                     .addComponent(txt_cust_details_ABN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(panel_cust_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_cust_details_billAddr_street, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_cust_details_billAddr_street, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -431,32 +432,41 @@ public class Gui extends javax.swing.JFrame {
 
         lbl_cust_order_totalCost.setText("Total Cost of Order:");
 
+        lbl_cust_order_listedCost_val.setText("test");
+
+        lbl_cust_order_plusGST_val.setText("test");
+
+        lbl_cust_order_totalCost_val.setText("test");
+
         javax.swing.GroupLayout panel_cust_orderLayout = new javax.swing.GroupLayout(panel_cust_order);
         panel_cust_order.setLayout(panel_cust_orderLayout);
         panel_cust_orderLayout.setHorizontalGroup(
             panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_cust_orderLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panel_cust_orderLayout.createSequentialGroup()
                         .addComponent(btn_cust_order_confirmLine)
                         .addGap(17, 17, 17)
+                        .addComponent(btn_cust_order_removeLine)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_cust_order_proceed, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_cust_order_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(panel_cust_orderLayout.createSequentialGroup()
-                                .addComponent(btn_cust_order_removeLine)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn_cust_order_proceed, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn_cust_order_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(183, 183, 183)
-                                .addComponent(lbl_cust_order_totalCost))
-                            .addComponent(lbl_cust_order_listedCost)
-                            .addComponent(lbl_cust_order_plusGST))
-                        .addGap(36, 36, 36)
+                            .addComponent(lbl_cust_order_totalCost)
+                            .addComponent(lbl_cust_order_plusGST)
+                            .addComponent(lbl_cust_order_listedCost))
                         .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_cust_order_listedCost_val, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_cust_order_plusGST_val, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_cust_order_totalCost_val, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addGroup(panel_cust_orderLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(lbl_cust_order_listedCost_val))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_cust_orderLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbl_cust_order_plusGST_val, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lbl_cust_order_totalCost_val, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(panel_cust_orderLayout.createSequentialGroup()
                         .addComponent(lbl_cust_order_welcome)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -479,23 +489,25 @@ public class Gui extends javax.swing.JFrame {
                 .addComponent(lbl_cust_order_pleaseDo)
                 .addGap(18, 18, 18)
                 .addComponent(scrPane_cust_order_table, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cust_order_listedCost_val)
-                    .addComponent(lbl_cust_order_plusGST))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cust_order_plusGST_val)
-                    .addComponent(lbl_cust_order_listedCost))
-                .addGap(18, 18, 18)
+                    .addComponent(lbl_cust_order_listedCost)
+                    .addComponent(lbl_cust_order_listedCost_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cust_order_totalCost_val)
+                    .addComponent(lbl_cust_order_plusGST)
+                    .addComponent(lbl_cust_order_plusGST_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_cust_order_totalCost)
+                    .addComponent(lbl_cust_order_totalCost_val))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(panel_cust_orderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_cust_order_confirmLine)
                     .addComponent(btn_cust_order_removeLine)
                     .addComponent(btn_cust_order_proceed)
                     .addComponent(btn_cust_order_cancel))
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_cust_order, "card3");
@@ -651,7 +663,7 @@ public class Gui extends javax.swing.JFrame {
                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE)
+                            .addComponent(scrPnl_cust_order_table1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1148, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_doc_detailLayout.createSequentialGroup()
                                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lbl_doc_detail_totalCost)
@@ -681,7 +693,7 @@ public class Gui extends javax.swing.JFrame {
                                     .addComponent(lbl_doc_detail_cust_shpAddr_line1_val)
                                     .addComponent(lbl_doc_detail_cust_billAddr_line1_val)
                                     .addComponent(lbl_doc_detail_cust_billAddr_line2_val))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 724, Short.MAX_VALUE)
                                 .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(panel_doc_detailLayout.createSequentialGroup()
                                         .addGroup(panel_doc_detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -966,7 +978,7 @@ public class Gui extends javax.swing.JFrame {
                     .addGroup(panel_job_listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btn_job_list_mgr_addNewEmployee)
                         .addComponent(btn_job_list_mgr_newTaxRate)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_job_list, "card5");
@@ -1021,7 +1033,7 @@ public class Gui extends javax.swing.JFrame {
                                 .addComponent(btn_usr_login_fireLogin)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btn_usr_login_cancel)))))
-                .addContainerGap(432, Short.MAX_VALUE))
+                .addContainerGap(573, Short.MAX_VALUE))
         );
         panel_usr_loginLayout.setVerticalGroup(
             panel_usr_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1042,7 +1054,7 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(panel_usr_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_usr_login_fireLogin)
                     .addComponent(btn_usr_login_cancel))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(305, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_usr_login, "card6");
@@ -1074,7 +1086,7 @@ public class Gui extends javax.swing.JFrame {
         panel_new_employeeLayout.setHorizontalGroup(
             panel_new_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_new_employeeLayout.createSequentialGroup()
-                .addContainerGap(391, Short.MAX_VALUE)
+                .addContainerGap(545, Short.MAX_VALUE)
                 .addGroup(panel_new_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_new_employeeLayout.createSequentialGroup()
                         .addGroup(panel_new_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1112,7 +1124,7 @@ public class Gui extends javax.swing.JFrame {
                     .addComponent(txt_new_employee_employeePassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btn_new_employee_addNewEmployee)
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_new_employee, "card7");
@@ -1220,18 +1232,6 @@ public class Gui extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-private void btn_cust_order_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_cancelActionPerformed
-//TODO save data to DB as uncommited (job class responsibility?)
-    displayPanel(panel_cust_details);
-    
-}//GEN-LAST:event_btn_cust_order_cancelActionPerformed
-
-private void btn_cust_order_removeLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_removeLineActionPerformed
-   //TODO remove a previously created product from ArrayList
-    
-   hackTable(tbl_cust_order, scrPane_cust_order_table, false, true); 
-}//GEN-LAST:event_btn_cust_order_removeLineActionPerformed
-
 private void menu_item_cust_detailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_cust_detailsActionPerformed
     displayPanel(panel_cust_details);
 }//GEN-LAST:event_menu_item_cust_detailsActionPerformed
@@ -1245,11 +1245,6 @@ private void menu_item_cust_docDetailActionPerformed(java.awt.event.ActionEvent 
 
     displayPanel(panel_doc_detail);
 }//GEN-LAST:event_menu_item_cust_docDetailActionPerformed
-
-private void btn_cust_order_proceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_proceedActionPerformed
-    //TODO create a new job class and save to DB If not jobClass then create new method
-    displayPanel(panel_doc_detail);
-}//GEN-LAST:event_btn_cust_order_proceedActionPerformed
 
 private void menu_item_changeUser_managerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_item_changeUser_managerActionPerformed
 
@@ -1329,17 +1324,6 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
         displayPanel(panel_cust_order);
     }//GEN-LAST:event_btn_cust_details_proceedActionPerformed
 
-    private void btn_cust_order_confirmLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_confirmLineActionPerformed
-       //TODO call addProduct (or job class method?) to add a new product
-       prod = addProductFromPanel(getSelectedRow(tbl_cust_order));
-       System.out.println(prod.getFields());
-       hackTable(tbl_cust_order, scrPane_cust_order_table, true, false);
-       // -2 magic number: 2 rows have been added, -2 resets to original row
-       // 8 is the final column in the table
-       tbl_cust_order.getModel().setValueAt(prod.getProductPrice(), 
-               tbl_cust_order.getRowCount()-2, 8);
-    }//GEN-LAST:event_btn_cust_order_confirmLineActionPerformed
-
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
 
     }//GEN-LAST:event_formWindowStateChanged
@@ -1389,10 +1373,40 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
 }//GEN-LAST:event_btn_new_employee_addNewEmployeeActionPerformed
 
     private void panel_cust_orderComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panel_cust_orderComponentShown
-        // TODO add your handling code here:
+
         lbl_cust_order_firstName.setText(cust.getFirstName());
         hackTable(tbl_cust_order, scrPane_cust_order_table, false, false);
     }//GEN-LAST:event_panel_cust_orderComponentShown
+
+    private void btn_cust_order_removeLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_removeLineActionPerformed
+        //TODO remove a previously created product from ArrayList
+
+        hackTable(tbl_cust_order, scrPane_cust_order_table, false, true);
+    }//GEN-LAST:event_btn_cust_order_removeLineActionPerformed
+
+    private void btn_cust_order_confirmLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_confirmLineActionPerformed
+        //TODO call addProduct (or job class method?) to add a new product
+        prod = addProductFromPanel(getSelectedRow(tbl_cust_order));
+        System.out.println(prod.getFields());
+        hackTable(tbl_cust_order, scrPane_cust_order_table, true, false);
+        // -2 magic number: 2 rows have been added, -2 resets to original row
+        // 8 is the final column in the table
+        tbl_cust_order.getModel().setValueAt(prod.getProductPrice(),
+            tbl_cust_order.getRowCount()-2, 8);
+        productList.add(prod);
+        updateCustOrderLabels();
+    }//GEN-LAST:event_btn_cust_order_confirmLineActionPerformed
+
+    private void btn_cust_order_proceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_proceedActionPerformed
+        //TODO create a new job class and save to DB If not jobClass then create new method
+        displayPanel(panel_doc_detail);
+    }//GEN-LAST:event_btn_cust_order_proceedActionPerformed
+
+    private void btn_cust_order_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_cancelActionPerformed
+        //TODO save data to DB as uncommited (job class responsibility?)
+        displayPanel(panel_cust_details);
+
+    }//GEN-LAST:event_btn_cust_order_cancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1824,8 +1838,6 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * @see btn_cust_order_confirmLineActionPerformed(...)
      * @see btn_cust_order_removeLineActionPerformed(...)
      * @see panel_cust_orderPropertyChange(...)
-     * 
-     * @TODO modify hackTable to set previously entered lines as read only
      *******************************************************************/
     private void hackTable(javax.swing.JTable table, 
                                 javax.swing.JScrollPane scrollpane,
@@ -1998,7 +2010,8 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
        Product product = new Product ((String) list.get(0),
                (Boolean) list.get(2), isOutdoor, 
                (Integer) list.get(4), (Integer) list.get(5), 
-               (Integer) list.get(6), (Integer) list.get(7));
+               (Integer) list.get(6), (Integer) list.get(7), 
+               (String) list.get(3));
        return product;
     }
     
@@ -2009,6 +2022,13 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
             rowList.add(table.getModel().getValueAt(row, i));
         }
         return rowList;
+    }
+    
+    void updateCustOrderLabels() {
+        double listedCost = 0.00;
+        //TODO get the system tax rate
+        double taxRate = 0.00;
+        
     }
 }
 
