@@ -25,11 +25,14 @@ public class Product {
     private int width;
     private int thickness;
     private int quantity;
+    private String description;
     private int matsUsed;
     private float unitPrice;
     private float productPrice;
         
-    public Product(String type, boolean isLockable, boolean isOutdoor, int length, int width, int thickness, int quantity) {
+    public Product(String type, boolean isLockable, boolean isOutdoor, 
+            int length, int width, int thickness, int quantity, 
+            String description) {
         this.productID = getProductIdFromDB() + 1;
         this.type = type;
         this.isLockable = isLockable;
@@ -37,6 +40,7 @@ public class Product {
         this.length = length;
         this.width = width;
         this.thickness = thickness;
+        this.description = description;
         this.quantity = quantity;
         this.matsUsed = length * width * thickness;
         deductMatsFromDB();
@@ -77,6 +81,50 @@ public class Product {
             System.err.println("Error: " + e.getMessage());
             return -1;
         }
+    }
+    
+    public List getFields(){
+        List<Object> list = new ArrayList<Object>();
+        list.add(productID);
+        list.add(type);
+        list.add(isLockable);
+        list.add(isOutdoor);
+        list.add(length);
+        list.add(width);
+        list.add(thickness);                
+        list.add(quantity);
+        list.add(unitPrice);
+        list.add(productPrice);
+        list.add(getDescription());
+        return list;
+    }
+    
+    public static void writeToDB(Product p) {
+        List<Object> l = p.getFields();
+        int productId = (int)l.get(0);
+        String type = (String)l.get(1);
+        boolean isLockable = (boolean)l.get(2);
+        boolean isOutdoor = (boolean)l.get(3);
+        int length = (int)l.get(4);
+        int width = (int)l.get(5);
+        int thickness = (int)l.get(6);
+        int quantity = (int)l.get(7);
+        float unitPrice = (float)l.get(8);
+        float productPrice = (float)l.get(9);
+        String description = (String)l.get(10);
+        
+        Query.writeToTable(SQLStatements.insertProductStmt(
+                length, width, thickness, isLockable, description, type, 
+                isOutdoor, quantity));
+    }
+
+    // for testing output to console
+    public String productListString(){
+        String productValues = getProductID() + "\t" + getType() + "\t" 
+                + isIsLockable() + "\t" + isIsOutdoor() + "\t"
+                + getLength() + "\t" + getWidth() + "\t"
+                + getThickness();
+        return productValues;
     }
 
     /**
@@ -218,46 +266,19 @@ public class Product {
     public void setProductPrice(float productPrice) {
         this.productPrice = productPrice;
     }
-    
-    public List getFields(){
-        List<Object> list = new ArrayList<Object>();
-        list.add(productID);
-        list.add(type);
-        list.add(isLockable);
-        list.add(isOutdoor);
-        list.add(length);
-        list.add(width);
-        list.add(thickness);                
-        list.add(quantity);
-        list.add(unitPrice);
-        list.add(productPrice);
-        return list;
-    }
-    
-    public static void writeToDB(Product p) {
-        List<Object> l = p.getFields();
-        int productId = (Integer) l.get(0);
-        String type = (String)l.get(1);
-        boolean isLockable = (Boolean) l.get(2);
-        boolean isOutdoor = (Boolean) l.get(3);
-        int length = (Integer) l.get(4);
-        int width = (Integer) l.get(5);
-        int thickness = (Integer) l.get(6);
-        int quantity = (Integer) l.get(7);
-        float unitPrice = (Float) l.get(8);
-        float productPrice = (Float) l.get(9);
-        
-        Query.writeToTable(SQLStatements.insertProductStmt(
-                length, width, thickness, isLockable, "A product", type, 
-                isOutdoor, quantity));
+
+    /**
+     * @return the description
+     */
+    public String getDescription() {
+        return description;
     }
 
-    // for testing output to console
-    public String productListString(){
-        String productValues = getProductID() + "\t" + getType() + "\t" 
-                + isIsLockable() + "\t" + isIsOutdoor() + "\t"
-                + getLength() + "\t" + getWidth() + "\t"
-                + getThickness();
-        return productValues;
+    /**
+     * @param description the description to set
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
+    
 }

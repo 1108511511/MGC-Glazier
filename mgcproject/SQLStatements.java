@@ -52,7 +52,7 @@ public class SQLStatements {
         return statement;
     }
     
-    public static String selectCustomerDetailsStmt(String custABN) {
+    public static String selectCustomerDetailsStmt(int custABN) {
         String statement = ("SELECT * FROM customer WHERE cust_abn = '" 
                 + custABN + "'");
         return statement;
@@ -69,6 +69,11 @@ public class SQLStatements {
                 "SELECT * FROM employee "
               + "WHERE employee_id = '" + employeeID + "' AND "
               + "employee_password = '" + password + "'");
+        return statement;
+    }
+    
+    public static String selectTaxRateStmt() {
+        String statement = ("SELECT tax_rate FROM tax WHERE tax_type = 'GST'");
         return statement;
     }
      
@@ -107,6 +112,12 @@ public class SQLStatements {
         return statement;
     }
     
+    public static String updateTaxRateStmt(float taxRate) {
+        String statement = ("UPDATE tax SET tax_rate = '" + taxRate
+                + "WHERE tax_type = 'GST'");
+        return statement;
+    }
+    
     // Overwrite the system tax rate with a new one, updating all jobs in DB. 
     // Note: Statement flexible to allow for potential 'completed jobs'.
     public static String updateTaxRateStmt(double taxRate) {
@@ -128,13 +139,12 @@ public class SQLStatements {
     }
     
     // Save the new glazier to the DB for that job.
-    public static String updateGlazierForJobStmt(int jobID, int employeeID) {
+    public static String updateEmployeeForJobStmt(int jobID, int employeeID) {
         String statement = (
                 "UPDATE job SET employee_employee_id = '" + employeeID + "' "
               + "WHERE job_id = '" + jobID + "'");
         return statement;
-    }  
-    
+    }    
     
     /******************************************************************
      * INSERT INTO table SQL statements
@@ -180,6 +190,18 @@ public class SQLStatements {
                 + "VALUES('" + employeeId + "','" + firstName
                 + "','" + lastName + "','" + employeeRole + "','" 
                 + password + "')";
+        return statement;
+    }
+    
+    public static String insertJobStmt(
+            int jobId, String jobStatus, 
+            double taxPercent, double discountPercent, String custAbn,
+            int employeeId) {
+        String statement = "INSERT INTO employee(job_id, job_status, "
+                + "tax_percent, discount_percent, customer_cust_abn, tax_type "
+                + "VALUES('" + jobId + "','" + jobStatus
+                + "','" + taxPercent + "','" + discountPercent + "','" 
+                + custAbn + "','" + employeeId + "')";
         return statement;
     }
 
