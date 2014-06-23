@@ -582,11 +582,11 @@
                     <Column editable="true" title="Glass Location" type="java.lang.String"/>
                     <Column editable="true" title="Lockable" type="java.lang.Boolean"/>
                     <Column editable="true" title="Description" type="java.lang.String"/>
-                    <Column editable="true" title="Length (cm)" type="java.lang.Double"/>
-                    <Column editable="true" title="Width (cm)" type="java.lang.Double"/>
-                    <Column editable="true" title="Thickness (cm)" type="java.lang.Double"/>
+                    <Column editable="true" title="Length (cm)" type="java.lang.Integer"/>
+                    <Column editable="true" title="Width (cm)" type="java.lang.Integer"/>
+                    <Column editable="true" title="Thickness (cm)" type="java.lang.Integer"/>
                     <Column editable="true" title="Quantity" type="java.lang.Integer"/>
-                    <Column editable="true" title="Cost" type="java.lang.Object"/>
+                    <Column editable="false" title="Cost" type="java.lang.Double"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

@@ -15,8 +15,15 @@
 package mgcproject;
 
 public class Gui extends javax.swing.JFrame {
-    
+    /**********************************************************************
+     * -------------------------GLOBAL CLASS VARIALES---------------------
+     **********************************************************************/
     Customer cust;
+    Product prod;
+    java.util.ArrayList<Product> productList = new 
+        java.util.ArrayList<Product>();
+    Job job;
+    
     /** Creates new form gui_customer_details */
     public Gui() {
         initComponents();
@@ -369,11 +376,18 @@ public class Gui extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                true, true, true, true, true, true, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         tbl_cust_order.getTableHeader().setReorderingAllowed(false);
@@ -1311,12 +1325,19 @@ private void menu_item_changeUser_customerActionPerformed(java.awt.event.ActionE
         
         // TODO query the DB for existing customer ABN    
         cust = addCustomer();
+        System.out.println(cust.getFields());
         displayPanel(panel_cust_order);
     }//GEN-LAST:event_btn_cust_details_proceedActionPerformed
 
     private void btn_cust_order_confirmLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_confirmLineActionPerformed
        //TODO call addProduct (or job class method?) to add a new product
+       prod = addProductFromPanel(getSelectedRow(tbl_cust_order));
+       System.out.println(prod.getFields());
        hackTable(tbl_cust_order, scrPane_cust_order_table, true, false);
+       // -2 magic number: 2 rows have been added, -2 resets to original row
+       // 8 is the final column in the table
+       tbl_cust_order.getModel().setValueAt(prod.getProductPrice(), 
+               tbl_cust_order.getRowCount()-2, 8);
     }//GEN-LAST:event_btn_cust_order_confirmLineActionPerformed
 
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
@@ -1369,7 +1390,6 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
 
     private void panel_cust_orderComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panel_cust_orderComponentShown
         // TODO add your handling code here:
-        System.out.println("Order fires");
         lbl_cust_order_firstName.setText(cust.getFirstName());
         hackTable(tbl_cust_order, scrPane_cust_order_table, false, false);
     }//GEN-LAST:event_panel_cust_orderComponentShown
@@ -1799,7 +1819,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * 
      * @author Donovan Crichton
      * @param table - the JTable object to be replaced.
-     * @param scrollpane - JScrollPane object assosicated with table.
+     * @param scrollpane - JScrollPane object associated with table.
      * @return void.
      * @see btn_cust_order_confirmLineActionPerformed(...)
      * @see btn_cust_order_removeLineActionPerformed(...)
@@ -1884,7 +1904,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
         //scrollpane.getViewport().add(table);
     }
      
-     /******************************************************************
+      /******************************************************************
      * Check to see if the customer already exists in the database
      * 
      * <p>
@@ -1893,7 +1913,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * customers in memory first, it just needs to check the customer classes
      * in memory - left up to programmer to decide how to implement).
      * This will avoid adding new customers where one already exists.
-     * <p>
+     * </p>
      * 
      * <p>
      * -------------------------------IDEAS-----------------------------
@@ -1922,7 +1942,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * This method will get the arguments to be passed to the Customer
      * constructor from the textField objects on panel_cust_details. Then will
      * subsequently create that new customer object 
-     * <p>
+     * </p>
      * 
      * 
      * @author Donovan Crichton
@@ -1945,10 +1965,50 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
             txt_cust_details_shpAddr_street.getText(),
             txt_cust_details_shpAddr_suburb.getText(),
             cbx_cust_details_shpAddr_state.getSelectedItem().toString(),
-            txt_cust_details_shpAddr_postCode.getText());
-       
+            txt_cust_details_shpAddr_postCode.getText());  
        return cust;
     }
     
+    /******************************************************************
+     * Instantiates a new product and appends it to the productList
+     * 
+     * <p>
+     * This method will create a new product from the panel_cust_order and
+     * add it to the productList arrayList. This will then allow a Job object
+     * to be instantiated.
+     * </p>
+     * 
+     * <p>
+     * Note! Uses magic numbers in the list field to get Columns
+     * </p>
+     * 
+     * @author Donovan Crichton
+     * @param unsure
+     * @return void
+     * @see btn_cust_order_confirmLineActionPerformed(...)
+     ******************************************************************/
+    private Product addProductFromPanel(java.util.ArrayList list) {
+       boolean isOutdoor;
+       if (list.get(1) == "Outdoor") {
+           isOutdoor = true;
+       }
+       else {
+           isOutdoor = false;
+       }
+       Product product = new Product ((String) list.get(0),
+               (Boolean) list.get(2), isOutdoor, 
+               (Integer) list.get(4), (Integer) list.get(5), 
+               (Integer) list.get(6), (Integer) list.get(7));
+       return product;
+    }
+    
+    private java.util.ArrayList getSelectedRow(javax.swing.JTable table) {
+        java.util.ArrayList rowList = new java.util.ArrayList();
+        int row = table.getSelectedRow();
+        for (int i = 0; i < table.getColumnCount(); i++){
+            rowList.add(table.getModel().getValueAt(row, i));
+        }
+        return rowList;
+    }
 }
 
