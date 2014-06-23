@@ -1,5 +1,3 @@
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,10 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.sql.rowset.CachedRowSet;
 import javax.swing.table.DefaultTableModel;
-import mgcproject.Job;
-import mgcproject.ProductTable;
-import mgcproject.Query;
-import mgcproject.SQLStatements;
 
 /**
  *
@@ -24,7 +18,7 @@ import mgcproject.SQLStatements;
  */
 public class JobTable extends javax.swing.JFrame {
 
-    ArrayList<Job> jobsList = new ArrayList<Job>();
+    ArrayList<Job> jobsList = new ArrayList<>();
     
     /**
      * Creates new form NewJFrame
@@ -103,7 +97,7 @@ public class JobTable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -117,9 +111,9 @@ public class JobTable extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-//        try {
-//        CachedRowSet crs = new CachedRowSetImpl();
-//        crs = Query.readFromTable(SQLStatements.selectJobListStmt());
+        try {
+        CachedRowSet crs = new CachedRowSetImpl();
+        crs = Query.readFromTable(SQLStatements.selectJobListStmt());
 //            while (crs.next())
 //            {
 //                int jobID = crs.getInt("job_id");
@@ -135,41 +129,41 @@ public class JobTable extends javax.swing.JFrame {
 //                custLastName);
 //                jobsList.add(newJob);
 //            }
-//        } catch(SQLException e) {
-//            e.printStackTrace();
-//        }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
         
-//        DefaultTableModel amodel = new DefaultTableModel();
-//        Object[] tableColumnNames = new Object[8]; // two columns in kart table
-//        tableColumnNames[0] = "Job Id";
-//        tableColumnNames[1] = "Status";
-//        tableColumnNames[2] = "Tax (%)";
-//        tableColumnNames[3] = "Discount (%)";
-//        tableColumnNames[4] = "Number of Jobs";
-//        tableColumnNames[5] = "Customer ABN";
-//        tableColumnNames[6] = "First Name";
-//        tableColumnNames[7] = "Last Name";
-//        amodel.setColumnIdentifiers(tableColumnNames); // important step model won't be visible 
-//        
-//        Object[] objects = new Object[8];
-//        if(jobsList.size() > 0) {
-//            for(int i = 0; i < jobsList.size(); i++ ) { // build the model
-//                Job someJob = jobsList.get(i);
-//                objects[0] = someJob.getJobID();
-//                objects[1] = someJob.getJobStatus();
-//                objects[2] = someJob.getTaxPercent();
-//                objects[3] = someJob.getDiscountPercent();
-//                objects[4] = someJob.getQuantityUsed();
-//                objects[5] = someJob.getCustomerABN();
-//                objects[6] = someJob.getCustFirstName();
-//                objects[7] = someJob.getCustLastName();
-//                
-//                amodel.addRow(objects);
-//            }
-//            
-//            this.jTable1.setModel(amodel);
-//        
-//        }//end of if
+        DefaultTableModel amodel = new DefaultTableModel();
+        Object[] tableColumnNames = new Object[8]; // two columns in kart table
+        tableColumnNames[0] = "Job Id";
+        tableColumnNames[1] = "Status";
+        tableColumnNames[2] = "Tax (%)";
+        tableColumnNames[3] = "Discount (%)";
+        tableColumnNames[4] = "Number of Jobs";
+        tableColumnNames[5] = "Customer ABN";
+        tableColumnNames[6] = "First Name";
+        tableColumnNames[7] = "Last Name";
+        amodel.setColumnIdentifiers(tableColumnNames); // important step model won't be visible 
+        
+        Object[] objects = new Object[8];
+        if(jobsList.size() > 0) {
+            for(int i = 0; i < jobsList.size(); i++ ) { // build the model
+                Job someJob = jobsList.get(i);
+                objects[0] = someJob.getJobID();
+                objects[1] = someJob.getJobStatus();
+                objects[2] = someJob.getTaxPercent();
+                objects[3] = someJob.getDiscountPercent();
+                objects[4] = someJob.getQuantityUsed();
+                objects[5] = someJob.getCustomerABN();
+                objects[6] = someJob.getCustFirstName();
+                objects[7] = someJob.getCustLastName();
+                
+                amodel.addRow(objects);
+            }
+            
+            this.jTable1.setModel(amodel);
+        
+        }//end of if
     }//GEN-LAST:event_formWindowActivated
 
     /**
@@ -198,7 +192,7 @@ public class JobTable extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JobTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-         
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -213,5 +207,3 @@ public class JobTable extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
-
-

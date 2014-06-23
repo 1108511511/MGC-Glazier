@@ -105,7 +105,7 @@ public class Job {
         System.out.println(jobsList.size());
         System.out.println("start of printJobList");
         for(int i = 0; i < jobsList.size(); i++) {
-            System.out.println(jobsList.get(i).toString());
+            System.out.println(jobsList.get(i).jobsListString());
         }
         System.out.println("end of printJobList for loop");
     }
@@ -114,18 +114,21 @@ public class Job {
         System.out.println(productList.size());
         System.out.println("start of printProductList");
         for(int i = 0; i < productList.size(); i++) {
-            System.out.println(productList.get(i).toString());
+            System.out.println(productList.get(i).productListString());
         }
         System.out.println("end of printProductList for loop");
     }
     
-    @Override
-    public String toString(){
+    public String jobsListString(){
         String jobValues = getJobID() + "\t" + getJobStatus() + "\t" 
                 + getTaxPercent() + "\t" + getDiscountPercent() + "\t"
                 + productList;
         return jobValues;
     }
+    
+    
+    
+    
     // end of testing cacheJoblist
     
     /**

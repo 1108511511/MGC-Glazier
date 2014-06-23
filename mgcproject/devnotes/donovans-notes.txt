@@ -1,0 +1,10 @@
+Currently working on GUI - specifically how to get drop boxes inside table cells
+for efficient data input. GUI is based on a card layout with one JFrame and
+overlapping JPanels that hide themselves and display another when a major screen
+event happens (moving from one 'screen' to another. I'm designing the screens in
+netbeans and just editing them in vim, so you guys wont have to worry about me
+going overboard doing it from scratch.
+
+Give me a hoy if there's any questions yeah?
+
+

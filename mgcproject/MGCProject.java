@@ -13,11 +13,10 @@ public class MGCProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {    
-        Employee e = new Employee("Bob", "Jones", "Glazier", "p4ssw0rd");
-        Employee.writeToDB(e);
-//        Product p = new Product("Delicate", true, false, 12, 32, 10, 2);
-//        Product.writeToDB(p);
-//        Query.printFromTable(SQLStatements.selectProductListStmt());
+        Product p = new Product("Delicate", true, false, 12, 32, 10, 2);
+        Product.writeToDB(p);
+        Query.printFromTable(SQLStatements.selectProductListStmt());
                
     }
 }
+

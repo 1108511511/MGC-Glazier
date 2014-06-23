@@ -252,4 +252,12 @@ public class Product {
                 isOutdoor, quantity));
     }
 
+    // for testing output to console
+    public String productListString(){
+        String productValues = getProductID() + "\t" + getType() + "\t" 
+                + isIsLockable() + "\t" + isIsOutdoor() + "\t"
+                + getLength() + "\t" + getWidth() + "\t"
+                + getThickness();
+        return productValues;
+    }
 }
