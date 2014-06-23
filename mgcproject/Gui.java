@@ -1380,8 +1380,8 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
 
     private void btn_cust_order_removeLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_removeLineActionPerformed
         //TODO remove a previously created product from ArrayList
-
         hackTable(tbl_cust_order, scrPane_cust_order_table, false, true);
+        updateCustOrderLabels();
     }//GEN-LAST:event_btn_cust_order_removeLineActionPerformed
 
     private void btn_cust_order_confirmLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cust_order_confirmLineActionPerformed
@@ -1998,6 +1998,7 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
      * @param unsure
      * @return void
      * @see btn_cust_order_confirmLineActionPerformed(...)
+     * @TODO implement numberFormat object to correctly display currency
      ******************************************************************/
     private Product addProductFromPanel(java.util.ArrayList list) {
        boolean isOutdoor;
@@ -2025,10 +2026,30 @@ private void btn_new_employee_addNewEmployeeActionPerformed(java.awt.event.Actio
     }
     
     void updateCustOrderLabels() {
+        //define variables
         double listedCost = 0.00;
-        //TODO get the system tax rate
-        double taxRate = 0.00;
-        
+        double taxRate = 0;
+        double totalCost = 0;
+
+        //update variables
+        for (int i = 0; i < tbl_cust_order.getRowCount()-1; i++) {
+            System.out.println(tbl_cust_order.getModel().getValueAt(i, 8));
+            listedCost += (Float) tbl_cust_order.getModel().getValueAt(i, 8);
+        }
+        taxRate = Job.getTaxPercent();
+        if (listedCost != 0) {
+            totalCost = listedCost + taxRate;
+        }
+        else {
+            taxRate = 0;
+            totalCost = 0;
+        }
+         
+        lbl_cust_order_listedCost_val.setText("$"+String.valueOf(listedCost));
+        lbl_cust_order_plusGST_val.setText(String.valueOf(taxRate * 100) + "%");
+        lbl_cust_order_totalCost_val.setText("$"+String.valueOf(totalCost));
     }
+        
 }
+
 

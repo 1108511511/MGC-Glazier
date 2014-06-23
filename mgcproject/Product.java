@@ -101,16 +101,16 @@ public class Product {
     
     public static void writeToDB(Product p) {
         List<Object> l = p.getFields();
-        int productId = (int)l.get(0);
+        int productId = (Integer)l.get(0);
         String type = (String)l.get(1);
-        boolean isLockable = (boolean)l.get(2);
-        boolean isOutdoor = (boolean)l.get(3);
-        int length = (int)l.get(4);
-        int width = (int)l.get(5);
-        int thickness = (int)l.get(6);
-        int quantity = (int)l.get(7);
-        float unitPrice = (float)l.get(8);
-        float productPrice = (float)l.get(9);
+        boolean isLockable = (Boolean)l.get(2);
+        boolean isOutdoor = (Boolean)l.get(3);
+        int length = (Integer)l.get(4);
+        int width = (Integer)l.get(5);
+        int thickness = (Integer)l.get(6);
+        int quantity = (Integer)l.get(7);
+        float unitPrice = (Float)l.get(8);
+        float productPrice = (Float)l.get(9);
         String description = (String)l.get(10);
         
         Query.writeToTable(SQLStatements.insertProductStmt(

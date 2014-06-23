@@ -53,7 +53,7 @@ public class Job {
             return -1;
         }
     }
-        
+     /*   
     public static ArrayList getJobList() {                                     
         try {
         CachedRowSet crs = new CachedRowSetImpl();
@@ -65,7 +65,7 @@ public class Job {
                 double taxPercent = crs.getDouble("tax_percent");
                 double discountPercent = crs.getDouble("discount_percent");                
                 ArrayList<Product> productList = getProductListPerJob(jobId);
-                Customer customer = new Customer();
+                //Customer customer = new Customer();
                 Job newJob = new Job(jobStatus, discountPercent, 
                         productList, customer);
                 newJob.setJobId(jobId);
@@ -76,6 +76,7 @@ public class Job {
         }
         return jobsList;
     }
+    */
     
     public static ArrayList getProductListPerJob(int jobId) {
         ArrayList<Product> p = new ArrayList();
@@ -135,14 +136,14 @@ public class Job {
     
     public static void writeToDB(Job j) {
         List<Object> l = j.getFields();
-        int jobId = (int)l.get(0);
+        int jobId = (Integer)l.get(0);
         String jobStatus = (String)l.get(1);
-        double taxPercent = (double)l.get(2);
-        double discountPercent = (double)l.get(3);
+        double taxPercent = (Double)l.get(2);
+        double discountPercent = (Double)l.get(3);
         String custAbn = (String)l.get(4);
         int employeeId;
         if(j.getEmployee() != null) {
-            employeeId = (int)l.get(5);
+            employeeId = (Integer)l.get(5);
         } else {
             employeeId = -1;
         }
@@ -252,22 +253,3 @@ public class Job {
         
 }
 
-public static Customer getCustomerFromDB(int abn) {
-        try {
-        CachedRowSet crs = new CachedRowSetImpl();
-        crs = Query.readFromTable(SQLStatements.selectCustomerDetailsStmt(abn));
-            while (crs.next())
-            {
-                int jobId = crs.getInt("job_id");
-                String jobStatus = crs.getString("job_status");
-                double taxPercent = crs.getDouble("tax_percent");
-                double discountPercent = crs.getDouble("discount_percent");                
-                ArrayList<Product> productList = getProductListPerJob(jobId);
-                newJob.setJobId(jobId);
-                jobsList.add(newJob);
-            }
-        } catch(SQLException e) {
-            e.printStackTrace();
-        }
-        return jobsList;
-    }
